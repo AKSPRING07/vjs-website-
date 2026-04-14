@@ -117,6 +117,19 @@
         }
 
 
+        // ------------------------ Sustainability / Purpose Slider
+        if($(".purpose-slider").length) {
+          $('.purpose-slider').slick({
+              dots: false,
+              arrows: false,
+              autoplay: true,
+              autoplaySpeed: 5000,
+              fade: true,
+              cssEase: 'linear'
+            });
+        }
+
+
         // ------------------------ Feedback Slider One
         if($(".feedback-slider-one").length) {
           $('.feedback-slider-one').slick({
