@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -36,16 +36,22 @@
 
 			.adani-nav-fx {
 				padding: 0;
+				align-self: top;
 				margin: 0;
-				background: transparent;
+				background: #08201b;
 				border: none !important;
 				box-shadow: none !important;
 				width: 100%;
+
+				/* 🔥 FIX: lock to top */
+				position: fixed;
+				top: 0;
+				left: 0;
+				z-index: 9999;
 			}
 
 			.adani-nav-fx .inner-content {
 				padding: 0;
-				/* removed side spacing */
 				margin: 0;
 				animation: adaniNavReveal 0.75s cubic-bezier(0.22, 1, 0.36, 1);
 			}
@@ -53,73 +59,97 @@
 			.adani-nav-fx .top-header {
 				position: relative;
 				padding: 18px 20px;
-				/* keep slight inner spacing */
-				border-radius: 0;
-				/* 🔥 removes left & right curved borders */
+
+				/* ❌ REMOVE this (causes line) */
+				/* margin: -1px 0; */
+
 				margin: 0;
+
 				width: 100%;
+				border-radius: 0;
 				transition: padding 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+
+				transform: translateZ(0);
+				backface-visibility: hidden;
+				isolation: isolate;
 			}
 		}
 
+		/* ================= GLASS EFFECT ================= */
 
 		.adani-nav-fx .top-header::before {
 			content: "";
 			position: absolute;
-			align-items: center;
-			inset: 0;
+
+			/* 🔥 STRONG FIX */
+			top: -4px;
+			bottom: -3px;
+			left: 0;
+			right: 0;
+
 			border-radius: inherit;
-			background: linear-gradient(135deg, rgba(8, 32, 27, 0.28), rgba(8, 32, 27, 0.08));
-			border: none;
-			backdrop-filter: blur(16px);
-			-webkit-backdrop-filter: blur(16px);
-			box-shadow: none;
-			transition: background 0.45s ease, border-color 0.45s ease;
+
+			background: linear-gradient(135deg,
+					rgba(8, 32, 27, 0.88) 0%,
+					rgba(8, 32, 27, 0.82) 50%,
+					rgba(8, 32, 27, 0.88) 100%);
+
+			backdrop-filter: blur(10px);
+			-webkit-backdrop-filter: blur(10px);
+
+			transform: translateZ(0);
+			will-change: transform;
+
+			z-index: 0;
 		}
 
+		/* 🔥 HARD TOP COVER (FINAL LINE KILLER) */
+		.adani-nav-fx::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 3px;
+			background: #08201b;
+			z-index: 10000;
+			padding-top: 0%;
+		}
+
+		/* keep content above */
 		.adani-nav-fx .top-header>.d-flex {
 			position: relative;
-			z-index: 1;
+			z-index: 2;
 		}
 
+		/* LOGO */
 		.adani-nav-fx .logo img {
 			transition: transform 0.45s ease;
+			background-color: #9ec008;
+			border-radius: 50%;
 		}
 
+		/* NAVBAR */
 		.adani-nav-fx .navbar-nav {
-			position: relative;
 			gap: 20px;
-			padding: 0;
-			border-radius: 999px;
-		}
-
-		.adani-nav-fx .nav-item {
-			position: relative;
-			z-index: 1;
 		}
 
 		.adani-nav-fx .nav-item .nav-link {
-			margin: 0;
 			padding: 6px 16px;
 			border-radius: 999px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			text-align: center;
 			font-size: 14px;
-			transition: color 0.35s ease, transform 0.35s ease;
+			color: rgba(255, 255, 255, 0.85);
+			transition: all 0.35s ease;
 		}
 
-		.adani-nav-fx .nav-item .nav-link::after {
-			display: none !important;
-		}
-
+		/* HOVER */
 		.adani-nav-fx .nav-item:hover>.nav-link,
 		.adani-nav-fx .nav-item.nav-current>.nav-link {
-			color: #ffffff;
+			color: #dfff7c;
 			transform: translateY(-0.5px);
 		}
 
+		/* HOVER INDICATOR */
 		.adani-nav-fx .nav-hover-indicator {
 			position: absolute;
 			top: 0;
@@ -129,21 +159,30 @@
 			border-radius: 999px;
 			pointer-events: none;
 			opacity: 0;
-			transform: translate3d(0, 0, 0) scale(0.92);
-			background: linear-gradient(135deg, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.08));
-			box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.22), 0 14px 32px rgba(0, 0, 0, 0.16);
-			transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), width 0.45s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.3s ease;
+			transform: scale(0.92);
+
+			background: linear-gradient(135deg,
+					rgba(255, 255, 255, 0.18),
+					rgba(255, 255, 255, 0.05));
+
+			transition: all 0.45s cubic-bezier(0.22, 1, 0.36, 1);
 		}
 
+		/* DROPDOWN */
 		.adani-nav-fx .navbar .dropdown-menu {
 			margin-top: 14px;
 			padding: 14px 8px;
 			border-radius: 24px;
-			border: 1px solid rgba(12, 58, 48, 0.08);
-			box-shadow: 0 30px 60px rgba(0, 0, 0, 0.16);
+			border: 1px solid rgba(255, 255, 255, 0.05);
+			background: rgba(253, 253, 253, 0.719);
+
 			transform: translateY(18px) scale(0.96);
 			clip-path: inset(0 0 100% 0 round 24px);
-			transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.3s ease, visibility 0.3s ease, clip-path 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+
+			transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+				opacity 0.3s ease,
+				visibility 0.3s ease,
+				clip-path 0.45s cubic-bezier(0.22, 1, 0.36, 1);
 		}
 
 		.adani-nav-fx .navbar .dropdown:hover>.dropdown-menu {
@@ -151,10 +190,11 @@
 			clip-path: inset(0 0 0 0 round 24px);
 		}
 
+		/* ================= STICKY STATE ================= */
+
 		.adani-nav-fx.fixed {
 			padding-top: 12px;
-			background: transparent;
-			box-shadow: none;
+			background: #08201b;
 		}
 
 		.adani-nav-fx.fixed .top-header {
@@ -162,34 +202,51 @@
 		}
 
 		.adani-nav-fx.fixed .top-header::before {
-			background: linear-gradient(135deg, rgba(8, 32, 27, 0.98), rgba(12, 44, 36, 0.96));
-			border: none !important;
-			box-shadow: none !important;
+			top: -4px;
+			bottom: -3px;
+
+			background: linear-gradient(135deg,
+					rgba(8, 32, 27, 0.96) 0%,
+					rgba(8, 32, 27, 0.92) 50%,
+					rgba(8, 32, 27, 0.96) 100%);
+
+			backdrop-filter: blur(12px);
+			-webkit-backdrop-filter: blur(12px);
 		}
 
+		/* LOGO SCALE */
 		.adani-nav-fx.fixed .logo img {
 			transform: scale(0.94);
 		}
 
-		.adani-nav-fx.fixed .nav-item .nav-link {
-			color: rgba(255, 255, 255, 0.84);
-		}
-
-		.adani-nav-fx.fixed .nav-item:hover>.nav-link,
-		.adani-nav-fx.fixed .nav-item.nav-current>.nav-link {
-			color: #dfff7c;
-		}
-
-		.adani-nav-fx.fixed .nav-hover-indicator {
-			background: linear-gradient(135deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.08));
-			box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18), 0 10px 24px rgba(0, 0, 0, 0.2);
-		}
-		}
-
+		/* MOBILE */
 		@media (max-width: 991px) {
 			.adani-nav-fx .top-header {
 				position: relative;
-				z-index: 1;
+				z-index: 5;
+				margin: 0;
+				background: #08201b;
+			}
+		}
+
+		/* BODY FIX */
+		html,
+		body {
+			margin: 0;
+			padding: 0;
+			background: #08201b;
+		}
+
+		/* ANIMATION */
+		@keyframes adaniNavReveal {
+			from {
+				opacity: 0;
+				transform: translateY(-18px);
+			}
+
+			to {
+				opacity: 1;
+				transform: translateY(0);
 			}
 		}
 
@@ -974,15 +1031,16 @@
 								class="block-one pt-45 lg-pt-30 pb-20 ps-3 ps-xl-5 pe-xl-5 pe-3 position-relative border-30 wow fadeInUp">
 								<div class="row">
 									<div class="col-lg-5">
-										<div class="tag d-inline-block border-30 fw-500 text-uppercase mb-15">Consulting
+										<div class="tag d-inline-block border-30 fw-500 text-uppercase mb-15">IT
+											SOLUTIONS
 										</div>
-										<div class="date text-dark"><span class="fw-500">Featured -</span> 18 Jul 2023
+										<div class="date text-dark"><span class="fw-500">Featured -</span> 2019
 										</div>
 									</div>
 									<div class="col-lg-7">
 										<h3 class="block-title d-inline-block position-relative"><a
-												href="project-details-v1.html">Manage your online banking and get
-												rewarded</a></h3>
+												href="project-details-v1.html">Building Powerful Full-Stack & Mobile
+												Solutions</a></h3>
 									</div>
 								</div>
 							</div>
@@ -991,12 +1049,12 @@
 							<div class="block-two border-30 d-flex mt-45 lg-mt-30 wow fadeInUp">
 								<div class="img-wrapper"></div>
 								<div class="text-wrapper bg-white">
-									<div class="date">18 Jul 2023</div>
+									<div class="date">Feature - 2019</div>
 									<h3 class="block-title d-inline-block position-relative mt-5 mb-40 lg-mb-30"><a
-											href="project-details-v1.html">Gold card user will get priority pass for <br
-												class="d-none d-lg-block"> Airport.</a></h3>
+											href="project-details-v1.html">Empowering Students With Future-Ready
+											Skills<br class="d-none d-lg-block"> </a></h3>
 									<div class="d-flex align-items-center justify-content-between">
-										<div class="tag text-uppercase fw-500">Payments</div>
+										<div class="tag text-uppercase fw-500">Education</div>
 										<a href="project-details-v1.html"
 											class="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s"><i
 												class="bi bi-arrow-up-right"></i></a>
@@ -1010,12 +1068,11 @@
 						<div class="col-lg-4">
 							<div class="block-three border-30 ps-lg-4 ps-3 pe-lg-4 pe-3 pt-40 lg-pt-30 pb-30 md-mt-30 wow fadeInUp"
 								data-wow-delay="0.2s">
-								<div class="date">3 Aug 2023</div>
+								<div class="date">2019</div>
 								<h3 class="block-title d-inline-block position-relative mt-20 mb-80 lg-mb-50"><a
-										href="project-details-v1.html">Gold card user will get priority pass for
-										Airport.</a></h3>
+										href="project-details-v1.html">Holistic Healing Through Ayurveda & Yoga</a></h3>
 								<div class="d-flex align-items-center justify-content-between">
-									<div class="tag text-uppercase fw-500">DESIGN</div>
+									<div class="tag text-uppercase fw-500">WELLNESS</div>
 									<a href="project-details-v1.html"
 										class="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s"><i
 											class="bi bi-arrow-up-right"></i></a>
@@ -1026,11 +1083,11 @@
 								data-wow-delay="0.2s">
 								<h3
 									class="block-title d-inline-block position-relative mt-20 mb-250 lg-mb-150 sm-mb-100">
-									<a href="project-details-v1.html">Our Travel Card Makes <br
-											class="d-none d-xl-block">you Happy.</a>
+									<a href="project-details-v1.html">Delivering Premium Agricultural Exports <br
+											class="d-none d-xl-block">Globally</a>
 								</h3>
 								<div class="d-flex align-items-center justify-content-between">
-									<div class="tag text-uppercase fw-500">DESIGN</div>
+									<div class="tag text-uppercase fw-500">EXPORT</div>
 									<a href="project-details-v1.html"
 										class="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s"><i
 											class="bi bi-arrow-up-right"></i></a>
@@ -1687,7 +1744,7 @@
 
 				<div class="quote-author">
 					<div class="quote-by">BY</div>
-					<div class="quote-name">Ashokkumar</div>
+					<div class="quote-name">Ms. S. Vijayalakshmi</div>
 					<div class="quote-role">Managing Director</div>
 				</div>
 
@@ -1740,9 +1797,38 @@
 				}
 
 				/* LEFT LOGO SECTION */
-				.footer-brand img {
-					width: 140px;
-					margin-bottom: 20px;
+				.footer-logo {
+					display: flex;
+					align-items: center;
+					margin-bottom: 25px;
+				}
+
+				.footer-logo img {
+					width: 48px;
+					margin-right: 12px;
+					margin-bottom: 0;
+				}
+
+				.footer-logo-text {
+					display: flex;
+					flex-direction: column;
+				}
+
+				.footer-logo-text .text-main {
+					font-family: Arial, sans-serif;
+					font-size: 16px;
+					font-weight: 700;
+					color: #000;
+					letter-spacing: 0.2px;
+				}
+
+				.footer-logo-text .text-sub {
+					font-family: Arial, sans-serif;
+					font-size: 11px;
+					font-weight: 700;
+					color: #000;
+					letter-spacing: 1.2px;
+					margin-top: 2px;
 				}
 
 				.social-icons a {
@@ -1791,9 +1877,24 @@
 					padding-top: 15px;
 					display: flex;
 					justify-content: space-between;
+					align-items: center;
 					flex-wrap: wrap;
 					font-size: 13px;
 					color: #666;
+				}
+
+				.footer-copyright {
+					display: flex;
+					align-items: center;
+					color: #000;
+					font-size: 15px;
+					font-weight: 500;
+				}
+
+				.footer-copyright img {
+					width: 24px;
+					height: auto;
+					margin-right: 10px;
 				}
 
 				.footer-bottom-links a {
@@ -1831,7 +1932,13 @@
 
 					<!-- LOGO + SOCIAL -->
 					<div class="footer-brand">
-						<img src="images/logo/vijayalakshmi-logo.svg" alt="Logo">
+						<div class="footer-logo">
+							<img src="images/logo/vijayalakshmi-mark.png" alt="Logo Mark">
+							<div class="footer-logo-text">
+								<div class="text-main">Vijayalakshmi Group</div>
+								<div class="text-sub">OF COMPANIES</div>
+							</div>
+						</div>
 
 						<div class="social-icons">
 							<a href="#"><i class="bi bi-facebook"></i></a>
@@ -1882,7 +1989,10 @@
 
 				<!-- BOTTOM -->
 				<div class="footer-bottom">
-					<div>© 2025 Vijayalakshmi Group</div>
+					<div class="footer-copyright">
+						<img src="images/logo/vijayalakshmi-mark.png" alt="Logo">
+						© 2025 Vijayalakshmi Group Of Companies
+					</div>
 
 					<div class="footer-bottom-links">
 						<a href="#">Legal Disclaimer</a>

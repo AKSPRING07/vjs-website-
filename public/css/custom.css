@@ -37,7 +37,7 @@
     transition: background 0.45s ease, border-color 0.45s ease, box-shadow 0.45s ease;
   }
 
-  .adani-nav-fx .top-header > .d-flex {
+  .adani-nav-fx .top-header>.d-flex {
     position: relative;
     z-index: 1;
   }
@@ -80,14 +80,14 @@
     transition: transform 0.35s ease, opacity 0.35s ease;
   }
 
-  .adani-nav-fx .nav-item:hover > .nav-link,
-  .adani-nav-fx .nav-item.nav-current > .nav-link {
+  .adani-nav-fx .nav-item:hover>.nav-link,
+  .adani-nav-fx .nav-item.nav-current>.nav-link {
     color: #ffffff;
     transform: translateY(-1px);
   }
 
-  .adani-nav-fx .nav-item:hover > .nav-link::after,
-  .adani-nav-fx .nav-item.nav-current > .nav-link::after {
+  .adani-nav-fx .nav-item:hover>.nav-link::after,
+  .adani-nav-fx .nav-item.nav-current>.nav-link::after {
     opacity: 0.65;
     transform: scaleX(1);
   }
@@ -118,7 +118,7 @@
     transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.3s ease, visibility 0.3s ease, clip-path 0.45s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
-  .adani-nav-fx .navbar .dropdown:hover > .dropdown-menu {
+  .adani-nav-fx .navbar .dropdown:hover>.dropdown-menu {
     transform: translateY(0) scale(1);
     clip-path: inset(0 0 0 0 round 24px);
   }
@@ -147,8 +147,8 @@
     color: rgba(255, 255, 255, 0.84);
   }
 
-  .adani-nav-fx.fixed .nav-item:hover > .nav-link,
-  .adani-nav-fx.fixed .nav-item.nav-current > .nav-link {
+  .adani-nav-fx.fixed .nav-item:hover>.nav-link,
+  .adani-nav-fx.fixed .nav-item.nav-current>.nav-link {
     color: #dfff7c;
   }
 
@@ -213,7 +213,7 @@
   white-space: nowrap;
 }
 
-.adani-nav-fx .top-header > .d-flex {
+.adani-nav-fx .top-header>.d-flex {
   padding-left: 18px;
   padding-right: 18px;
   gap: 20px;
@@ -342,8 +342,8 @@
     color: rgba(255, 255, 255, 0.84);
   }
 
-  .adani-nav-fx.fixed .nav-item:hover > .nav-link,
-  .adani-nav-fx.fixed .nav-item.nav-current > .nav-link {
+  .adani-nav-fx.fixed .nav-item:hover>.nav-link,
+  .adani-nav-fx.fixed .nav-item.nav-current>.nav-link {
     color: #dfff7c;
   }
 
@@ -408,7 +408,7 @@
   white-space: nowrap;
 }
 
-.adani-nav-fx .top-header > .d-flex {
+.adani-nav-fx .top-header>.d-flex {
   padding-left: 18px;
   padding-right: 18px;
   gap: 20px;
@@ -516,189 +516,218 @@
 
 /* Purpose Section Slider Styles (Adani Style Re-creation) */
 .purpose-section {
-    position: relative;
-    width: 100%;
-    height: 700px;
-    display: flex;
-    overflow: hidden;
-    background: #000;
+  position: relative;
+  width: 100%;
+  height: 700px;
+  display: flex;
+  overflow: hidden;
+  background: #000;
 }
 
 .purpose-slider {
-    position: relative;
-    flex: 1;
-    height: 100%;
+  position: relative;
+  flex: 1;
+  height: 100%;
 }
 
 .purpose-slide {
-    position: relative;
-    height: 700px;
-    background-size: cover;
-    background-position: center;
-    display: flex !important; /* Slick overrides */
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 80px 8%;
-    outline: none;
+  position: relative;
+  height: 700px;
+  background-size: cover;
+  background-position: center;
+  display: flex !important;
+  /* Slick overrides */
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 80px 8%;
+  outline: none;
 }
 
 .purpose-slide::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
 }
 
 .purpose-slide .purpose-title {
-    position: relative;
-    z-index: 1;
-    font-size: clamp(36px, 6vw, 72px);
-    font-weight: 700;
-    color: #fff;
-    line-height: 1;
-    max-width: 700px;
-    text-transform: uppercase;
-    margin-bottom: 30px;
-    transform: translateY(30px);
-    opacity: 0;
-    transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  position: relative;
+  z-index: 1;
+  font-size: clamp(36px, 6vw, 72px);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+  max-width: 700px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  transform: translateY(30px);
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .purpose-slide .purpose-pledge-box {
-    position: relative;
-    z-index: 1;
-    align-self: flex-start;
-    background: rgba(0, 0, 0, 0.45);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    padding: 24px 32px;
-    max-width: 450px;
-    transform: translateY(30px);
-    opacity: 0;
-    transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.2s;
+  position: relative;
+  z-index: 1;
+  align-self: flex-start;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 24px 32px;
+  max-width: 450px;
+  transform: translateY(30px);
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.2s;
 }
 
 /* Animation for active slide content */
 .slick-active .purpose-title,
 .slick-active .purpose-pledge-box {
-    transform: translateY(0);
-    opacity: 1;
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .purpose-pledge-box h3 {
-    font-size: 20px;
-    color: #fff;
-    font-weight: 700;
-    margin-bottom: 12px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .purpose-pledge-box .impact-link {
-    display: inline-flex;
-    align-items: center;
-    color: #fff;
-    font-size: 15px;
-    text-decoration: underline;
-    opacity: 0.9;
-    transition: opacity 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  color: #fff;
+  font-size: 15px;
+  text-decoration: underline;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
 }
 
 .purpose-pledge-box .impact-link:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 /* Slider Controls (Slick Dots) */
 .purpose-slider .slick-dots {
-    position: absolute;
-    bottom: 30px;
-    left: 8%;
-    display: flex !important;
-    gap: 12px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    z-index: 2;
+  position: absolute;
+  bottom: 30px;
+  left: 8%;
+  display: flex !important;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 2;
 }
 
 .purpose-slider .slick-dots li button {
-    font-size: 0;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.3);
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    transition: all 0.3s ease;
+  font-size: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .purpose-slider .slick-dots li.slick-active button {
-    background: #fff;
-    transform: scale(1.3);
+  background: #fff;
+  transform: scale(1.3);
 }
 
 .purpose-sidebar {
-    width: 20%;
-    display: flex;
-    flex-direction: row;
-    background: #000;
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+  background: #000;
 }
 
 .vertical-tab {
-    flex: 1;
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.45s ease;
-    overflow: hidden;
-    text-decoration: none;
-    padding-bottom: 40px;
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.45s ease;
+  overflow: hidden;
+  text-decoration: none;
+  padding-bottom: 40px;
 }
 
 .vertical-tab::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-size: cover;
-    background-position: center;
-    transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.45s ease;
-    opacity: 0.4;
-    z-index: 0;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.45s ease;
+  opacity: 0.4;
+  z-index: 0;
 }
 
-.vertical-tab:nth-child(1)::before { background-image: url("../images/media/community_sidebar_bg_1776155835990.png"); }
-.vertical-tab:nth-child(2)::before { background-image: url("../images/media/governance_sidebar_bg_1776155874370.png"); }
+.vertical-tab:nth-child(1)::before {
+  background-image: url("../images/media/community_sidebar_bg_1776155835990.png");
+}
 
-.vertical-tab:hover::before { 
-    transform: scale(1.1); 
-    opacity: 0.7;
+.vertical-tab:nth-child(2)::before {
+  background-image: url("../images/media/governance_sidebar_bg_1776155874370.png");
+}
+
+.vertical-tab:hover::before {
+  transform: scale(1.1);
+  opacity: 0.7;
 }
 
 .vertical-tab .tab-text {
-    position: relative;
-    z-index: 1;
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-    color: #fff;
-    font-size: 18px;
-    font-weight: 600;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    white-space: nowrap;
-    text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  position: relative;
+  z-index: 1;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 991px) {
-    .purpose-section { height: auto; flex-direction: column; }
-    .purpose-slider { height: 500px; }
-    .purpose-slide { height: 500px; padding: 40px 20px; }
-    .purpose-sidebar { width: 100%; height: 300px; }
-    .vertical-tab .tab-text { writing-mode: horizontal-tb; transform: none; font-size: 15px; }
-    .purpose-slider .slick-dots { left: 20px; bottom: 20px; }
+  .purpose-section {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .purpose-slider {
+    height: 500px;
+  }
+
+  .purpose-slide {
+    height: 500px;
+    padding: 40px 20px;
+  }
+
+  .purpose-sidebar {
+    width: 100%;
+    height: 300px;
+  }
+
+  .vertical-tab .tab-text {
+    writing-mode: horizontal-tb;
+    transform: none;
+    font-size: 15px;
+  }
+
+  .purpose-slider .slick-dots {
+    left: 20px;
+    bottom: 20px;
+  }
 }
 
 
