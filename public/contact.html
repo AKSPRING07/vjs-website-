@@ -5,10 +5,10 @@
 	<meta charset="UTF-8">
 	<meta name="keywords" content="Digital marketing agency, Digital marketing company, Digital marketing services">
 	<meta name="description" content="Vijayalakshmi Group Of Companies website.">
-    <meta property="og:site_name" content="Vijayalakshmi Group Of Companies">
-    <meta property="og:url" content="https://creativegigstf.com">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Vijayalakshmi Group Of Companies">
+	<meta property="og:site_name" content="Vijayalakshmi Group Of Companies">
+	<meta property="og:url" content="https://creativegigstf.com">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Vijayalakshmi Group Of Companies">
 	<meta name='og:image' content='images/assets/ogg.png'>
 	<!-- For IE -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -38,6 +38,204 @@
 			<script src="vendor/html5shiv.js"></script>
 			<script src="vendor/respond.js"></script>
 		<![endif]-->
+	<style>
+		@media (min-width: 992px) {
+
+			.adani-nav-fx {
+				padding: 0;
+				align-self: top;
+				margin: 0;
+				background: #08201b;
+				border: none !important;
+				box-shadow: none !important;
+				width: 100%;
+
+				/* FIX: lock to top */
+				position: fixed;
+				top: 0;
+				left: 0;
+				z-index: 9999;
+			}
+
+			.adani-nav-fx .inner-content {
+				padding: 0;
+				margin: 0;
+				animation: adaniNavReveal 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+			}
+
+			.adani-nav-fx .top-header {
+				position: relative;
+				padding: 18px 20px;
+				margin: 0;
+				width: 100%;
+				border-radius: 0;
+				transition: padding 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+				transform: translateZ(0);
+				backface-visibility: hidden;
+				isolation: isolate;
+			}
+		}
+
+		/* GLASS EFFECT */
+		.adani-nav-fx .top-header::before {
+			content: "";
+			position: absolute;
+			top: -4px;
+			bottom: -3px;
+			left: 0;
+			right: 0;
+			border-radius: inherit;
+			background: linear-gradient(135deg,
+					rgba(8, 32, 27, 0.88) 0%,
+					rgba(8, 32, 27, 0.82) 50%,
+					rgba(8, 32, 27, 0.88) 100%);
+			backdrop-filter: blur(10px);
+			-webkit-backdrop-filter: blur(10px);
+			transform: translateZ(0);
+			will-change: transform;
+			z-index: 0;
+		}
+
+		/* HARD TOP COVER */
+		.adani-nav-fx::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 3px;
+			background: #08201b;
+			z-index: 10000;
+			padding-top: 0%;
+		}
+
+		/* keep content above */
+		.adani-nav-fx .top-header>.d-flex {
+			position: relative;
+			z-index: 2;
+		}
+
+		/* LOGO */
+		.adani-nav-fx .logo img {
+			transition: transform 0.45s ease;
+			background-color: #9ec008;
+			border-radius: 50%;
+		}
+
+		/* NAVBAR */
+		.adani-nav-fx .navbar-nav {
+			gap: 20px;
+		}
+
+		.adani-nav-fx .nav-item .nav-link {
+			padding: 6px 16px;
+			border-radius: 999px;
+			font-size: 14px;
+			color: rgba(255, 255, 255, 0.85);
+			transition: all 0.35s ease;
+		}
+
+		/* HOVER */
+		.adani-nav-fx .nav-item:hover>.nav-link,
+		.adani-nav-fx .nav-item.nav-current>.nav-link {
+			color: #dfff7c;
+			transform: translateY(-0.5px);
+		}
+
+		/* HOVER INDICATOR */
+		.adani-nav-fx .nav-hover-indicator {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 0;
+			border-radius: 999px;
+			pointer-events: none;
+			opacity: 0;
+			transform: scale(0.92);
+			background: linear-gradient(135deg,
+					rgba(255, 255, 255, 0.18),
+					rgba(255, 255, 255, 0.05));
+			transition: all 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+		}
+
+		/* DROPDOWN */
+		.adani-nav-fx .navbar .dropdown-menu {
+			margin-top: 14px;
+			padding: 14px 8px;
+			border-radius: 24px;
+			border: 1px solid rgba(255, 255, 255, 0.05);
+			background: rgba(253, 253, 253, 0.719);
+			transform: translateY(18px) scale(0.96);
+			clip-path: inset(0 0 100% 0 round 24px);
+			transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+				opacity 0.3s ease,
+				visibility 0.3s ease,
+				clip-path 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+		}
+
+		.adani-nav-fx .navbar .dropdown:hover>.dropdown-menu {
+			transform: translateY(0) scale(1);
+			clip-path: inset(0 0 0 0 round 24px);
+		}
+
+		/* STICKY STATE */
+		.adani-nav-fx.fixed {
+			padding-top: 12px;
+			background: #08201b;
+		}
+
+		.adani-nav-fx.fixed .top-header {
+			padding: 12px 0;
+		}
+
+		.adani-nav-fx.fixed .top-header::before {
+			top: -4px;
+			bottom: -3px;
+			background: linear-gradient(135deg,
+					rgba(8, 32, 27, 0.96) 0%,
+					rgba(8, 32, 27, 0.92) 50%,
+					rgba(8, 32, 27, 0.96) 100%);
+			backdrop-filter: blur(12px);
+			-webkit-backdrop-filter: blur(12px);
+		}
+
+		/* LOGO SCALE */
+		.adani-nav-fx.fixed .logo img {
+			transform: scale(0.94);
+		}
+
+		/* MOBILE */
+		@media (max-width: 991px) {
+			.adani-nav-fx .top-header {
+				position: relative;
+				z-index: 5;
+				margin: 0;
+				background: #08201b;
+			}
+		}
+
+		/* BODY FIX */
+		html,
+		body {
+			margin: 0;
+			padding: 0;
+			background: #08201b;
+		}
+
+		/* ANIMATION */
+		@keyframes adaniNavReveal {
+			from {
+				opacity: 0;
+				transform: translateY(-18px);
+			}
+
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+	</style>
 </head>
 
 <body>
@@ -47,11 +245,14 @@
 			==================================================== -->
 		<div id="preloader">
 			<div id="ctn-preloader" class="ctn-preloader">
-				<div class="icon"><video class="m-auto d-block site-loader-video" autoplay muted loop playsinline webkit-playsinline preload="auto" disablepictureinpicture aria-label="Loading animation"><source src="images/fav-icon/reload.ani.mp4" type="video/mp4"></video></div>
+				<div class="icon"><video class="m-auto d-block site-loader-video" autoplay muted loop playsinline
+						webkit-playsinline preload="auto" disablepictureinpicture aria-label="Loading animation">
+						<source src="images/fav-icon/reload.ani.mp4" type="video/mp4">
+					</video></div>
 			</div>
 		</div>
 
-		
+
 		<!-- 
 		=============================================
 				Theme Main Menu
@@ -108,13 +309,20 @@
 										</a>
 										<ul class="dropdown-menu">
 											<li><a href="index.html" class="dropdown-item"><span>Finance</span></a></li>
-											<li><a href="index-2.html" class="dropdown-item"><span>Business Consultancy</span></a></li>
-											<li><a href="index-3.html" class="dropdown-item"><span>Banking</span></a></li>
-											<li><a href="index-4.html" class="dropdown-item"><span>Payment Solution</span></a></li>
-											<li><a href="index-5.html" class="dropdown-item"><span>Digital Agency</span></a></li>
-											<li><a href="index-6.html" class="dropdown-item"><span>Marketing</span></a></li>
-											<li><a href="index-7.html" class="dropdown-item"><span>Insurance</span></a></li>
-											<li><a href="index-8.html" class="dropdown-item"><span>Insurance Two</span></a></li>
+											<li><a href="index-2.html" class="dropdown-item"><span>Business
+														Consultancy</span></a></li>
+											<li><a href="index-3.html" class="dropdown-item"><span>Banking</span></a>
+											</li>
+											<li><a href="index-4.html" class="dropdown-item"><span>Payment
+														Solution</span></a></li>
+											<li><a href="index-5.html" class="dropdown-item"><span>Digital
+														Agency</span></a></li>
+											<li><a href="index-6.html" class="dropdown-item"><span>Marketing</span></a>
+											</li>
+											<li><a href="index-7.html" class="dropdown-item"><span>Insurance</span></a>
+											</li>
+											<li><a href="index-8.html" class="dropdown-item"><span>Insurance
+														Two</span></a></li>
 										</ul>
 									</li>
 									<li class="nav-item dropdown mega-dropdown-sm">
@@ -127,35 +335,64 @@
 												<div class="col-lg-4">
 													<div class="menu-column">
 														<ul class="style-none mega-dropdown-list">
-															<li><a href="service-v1.html" class="dropdown-item"><span>Service v-1</span></a></li>
-															<li><a href="service-v2.html" class="dropdown-item"><span>Service v-2</span></a></li>
-															<li><a href="service-details.html" class="dropdown-item"><span>Service Details</span></a></li>
-															<li><a href="team-v1.html" class="dropdown-item"><span>Team V-1</span></a></li>
-															<li><a href="team-v2.html" class="dropdown-item"><span>Team V-2</span></a></li>
-															<li><a href="team-details.html" class="dropdown-item"><span>Team Details</span></a></li>
+															<li><a href="service-v1.html"
+																	class="dropdown-item"><span>Service v-1</span></a>
+															</li>
+															<li><a href="service-v2.html"
+																	class="dropdown-item"><span>Service v-2</span></a>
+															</li>
+															<li><a href="service-details.html"
+																	class="dropdown-item"><span>Service
+																		Details</span></a></li>
+															<li><a href="team-v1.html" class="dropdown-item"><span>Team
+																		V-1</span></a></li>
+															<li><a href="team-v2.html" class="dropdown-item"><span>Team
+																		V-2</span></a></li>
+															<li><a href="team-details.html"
+																	class="dropdown-item"><span>Team Details</span></a>
+															</li>
 														</ul>
 													</div> <!--/.menu-column -->
 												</div>
 												<div class="col-lg-4">
 													<div class="menu-column">
 														<ul class="style-none mega-dropdown-list">
-															<li><a href="about-us-v1.html" class="dropdown-item"><span>About Us V-1</span></a></li>
-															<li><a href="about-us-v2.html" class="dropdown-item"><span>About Us V-2</span></a></li>
-															<li><a href="testimonial.html" class="dropdown-item"><span>Testimonial</span></a></li>
-															<li><a href="pricing.html" class="dropdown-item"><span>Pricing</span></a></li>
-															<li><a href="faq.html" class="dropdown-item"><span>FAQ's</span></a></li>
-															<li><a href="404.html" class="dropdown-item"><span>404 Error</span></a></li>
+															<li><a href="about-us-v1.html"
+																	class="dropdown-item"><span>About Us V-1</span></a>
+															</li>
+															<li><a href="about-us-v2.html"
+																	class="dropdown-item"><span>About Us V-2</span></a>
+															</li>
+															<li><a href="testimonial.html"
+																	class="dropdown-item"><span>Testimonial</span></a>
+															</li>
+															<li><a href="pricing.html"
+																	class="dropdown-item"><span>Pricing</span></a></li>
+															<li><a href="faq.html"
+																	class="dropdown-item"><span>FAQ's</span></a></li>
+															<li><a href="404.html" class="dropdown-item"><span>404
+																		Error</span></a></li>
 														</ul>
 													</div> <!--/.menu-column -->
 												</div>
 												<div class="col-lg-4">
 													<div class="menu-column">
 														<ul class="style-none mega-dropdown-list">
-															<li><a href="project-v1.html" class="dropdown-item"><span>Project V-1</span></a></li>
-															<li><a href="project-v2.html" class="dropdown-item"><span>Project V-2</span></a></li>
-															<li><a href="project-v3.html" class="dropdown-item"><span>Project V-3</span></a></li>
-															<li><a href="project-details-v1.html" class="dropdown-item"><span>Project Details V-1</span></a></li>
-															<li><a href="project-details-v2.html" class="dropdown-item"><span>Project Details V-2</span></a></li>
+															<li><a href="project-v1.html"
+																	class="dropdown-item"><span>Project V-1</span></a>
+															</li>
+															<li><a href="project-v2.html"
+																	class="dropdown-item"><span>Project V-2</span></a>
+															</li>
+															<li><a href="project-v3.html"
+																	class="dropdown-item"><span>Project V-3</span></a>
+															</li>
+															<li><a href="project-details-v1.html"
+																	class="dropdown-item"><span>Project Details
+																		V-1</span></a></li>
+															<li><a href="project-details-v2.html"
+																	class="dropdown-item"><span>Project Details
+																		V-2</span></a></li>
 														</ul>
 													</div> <!--/.menu-column -->
 												</div>
@@ -168,10 +405,13 @@
 											aria-expanded="false">Shop
 										</a>
 										<ul class="dropdown-menu">
-											<li><a href="shop-grid.html" class="dropdown-item"><span>Shop</span></a></li>
-											<li><a href="shop-details.html" class="dropdown-item"><span>Shop Details</span></a></li>
+											<li><a href="shop-grid.html" class="dropdown-item"><span>Shop</span></a>
+											</li>
+											<li><a href="shop-details.html" class="dropdown-item"><span>Shop
+														Details</span></a></li>
 											<li><a href="cart.html" class="dropdown-item"><span>Cart</span></a></li>
-											<li><a href="checkout.html" class="dropdown-item"><span>Checkout</span></a></li>
+											<li><a href="checkout.html" class="dropdown-item"><span>Checkout</span></a>
+											</li>
 										</ul>
 									</li>
 									<li class="nav-item dropdown">
@@ -180,9 +420,12 @@
 											aria-expanded="false">Blog
 										</a>
 										<ul class="dropdown-menu">
-											<li><a href="blog-v1.html" class="dropdown-item"><span>Blog List</span></a></li>
-											<li><a href="blog-v2.html" class="dropdown-item"><span>Blog Grid</span></a></li>
-											<li><a href="blog-details.html" class="dropdown-item"><span>Blog Details</span></a></li>
+											<li><a href="blog-v1.html" class="dropdown-item"><span>Blog List</span></a>
+											</li>
+											<li><a href="blog-v2.html" class="dropdown-item"><span>Blog Grid</span></a>
+											</li>
+											<li><a href="blog-details.html" class="dropdown-item"><span>Blog
+														Details</span></a></li>
 										</ul>
 									</li>
 									<li class="nav-item">
@@ -212,26 +455,132 @@
 			Inner Banner
 		============================================== 
 		-->
-		<div class="inner-banner-one pt-225 lg-pt-200 md-pt-150 pb-100 md-pb-70 position-relative" style="background-image: url(images/media/img_26.jpg);">
-			<div class="container position-relative">
+		<style>
+			/* ===== SECTION ===== */
+			.inner-banner-one {
+				padding: 220px 0 100px;
+				background-size: cover;
+				background-position: center;
+				position: relative;
+			}
+
+			/* OVERLAY */
+			.inner-banner-one::before {
+				content: "";
+				position: absolute;
+				inset: 0;
+				background: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2));
+			}
+
+			.inner-banner-one .container {
+				position: relative;
+				z-index: 2;
+			}
+
+			/* ===== WRAPPER ===== */
+			.heading-wrap {
+				display: inline-block;
+				max-width: 425px;
+				/* control width */
+			}
+
+			/* ===== SINGLE CONNECTED BACKGROUND ===== */
+			.single-bg-heading {
+				display: inline-block;
+				/* 🔥 single block */
+
+				font-size: 64px;
+				font-weight: 700;
+				line-height: 1.15;
+				color: #0b2d26;
+
+				background: rgba(255, 255, 255, 0.9);
+				backdrop-filter: blur(8px);
+
+				padding: 16px 22px;
+				border-radius: 20px;
+
+				width: 100%;
+				/* 🔥 fill wrapper perfectly */
+
+				box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+			}
+
+			/* RIGHT TEXT */
+			.text-content {
+				color: #ffffff;
+				font-size: 18px;
+				line-height: 1.6;
+			}
+
+			/* BREADCRUMB */
+			.pager {
+				list-style: none;
+				display: flex;
+				gap: 10px;
+				padding: 0;
+			}
+
+			.pager a {
+				color: #ffffff;
+				text-decoration: none;
+			}
+
+			/* RESPONSIVE */
+			@media (max-width: 991px) {
+				.heading-wrap {
+					max-width: 100%;
+				}
+
+				.single-bg-heading {
+					font-size: 42px;
+				}
+			}
+
+			@media (max-width: 576px) {
+				.single-bg-heading {
+					font-size: 28px;
+					padding: 12px 16px;
+				}
+			}
+		</style>
+
+
+		<div class="inner-banner-one pt-225 pb-100 position-relative"
+			style="background-image: url(images/media/img_26.jpg);">
+
+			<div class="container">
 				<div class="row align-items-center">
+
+					<!-- LEFT -->
 					<div class="col-lg-7">
-						<h1 class="hero-heading d-inline-block position-relative">Contact us for inquiries <img src="images/shape/shape_33.svg" alt=""></h1>
+						<div class="heading-wrap">
+							<h1 class="hero-heading single-bg-heading">
+								Let’s Build Something Meaningful Together
+							</h1>
+						</div>
 					</div>
-                    <div class="col-xl-4 col-lg-5 ms-auto">
-                        <p class="text-white text-lg mb-70 lg-mb-40">Get our all info and also can message us directly from here</p>
-                        <ul class="style-none d-inline-flex pager">
-                            <li><a href="index.html">Home</a></li>
-                            <li>/</li>
-                            <li>Contact</li>
-                        </ul>
-                    </div>
+
+					<!-- RIGHT -->
+					<div class="col-xl-4 col-lg-5 ms-auto">
+						<p class="text-content mb-70">
+							Connect with us for business, partnerships, or support.
+							Our team is always ready to collaborate and deliver excellence.
+						</p>
+
+						<ul class="pager">
+							<li><a href="index.html">Home</a></li>
+							<li>/</li>
+							<li>Contact</li>
+						</ul>
+					</div>
+
 				</div>
 			</div>
 		</div>
 		<!-- /.inner-banner-one -->
 
-		
+
 
 
 		<!-- 
@@ -241,87 +590,109 @@
 		-->
 		<div class="contact-us-section pt-150 lg-pt-80">
 			<div class="container">
-                <div class="position-relative">
-                    <div class="row">
+				<div class="position-relative">
+					<div class="row">
 						<div class="col-12 m-auto">
 							<div class="row">
 								<div class="col-md-4">
 									<div class="address-block-one text-center mb-40 wow fadeInUp">
-										<div class="icon rounded-circle d-flex align-items-center justify-content-center m-auto"><img src="images/lazy.svg" data-src="images/icon/icon_90.svg" alt="" class="lazy-img"></div>
+										<div
+											class="icon rounded-circle d-flex align-items-center justify-content-center m-auto">
+											<img src="images/lazy.svg" data-src="images/icon/icon_90.svg" alt=""
+												class="lazy-img">
+										</div>
 										<h5 class="title">Our Address</h5>
 										<p>1012 Pebda Parkway, Mirpur 2 <br>Dhaka, Bangladesh</p>
 									</div> <!-- /.address-block-one -->
 								</div>
 								<div class="col-md-4">
 									<div class="address-block-one text-center mb-40 wow fadeInUp">
-										<div class="icon rounded-circle d-flex align-items-center justify-content-center m-auto"><img src="images/lazy.svg" data-src="images/icon/icon_91.svg" alt="" class="lazy-img"></div>
+										<div
+											class="icon rounded-circle d-flex align-items-center justify-content-center m-auto">
+											<img src="images/lazy.svg" data-src="images/icon/icon_91.svg" alt=""
+												class="lazy-img">
+										</div>
 										<h5 class="title">Contact Info</h5>
-										<p>Open a chat or give us call at <br><a href="tel:310.841.5500" class="call text-lg fw-500">310.841.5500</a></p>
+										<p>Open a chat or give us call at <br><a href="tel:310.841.5500"
+												class="call text-lg fw-500">310.841.5500</a></p>
 									</div> <!-- /.address-block-one -->
 								</div>
 								<div class="col-md-4">
 									<div class="address-block-one text-center mb-40 wow fadeInUp">
-										<div class="icon rounded-circle d-flex align-items-center justify-content-center m-auto"><img src="images/lazy.svg" data-src="images/icon/icon_92.svg" alt="" class="lazy-img"></div>
+										<div
+											class="icon rounded-circle d-flex align-items-center justify-content-center m-auto">
+											<img src="images/lazy.svg" data-src="images/icon/icon_92.svg" alt=""
+												class="lazy-img">
+										</div>
 										<h5 class="title">Live Support</h5>
-										<p>live chat service <br><a href="#" class="webaddress">www.babunlivechat.com</a></p>
+										<p>live chat service <br><a href="#"
+												class="webaddress">www.babunlivechat.com</a></p>
 									</div> <!-- /.address-block-one -->
 								</div>
 							</div>
 						</div>
 					</div>
 
-                    <div class="bg-wrapper light-bg mt-80 lg-mt-40">
-                        <div class="row">
-                            <div class="col-lg-5">
-                                <div class="d-flex flex-column flex-lg-column-reverse">
+					<div class="bg-wrapper light-bg mt-80 lg-mt-40">
+						<div class="row">
+							<div class="col-lg-5">
+								<div class="d-flex flex-column flex-lg-column-reverse">
 									<div class="row">
-										<div class="col-md-8 col-6 me-auto ms-auto"><img src="images/lazy.svg" data-src="images/assets/ils_07.svg" alt="" class="lazy-img me-auto ms-auto"></div>
+										<div class="col-md-8 col-6 me-auto ms-auto"><img src="images/lazy.svg"
+												data-src="images/assets/ils_07.svg" alt=""
+												class="lazy-img me-auto ms-auto"></div>
 									</div>
 									<div class="title-one text-center text-lg-start md-mt-20 mb-70 md-mb-30">
 										<h2>Have inquiries? Reach out via message</h2>
 									</div>
 									<!-- /.title-one -->
 								</div>
-                            </div>
-                            <div class="col-lg-7">
-                                <div class="form-style-one ps-xl-5">
-                                    <form action="inc/contact.php" id="contact-form" data-toggle="validator">
-                                        <div class="messages"></div>
-                                        <div class="row controls">
-                                            <div class="col-12">
-                                                <div class="input-group-meta form-group mb-30">
-                                                    <label for="">Name*</label>
-                                                    <input type="text" placeholder="Your Name*" name="name" required="required" data-error="Name is required.">
-                                                    <div class="help-block with-errors"></div>
-                                                </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <div class="input-group-meta form-group mb-40">
-                                                    <label for="">Email*</label>
-                                                    <input type="email" placeholder="Email Address*" name="email" required="required" data-error="Valid email is required.">
-                                                    <div class="help-block with-errors"></div>
-                                                </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <div class="input-group-meta form-group mb-35">
-                                                    <textarea placeholder="Your message*" name="message" required="required" data-error="Please,leave us a message."></textarea>
-                                                    <div class="help-block with-errors"></div>
-                                                </div>
-                                            </div>
-                                            <div class="col-12"><button class="btn-four tran3s w-100 d-block">Send Message</button></div>
-                                        </div>
-                                    </form>
-                                </div> <!-- /.form-style-one -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="map-banner mt-120 lg-mt-80">
-                <div class="gmap_canvas h-100 w-100">
-                    <iframe class="gmap_iframe h-100 w-100" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=dhaka collage&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
-                </div>
-            </div>
+							</div>
+							<div class="col-lg-7">
+								<div class="form-style-one ps-xl-5">
+									<form action="inc/contact.php" id="contact-form" data-toggle="validator">
+										<div class="messages"></div>
+										<div class="row controls">
+											<div class="col-12">
+												<div class="input-group-meta form-group mb-30">
+													<label for="">Name*</label>
+													<input type="text" placeholder="Your Name*" name="name"
+														required="required" data-error="Name is required.">
+													<div class="help-block with-errors"></div>
+												</div>
+											</div>
+											<div class="col-12">
+												<div class="input-group-meta form-group mb-40">
+													<label for="">Email*</label>
+													<input type="email" placeholder="Email Address*" name="email"
+														required="required" data-error="Valid email is required.">
+													<div class="help-block with-errors"></div>
+												</div>
+											</div>
+											<div class="col-12">
+												<div class="input-group-meta form-group mb-35">
+													<textarea placeholder="Your message*" name="message"
+														required="required"
+														data-error="Please,leave us a message."></textarea>
+													<div class="help-block with-errors"></div>
+												</div>
+											</div>
+											<div class="col-12"><button class="btn-four tran3s w-100 d-block">Send
+													Message</button></div>
+										</div>
+									</form>
+								</div> <!-- /.form-style-one -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="map-banner mt-120 lg-mt-80">
+				<div class="gmap_canvas h-100 w-100">
+					<iframe class="gmap_iframe h-100 w-100"
+						src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=dhaka collage&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+				</div>
+			</div>
 		</div>
 		<!-- ./contact-us-section -->
 
@@ -333,28 +704,29 @@
 			Newsletter Banner
 		=====================================================
 		-->
-        <div class="newsletter-banner mt-40">
-            <div class="container">
-                <div class="main-wrapper bottom-border">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <h2 class="fw-bold">Our Newsletter.</h2>
-                            <p class="text-lg md-pb-20">Get instant news by subscribe to our daily newsletter</p>
-                        </div>
-                        <div class="col-lg-6">
-                            <form action="#" class="me-auto ms-auto me-lg-0">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <input type="email" placeholder="Enter your email address">
-                                    <button class="rounded-circle tran3s"><i class="bi bi-arrow-right"></i></button>
-                                </div>
-                                <p class="text-center text-lg-end m0 pt-5">Already subscribed? <a href="#" class="text-dark fw-500">Unsubscribe</a></p>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <!-- /.main-wrapper -->
-            </div>
-        </div>
+		<div class="newsletter-banner mt-40">
+			<div class="container">
+				<div class="main-wrapper bottom-border">
+					<div class="row">
+						<div class="col-lg-6">
+							<h2 class="fw-bold">Our Newsletter.</h2>
+							<p class="text-lg md-pb-20">Get instant news by subscribe to our daily newsletter</p>
+						</div>
+						<div class="col-lg-6">
+							<form action="#" class="me-auto ms-auto me-lg-0">
+								<div class="d-flex align-items-center justify-content-between">
+									<input type="email" placeholder="Enter your email address">
+									<button class="rounded-circle tran3s"><i class="bi bi-arrow-right"></i></button>
+								</div>
+								<p class="text-center text-lg-end m0 pt-5">Already subscribed? <a href="#"
+										class="text-dark fw-500">Unsubscribe</a></p>
+							</form>
+						</div>
+					</div>
+				</div>
+				<!-- /.main-wrapper -->
+			</div>
+		</div>
 
 
 		<!--
@@ -367,14 +739,17 @@
 				<div class="inner-wrapper position-relative">
 					<div class="row justify-content-between">
 						<div class="col-lg-4 footer-intro mb-30">
-							<div class="round-bg color-two rounded-circle text-center d-flex flex-column align-items-center justify-content-center">
+							<div
+								class="round-bg color-two rounded-circle text-center d-flex flex-column align-items-center justify-content-center">
 								<div class="logo mb-15">
 									<a href="index-2.html">
-										<img src="images/logo/vijayalakshmi-logo.svg" alt="Vijayalakshmi Group Of Companies" class="site-brand-logo">
+										<img src="images/logo/vijayalakshmi-logo.svg"
+											alt="Vijayalakshmi Group Of Companies" class="site-brand-logo">
 									</a>
-								</div> 
+								</div>
 								<!-- logo -->
-								<p class="lh-sm mb-45 lg-mb-30">2190 Urban Terrace, Mirpur,  <br>Licensed in 50 states.</p>
+								<p class="lh-sm mb-45 lg-mb-30">2190 Urban Terrace, Mirpur, <br>Licensed in 50 states.
+								</p>
 								<p class="m0"><a href="#">+757 699-4478</a></p>
 							</div>
 						</div>
@@ -408,15 +783,18 @@
 							</ul>
 						</div>
 					</div>
-					<img src="images/lazy.svg" data-src="images/shape/shape_38.svg" alt="" class="lazy-img shapes shape_01">
-					<img src="images/lazy.svg" data-src="images/shape/shape_39.svg" alt="" class="lazy-img shapes shape_02">
+					<img src="images/lazy.svg" data-src="images/shape/shape_38.svg" alt=""
+						class="lazy-img shapes shape_01">
+					<img src="images/lazy.svg" data-src="images/shape/shape_39.svg" alt=""
+						class="lazy-img shapes shape_02">
 				</div> <!-- /.inner-wrapper -->
 			</div>
 			<div class="container">
 				<div class="bottom-footer">
 					<div class="row">
 						<div class="col-xl-4 col-lg-3 order-lg-3 mb-15">
-							<ul class="style-none d-flex align-items-center justify-content-center justify-content-lg-end social-icon">
+							<ul
+								class="style-none d-flex align-items-center justify-content-center justify-content-lg-end social-icon">
 								<li><a href="#"><i class="bi bi-facebook"></i></a></li>
 								<li><a href="#"><i class="bi bi-dribbble"></i></a></li>
 								<li><a href="#"><i class="bi bi-instagram"></i></a></li>
@@ -430,7 +808,8 @@
 							</ul>
 						</div>
 						<div class="col-xl-4 col-lg-3 order-lg-1 mb-15">
-							<div class="copyright text-center text-lg-start order-lg-first">Copyright @2023 Vijayalakshmi Group Of Companies.</div>
+							<div class="copyright text-center text-lg-start order-lg-first">Copyright @2023
+								Vijayalakshmi Group Of Companies.</div>
 						</div>
 					</div>
 				</div>
@@ -440,18 +819,20 @@
 
 
 		<!-- Modal -->
-        <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-fullscreen modal-dialog-centered">
-                <div class="container">
-                    <div class="user-data-form modal-content">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		<div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+			<div class="modal-dialog modal-fullscreen modal-dialog-centered">
+				<div class="container">
+					<div class="user-data-form modal-content">
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 						<div class="form-wrapper m-auto">
 							<ul class="nav nav-tabs border-0 w-100" role="tablist">
 								<li class="nav-item" role="presentation">
-									<button class="nav-link active" data-bs-toggle="tab" data-bs-target="#fc1" role="tab">Login</button>
+									<button class="nav-link active" data-bs-toggle="tab" data-bs-target="#fc1"
+										role="tab">Login</button>
 								</li>
 								<li class="nav-item" role="presentation">
-									<button class="nav-link" data-bs-toggle="tab" data-bs-target="#fc2" role="tab">Signup</button>
+									<button class="nav-link" data-bs-toggle="tab" data-bs-target="#fc2"
+										role="tab">Signup</button>
 								</li>
 							</ul>
 							<div class="tab-content mt-30">
@@ -471,12 +852,15 @@
 											<div class="col-12">
 												<div class="input-group-meta position-relative mb-20">
 													<label>Password*</label>
-													<input type="password" placeholder="Enter Password" class="pass_log_id">
-													<span class="placeholder_icon"><span class="passVicon"><img src="images/icon/icon_13.svg" alt=""></span></span>
+													<input type="password" placeholder="Enter Password"
+														class="pass_log_id">
+													<span class="placeholder_icon"><span class="passVicon"><img
+																src="images/icon/icon_13.svg" alt=""></span></span>
 												</div>
 											</div>
 											<div class="col-12">
-												<div class="agreement-checkbox d-flex justify-content-between align-items-center">
+												<div
+													class="agreement-checkbox d-flex justify-content-between align-items-center">
 													<div>
 														<input type="checkbox" id="remember">
 														<label for="remember">Keep me logged in</label>
@@ -513,15 +897,20 @@
 											<div class="col-12">
 												<div class="input-group-meta position-relative mb-20">
 													<label>Password*</label>
-													<input type="password" placeholder="Enter Password" class="pass_log_id">
-													<span class="placeholder_icon"><span class="passVicon"><img src="images/icon/icon_13.svg" alt=""></span></span>
+													<input type="password" placeholder="Enter Password"
+														class="pass_log_id">
+													<span class="placeholder_icon"><span class="passVicon"><img
+																src="images/icon/icon_13.svg" alt=""></span></span>
 												</div>
 											</div>
 											<div class="col-12">
-												<div class="agreement-checkbox d-flex justify-content-between align-items-center">
+												<div
+													class="agreement-checkbox d-flex justify-content-between align-items-center">
 													<div>
 														<input type="checkbox" id="remember2">
-														<label for="remember2">By hitting the "Register" button, you agree to the <a href="#">Terms conditions</a> & <a href="#">Privacy Policy</a></label>
+														<label for="remember2">By hitting the "Register" button, you
+															agree to the <a href="#">Terms conditions</a> & <a
+																href="#">Privacy Policy</a></label>
 													</div>
 												</div> <!-- /.agreement-checkbox -->
 											</div>
@@ -533,7 +922,7 @@
 								</div>
 								<!-- /.tab-pane -->
 							</div>
-							
+
 							<div class="d-flex align-items-center mt-30 mb-10">
 								<div class="line"></div>
 								<span class="pe-3 ps-3 fs-6">OR</span>
@@ -541,13 +930,15 @@
 							</div>
 							<div class="row">
 								<div class="col-sm-6">
-									<a href="#" class="social-use-btn d-flex align-items-center justify-content-center tran3s w-100 mt-10">
+									<a href="#"
+										class="social-use-btn d-flex align-items-center justify-content-center tran3s w-100 mt-10">
 										<img src="images/icon/google.png" alt="">
 										<span class="ps-3">Signup with Google</span>
 									</a>
 								</div>
 								<div class="col-sm-6">
-									<a href="#" class="social-use-btn d-flex align-items-center justify-content-center tran3s w-100 mt-10">
+									<a href="#"
+										class="social-use-btn d-flex align-items-center justify-content-center tran3s w-100 mt-10">
 										<img src="images/icon/facebook.png" alt="">
 										<span class="ps-3">Signup with Facebook</span>
 									</a>
@@ -555,11 +946,11 @@
 							</div>
 						</div>
 						<!-- /.form-wrapper -->
-                    </div>
-                    <!-- /.user-data-form -->
-                </div>
-            </div>
-        </div>
+					</div>
+					<!-- /.user-data-form -->
+				</div>
+			</div>
+		</div>
 
 
 		<button class="scroll-top">
@@ -587,12 +978,14 @@
 		<!-- js Counter -->
 		<script src="vendor/jquery.counterup.min.js"></script>
 		<script src="vendor/jquery.waypoints.min.js"></script>
-		
+
 		<!-- validator js -->
 		<script src="vendor/validator.js"></script>
 
 		<!-- Theme js -->
 		<script src="js/theme.js"></script>
+		<!-- Navbar Hover Animation -->
+		<script src="js/navbar-hover.js"></script>
 	</div> <!-- /.main-page-wrapper -->
 </body>
 

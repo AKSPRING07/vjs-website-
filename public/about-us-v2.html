@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -38,6 +38,204 @@
 			<script src="vendor/html5shiv.js"></script>
 			<script src="vendor/respond.js"></script>
 		<![endif]-->
+<style>
+		@media (min-width: 992px) {
+
+			.adani-nav-fx {
+				padding: 0;
+				align-self: top;
+				margin: 0;
+				background: #08201b;
+				border: none !important;
+				box-shadow: none !important;
+				width: 100%;
+
+				/* FIX: lock to top */
+				position: fixed;
+				top: 0;
+				left: 0;
+				z-index: 9999;
+			}
+
+			.adani-nav-fx .inner-content {
+				padding: 0;
+				margin: 0;
+				animation: adaniNavReveal 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+			}
+
+			.adani-nav-fx .top-header {
+				position: relative;
+				padding: 18px 20px;
+				margin: 0;
+				width: 100%;
+				border-radius: 0;
+				transition: padding 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+				transform: translateZ(0);
+				backface-visibility: hidden;
+				isolation: isolate;
+			}
+		}
+
+		/* GLASS EFFECT */
+		.adani-nav-fx .top-header::before {
+			content: "";
+			position: absolute;
+			top: -4px;
+			bottom: -3px;
+			left: 0;
+			right: 0;
+			border-radius: inherit;
+			background: linear-gradient(135deg,
+					rgba(8, 32, 27, 0.88) 0%,
+					rgba(8, 32, 27, 0.82) 50%,
+					rgba(8, 32, 27, 0.88) 100%);
+			backdrop-filter: blur(10px);
+			-webkit-backdrop-filter: blur(10px);
+			transform: translateZ(0);
+			will-change: transform;
+			z-index: 0;
+		}
+
+		/* HARD TOP COVER */
+		.adani-nav-fx::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 3px;
+			background: #08201b;
+			z-index: 10000;
+			padding-top: 0%;
+		}
+
+		/* keep content above */
+		.adani-nav-fx .top-header>.d-flex {
+			position: relative;
+			z-index: 2;
+		}
+
+		/* LOGO */
+		.adani-nav-fx .logo img {
+			transition: transform 0.45s ease;
+			background-color: #9ec008;
+			border-radius: 50%;
+		}
+
+		/* NAVBAR */
+		.adani-nav-fx .navbar-nav {
+			gap: 20px;
+		}
+
+		.adani-nav-fx .nav-item .nav-link {
+			padding: 6px 16px;
+			border-radius: 999px;
+			font-size: 14px;
+			color: rgba(255, 255, 255, 0.85);
+			transition: all 0.35s ease;
+		}
+
+		/* HOVER */
+		.adani-nav-fx .nav-item:hover>.nav-link,
+		.adani-nav-fx .nav-item.nav-current>.nav-link {
+			color: #dfff7c;
+			transform: translateY(-0.5px);
+		}
+
+		/* HOVER INDICATOR */
+		.adani-nav-fx .nav-hover-indicator {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 0;
+			border-radius: 999px;
+			pointer-events: none;
+			opacity: 0;
+			transform: scale(0.92);
+			background: linear-gradient(135deg,
+					rgba(255, 255, 255, 0.18),
+					rgba(255, 255, 255, 0.05));
+			transition: all 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+		}
+
+		/* DROPDOWN */
+		.adani-nav-fx .navbar .dropdown-menu {
+			margin-top: 14px;
+			padding: 14px 8px;
+			border-radius: 24px;
+			border: 1px solid rgba(255, 255, 255, 0.05);
+			background: rgba(253, 253, 253, 0.719);
+			transform: translateY(18px) scale(0.96);
+			clip-path: inset(0 0 100% 0 round 24px);
+			transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+				opacity 0.3s ease,
+				visibility 0.3s ease,
+				clip-path 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+		}
+
+		.adani-nav-fx .navbar .dropdown:hover>.dropdown-menu {
+			transform: translateY(0) scale(1);
+			clip-path: inset(0 0 0 0 round 24px);
+		}
+
+		/* STICKY STATE */
+		.adani-nav-fx.fixed {
+			padding-top: 12px;
+			background: #08201b;
+		}
+
+		.adani-nav-fx.fixed .top-header {
+			padding: 12px 0;
+		}
+
+		.adani-nav-fx.fixed .top-header::before {
+			top: -4px;
+			bottom: -3px;
+			background: linear-gradient(135deg,
+					rgba(8, 32, 27, 0.96) 0%,
+					rgba(8, 32, 27, 0.92) 50%,
+					rgba(8, 32, 27, 0.96) 100%);
+			backdrop-filter: blur(12px);
+			-webkit-backdrop-filter: blur(12px);
+		}
+
+		/* LOGO SCALE */
+		.adani-nav-fx.fixed .logo img {
+			transform: scale(0.94);
+		}
+
+		/* MOBILE */
+		@media (max-width: 991px) {
+			.adani-nav-fx .top-header {
+				position: relative;
+				z-index: 5;
+				margin: 0;
+				background: #08201b;
+			}
+		}
+
+		/* BODY FIX */
+		html,
+		body {
+			margin: 0;
+			padding: 0;
+			background: #08201b;
+		}
+
+		/* ANIMATION */
+		@keyframes adaniNavReveal {
+			from {
+				opacity: 0;
+				transform: translateY(-18px);
+			}
+
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+	</style>
 </head>
 
 <body>
@@ -210,29 +408,382 @@
 
 		<!-- 
 		=============================================
-			Inner Banner
+			About Us — Premium Hero Section
 		============================================== 
 		-->
-		<div class="inner-banner-two light-bg text-center pt-200 md-pt-150 pb-85 lg-pb-50 position-relative">
-			<div class="container position-relative">
-				<div class="row">
-					<div class="col-xl-8 col-lg-9 m-auto">
-                        <ul class="style-none d-inline-flex justify-content-center pager">
-                            <li><a href="index-2.html">Home</a></li>
-                            <li>/</li>
-                            <li>About us</li>
-                        </ul>
-                        <h1 class="hero-heading">We're Award Winner Finance inc</h1>
-                        <p class="text-lg">Navigating Your Financial Growth With Experience & Insightful Solutions.</p>
-                    </div>
+		<style>
+		/* ============================================================
+		   VJS About Hero — Premium Split Layout
+		   ============================================================ */
+		.vjs-about-hero {
+			position: relative;
+			min-height: 100vh;
+			display: flex;
+			align-items: center;
+			background: linear-gradient(135deg, #08201b 0%, #0d2e26 45%, #112e24 100%);
+			overflow: hidden;
+			padding: 140px 0 80px;
+		}
+		.vjs-about-hero::before {
+			content: "";
+			position: absolute;
+			inset: 0;
+			background:
+				radial-gradient(ellipse 60% 50% at 80% 40%, rgba(158,192,8,0.08) 0%, transparent 65%),
+				radial-gradient(ellipse 40% 40% at 15% 70%, rgba(26,65,55,0.6) 0%, transparent 60%);
+			pointer-events: none;
+		}
+		.vjs-about-hero::after {
+			content: "";
+			position: absolute;
+			inset: 0;
+			background-image:
+				linear-gradient(rgba(158,192,8,0.04) 1px, transparent 1px),
+				linear-gradient(90deg, rgba(158,192,8,0.04) 1px, transparent 1px);
+			background-size: 60px 60px;
+			pointer-events: none;
+		}
+		.vjs-hero-orb {
+			position: absolute;
+			border-radius: 50%;
+			pointer-events: none;
+			animation: vjsOrbFloat 8s ease-in-out infinite;
+		}
+		.vjs-hero-orb-1 {
+			width: 380px; height: 380px;
+			top: -80px; right: -60px;
+			background: radial-gradient(circle, rgba(158,192,8,0.12) 0%, transparent 70%);
+			animation-delay: 0s;
+		}
+		.vjs-hero-orb-2 {
+			width: 260px; height: 260px;
+			bottom: 40px; left: -40px;
+			background: radial-gradient(circle, rgba(26,65,55,0.4) 0%, transparent 70%);
+			animation-delay: 3s;
+		}
+		.vjs-hero-orb-3 {
+			width: 180px; height: 180px;
+			top: 50%; right: 38%;
+			background: radial-gradient(circle, rgba(158,192,8,0.07) 0%, transparent 70%);
+			animation-delay: 5s;
+		}
+		@keyframes vjsOrbFloat {
+			0%, 100% { transform: translateY(0) scale(1); }
+			50%       { transform: translateY(-22px) scale(1.04); }
+		}
+		.vjs-hero-breadcrumb {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			list-style: none;
+			padding: 0; margin: 0 0 28px;
+		}
+		.vjs-hero-breadcrumb li,
+		.vjs-hero-breadcrumb a {
+			font-size: 13px;
+			letter-spacing: 0.08em;
+			text-transform: uppercase;
+			color: rgba(255,255,255,0.5);
+			text-decoration: none;
+			transition: color 0.3s;
+		}
+		.vjs-hero-breadcrumb a:hover { color: #c8f542; }
+		.vjs-hero-breadcrumb .sep { color: rgba(158,192,8,0.6); font-size: 10px; }
+		.vjs-hero-breadcrumb .active { color: #c8f542; }
+		.vjs-hero-eyebrow {
+			display: inline-flex;
+			align-items: center;
+			gap: 8px;
+			background: rgba(158,192,8,0.1);
+			border: 1px solid rgba(158,192,8,0.25);
+			border-radius: 999px;
+			padding: 6px 16px 6px 8px;
+			margin-bottom: 22px;
+		}
+		.vjs-hero-eyebrow .dot {
+			width: 8px; height: 8px;
+			border-radius: 50%;
+			background: #9ec008;
+			animation: vjsPulse 2s ease-in-out infinite;
+		}
+		@keyframes vjsPulse {
+			0%,100% { box-shadow: 0 0 0 0 rgba(158,192,8,0.5); }
+			50%     { box-shadow: 0 0 0 6px rgba(158,192,8,0); }
+		}
+		.vjs-hero-eyebrow span {
+			font-size: 12px; font-weight: 600;
+			letter-spacing: 0.1em; text-transform: uppercase;
+			color: #c8f542;
+		}
+		.vjs-about-hero h1 {
+			font-size: clamp(2rem, 4.5vw, 3.6rem);
+			font-weight: 800;
+			line-height: 1.15;
+			color: #ffffff;
+			margin-bottom: 24px;
+		}
+		.vjs-about-hero h1 em {
+			font-style: normal;
+			color: #c8f542;
+			position: relative;
+		}
+		.vjs-about-hero h1 em::after {
+			content: "";
+			position: absolute;
+			left: 0; bottom: 2px;
+			width: 100%; height: 3px;
+			background: linear-gradient(90deg, #9ec008, transparent);
+			border-radius: 2px;
+		}
+		.vjs-about-lead {
+			font-size: 1.05rem;
+			line-height: 1.8;
+			color: rgba(255,255,255,0.65);
+			max-width: 520px;
+			margin-bottom: 40px;
+		}
+		.vjs-hero-cta {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 14px;
+			margin-bottom: 56px;
+		}
+		.vjs-btn-primary {
+			display: inline-flex;
+			align-items: center;
+			gap: 10px;
+			background: #9ec008;
+			color: #08201b;
+			font-weight: 700;
+			font-size: 14px;
+			letter-spacing: 0.04em;
+			padding: 14px 28px;
+			border-radius: 999px;
+			text-decoration: none;
+			transition: all 0.35s ease;
+		}
+		.vjs-btn-primary:hover {
+			background: #c8f542;
+			color: #08201b;
+			transform: translateY(-2px);
+			box-shadow: 0 8px 24px rgba(158,192,8,0.35);
+		}
+		.vjs-btn-outline {
+			display: inline-flex;
+			align-items: center;
+			gap: 10px;
+			background: transparent;
+			color: rgba(255,255,255,0.8);
+			font-weight: 600;
+			font-size: 14px;
+			letter-spacing: 0.04em;
+			padding: 13px 28px;
+			border-radius: 999px;
+			border: 1px solid rgba(255,255,255,0.2);
+			text-decoration: none;
+			transition: all 0.35s ease;
+		}
+		.vjs-btn-outline:hover {
+			border-color: #9ec008;
+			color: #c8f542;
+			transform: translateY(-2px);
+		}
+		.vjs-hero-stats {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 1px;
+			background: rgba(255,255,255,0.08);
+			border-radius: 16px;
+			overflow: hidden;
+			border: 1px solid rgba(255,255,255,0.06);
+		}
+		.vjs-hero-stat {
+			background: rgba(8,32,27,0.6);
+			backdrop-filter: blur(12px);
+			padding: 22px 18px;
+			text-align: center;
+			transition: background 0.3s;
+		}
+		.vjs-hero-stat:hover { background: rgba(158,192,8,0.08); }
+		.vjs-hero-stat .num {
+			font-size: 1.9rem;
+			font-weight: 800;
+			color: #c8f542;
+			line-height: 1;
+			margin-bottom: 5px;
+		}
+		.vjs-hero-stat .lbl {
+			font-size: 11.5px;
+			letter-spacing: 0.06em;
+			text-transform: uppercase;
+			color: rgba(255,255,255,0.5);
+		}
+		.vjs-about-right { position: relative; padding-left: 40px; }
+		@media (max-width: 991px) {
+			.vjs-about-right { padding-left: 0; margin-top: 60px; }
+		}
+		.vjs-founding-year {
+			position: absolute;
+			top: -30px; right: 0;
+			font-size: clamp(5rem, 10vw, 9rem);
+			font-weight: 900;
+			color: rgba(158,192,8,0.06);
+			line-height: 1;
+			user-select: none;
+			pointer-events: none;
+		}
+		.vjs-pillar-grid {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 16px;
+		}
+		.vjs-pillar-card {
+			border-radius: 20px;
+			padding: 28px 24px;
+			background: rgba(255,255,255,0.04);
+			border: 1px solid rgba(255,255,255,0.07);
+			backdrop-filter: blur(10px);
+			transition: all 0.4s cubic-bezier(0.22,1,0.36,1);
+			position: relative;
+			overflow: hidden;
+		}
+		.vjs-pillar-card::before {
+			content: "";
+			position: absolute;
+			inset: 0;
+			border-radius: inherit;
+			background: linear-gradient(135deg, rgba(158,192,8,0.06), transparent);
+			opacity: 0;
+			transition: opacity 0.4s;
+		}
+		.vjs-pillar-card:hover { transform: translateY(-5px); border-color: rgba(158,192,8,0.25); }
+		.vjs-pillar-card:hover::before { opacity: 1; }
+		.vjs-pillar-card.featured {
+			grid-column: span 2;
+			background: linear-gradient(135deg, rgba(158,192,8,0.12) 0%, rgba(8,32,27,0.8) 100%);
+			border-color: rgba(158,192,8,0.2);
+		}
+		.vjs-pillar-icon {
+			width: 44px; height: 44px;
+			border-radius: 12px;
+			background: rgba(158,192,8,0.12);
+			display: flex; align-items: center; justify-content: center;
+			margin-bottom: 16px;
+			font-size: 20px;
+		}
+		.vjs-pillar-card h4 { font-size: 15px; font-weight: 700; color: #fff; margin-bottom: 8px; }
+		.vjs-pillar-card p { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.65; margin: 0; }
+		.vjs-pillar-card.featured h4 { font-size: 17px; color: #c8f542; }
+		.vjs-pillar-card.featured p { color: rgba(255,255,255,0.65); font-size: 13.5px; }
+		@media (max-width: 767px) {
+			.vjs-about-hero { padding: 120px 0 60px; }
+			.vjs-hero-stats { grid-template-columns: 1fr 1fr; }
+			.vjs-pillar-grid { grid-template-columns: 1fr; }
+			.vjs-pillar-card.featured { grid-column: span 1; }
+		}
+		</style>
+
+		<section class="vjs-about-hero" id="about-hero" aria-label="About Vijayalakshmi Group">
+			<!-- Decorative orbs -->
+			<div class="vjs-hero-orb vjs-hero-orb-1"></div>
+			<div class="vjs-hero-orb vjs-hero-orb-2"></div>
+			<div class="vjs-hero-orb vjs-hero-orb-3"></div>
+
+			<div class="container position-relative" style="z-index:2;">
+				<div class="row align-items-center gy-5">
+
+					<!-- LEFT COLUMN -->
+					<div class="col-lg-6 wow fadeInLeft" data-wow-duration="0.9s">
+
+						<!-- Breadcrumb -->
+						<ul class="vjs-hero-breadcrumb">
+							<li><a href="index-2.html">Home</a></li>
+							<li class="sep">&rsaquo;</li>
+							<li class="active">About Us</li>
+						</ul>
+
+						<!-- Eyebrow -->
+						<div class="vjs-hero-eyebrow">
+							<span class="dot"></span>
+							<span>Est. 1995 &nbsp;&middot;&nbsp; Trusted Across Tamil Nadu</span>
+						</div>
+
+						<!-- Headline -->
+						<h1>Driving Growth &amp;<br>Building <em>Lasting Trust</em><br>For Decades</h1>
+
+						<!-- Lead -->
+						<p class="vjs-about-lead">
+							Vijayalakshmi Group of Companies is a diversified conglomerate with a proven legacy in business consultancy, financial services, trade, and sustainable development &mdash; empowering communities and enterprises alike.
+						</p>
+
+						<!-- CTA -->
+						<div class="vjs-hero-cta">
+							<a href="contact.html" class="vjs-btn-primary" id="about-hero-contact-btn">
+								<svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+								Partner With Us
+							</a>
+							<a href="service-v1.html" class="vjs-btn-outline" id="about-hero-services-btn">
+								<svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" d="M9 10h.01M15 10h.01M12 14a3 3 0 01-3-3h6a3 3 0 01-3 3z"/></svg>
+								Explore Our Services
+							</a>
+						</div>
+
+						<!-- Stats bar -->
+						<div class="vjs-hero-stats">
+							<div class="vjs-hero-stat">
+								<div class="num"><span class="counter">28</span>+</div>
+								<div class="lbl">Years of Excellence</div>
+							</div>
+							<div class="vjs-hero-stat">
+								<div class="num"><span class="counter">15</span>k+</div>
+								<div class="lbl">Clients Served</div>
+							</div>
+							<div class="vjs-hero-stat">
+								<div class="num"><span class="counter">12</span></div>
+								<div class="lbl">Business Verticals</div>
+							</div>
+						</div>
+
+					</div><!-- /left -->
+
+					<!-- RIGHT COLUMN -->
+					<div class="col-lg-6 wow fadeInRight" data-wow-duration="0.9s" data-wow-delay="0.15s">
+						<div class="vjs-about-right">
+							<span class="vjs-founding-year" aria-hidden="true">1995</span>
+							<div class="vjs-pillar-grid">
+								<div class="vjs-pillar-card featured">
+									<div class="vjs-pillar-icon">&#127963;</div>
+									<h4>Our Legacy &amp; Identity</h4>
+									<p>Founded in 1995, Vijayalakshmi Group has grown from a regional consultancy into a multi-vertical powerhouse. With deep roots in Tamil Nadu and a pan-India presence, we combine tradition with innovation to deliver unmatched value.</p>
+								</div>
+								<div class="vjs-pillar-card">
+									<div class="vjs-pillar-icon">&#127919;</div>
+									<h4>Our Vision</h4>
+									<p>To be India's most trusted diversified business group, enabling sustainable prosperity for every stakeholder we serve.</p>
+								</div>
+								<div class="vjs-pillar-card">
+									<div class="vjs-pillar-icon">&#128640;</div>
+									<h4>Our Mission</h4>
+									<p>Delivering innovative, ethical, and impactful solutions across finance, trade, and consulting &mdash; one partnership at a time.</p>
+								</div>
+								<div class="vjs-pillar-card">
+									<div class="vjs-pillar-icon">&#129309;</div>
+									<h4>Core Values</h4>
+									<p>Integrity &middot; Excellence &middot; Innovation &middot; Inclusivity &mdash; the four pillars guiding every decision at VJS Group.</p>
+								</div>
+								<div class="vjs-pillar-card">
+									<div class="vjs-pillar-icon">&#127758;</div>
+									<h4>Our Reach</h4>
+									<p>Operating across 12 business verticals with offices in Tamil Nadu and partnerships spanning 5 states across India.</p>
+								</div>
+							</div>
+						</div>
+					</div><!-- /right -->
+
 				</div>
 			</div>
-			<img src="images/lazy.svg" data-src="images/assets/ils_01.svg" alt="" class="lazy-img shapes shape_01">
-			<img src="images/lazy.svg" data-src="images/assets/ils_02.svg" alt="" class="lazy-img shapes shape_02">
-			<img src="images/lazy.svg" data-src="images/shape/shape_05.svg" alt="" class="lazy-img shapes shape_03">
-			<img src="images/lazy.svg" data-src="images/shape/shape_05.svg" alt="" class="lazy-img shapes shape_04">
-		</div>
-		<!-- /.inner-banner-two -->
+		</section>
+		<!-- /.vjs-about-hero -->
 
 
 		<!--
@@ -245,28 +796,28 @@
 				<div class="row">
 					<div class="col-xxl-5 col-lg-6 ms-auto d-flex flex-column order-lg-last wow fadeInRight">
 						<div class="title-one">
-							<h2>15k+ Client using Our Services.</h2>
+							<h2>15,000+ Clients Trust Our Expertise.</h2>
 						</div>
 						<!-- /.title-one -->
-						<p class="text-lg mt-30 mb-55 lg-mb-30">Your success is our mission. As business advisors, we offer expert guidance, unlocking your potential</p>
+						<p class="text-lg mt-30 mb-45 lg-mb-30">Your success defines ours. As a full-spectrum business group, Vijayalakshmi Group delivers expert guidance in financial planning, corporate consulting, trade facilitation, and more &amp;mdash; unlocking your full potential at every stage of growth.</p>
 						<ul class="style-none">
-                            <li>Mobile app easy management &amp; access.</li>
-                            <li>Ton’s of features for handle the card easily &amp; safely</li>
-                            <li>Strong security system.</li>
+                            <li>Comprehensive financial planning &amp; investment advisory.</li>
+                            <li>End-to-end business consultancy for SMEs &amp; corporates.</li>
+                            <li>Robust compliance, legal, and risk management support.</li>
                         </ul>
 						<div class="counter-wrapper mt-50 lg-mt-40 pt-25 lg-pt-10">
 							<div class="row">
 								<div class="col-xl-6 col-sm-5">
 									<div class="counter-block-one mt-20">
-										<div class="main-count fw-bold"><span class="counter">1.2</span>x</div>
-										<p class="m0">Rapid wealth grow</p>
+										<div class="main-count fw-bold"><span class="counter">28</span>+</div>
+										<p class="m0">Years of Proven Excellence</p>
 									</div>
 									<!-- /.counter-block-one -->
 								</div>
 								<div class="col-xl-6 col-sm-7">
 									<div class="counter-block-one mt-20">
-										<div class="main-count fw-bold">$<span class="counter">1.3</span>b+</div>
-										<p class="m0">Cumulative trading volume</p>
+										<div class="main-count fw-bold">&#8377;<span class="counter">500</span>Cr+</div>
+										<p class="m0">Business Facilitated Annually</p>
 									</div>
 									<!-- /.counter-block-one -->
 								</div>
@@ -927,6 +1478,8 @@
 
 		<!-- Theme js -->
 		<script src="js/theme.js"></script>
+		<!-- Navbar Hover Animation -->
+		<script src="js/navbar-hover.js"></script>
 	</div> <!-- /.main-page-wrapper -->
 </body>
 
