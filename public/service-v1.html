@@ -1,82 +1,38 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="keywords" content="Vijayalakshmi Group, Awards, Recognition, Achievements, Excellence">
-	<meta name="description" content="Celebrating the milestones and industry recognition of Vijayalakshmi Group Of Companies.">
-    <meta property="og:site_name" content="Vijayalakshmi Group Of Companies">
-    <meta property="og:url" content="https://creativegigstf.com">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Awards & Recognition - Vijayalakshmi Group Of Companies">
-	<meta name='og:image' content='images/assets/ogg.png'>
-	<!-- For IE -->
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<!-- For Resposive Device -->
+	<meta name="keywords" content="Vijayalakshmi Group, Advisors, Awards, Success Story, Corporate">
+	<meta name="description" content="Vijayalakshmi Group Of Companies leadership, awards, and success stories.">
+	<meta property="og:site_name" content="Vijayalakshmi Group Of Companies">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Leadership & Awards | Vijayalakshmi Group">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- For Window Tab Color -->
-	<!-- Chrome, Firefox OS and Opera -->
-	<meta name="theme-color" content="#1A4137">
-	<!-- Windows Phone -->
-	<meta name="msapplication-navbutton-color" content="#1A4137">
-	<!-- iOS Safari -->
-	<meta name="apple-mobile-web-app-status-bar-style" content="#1A4137">
-	<title>Awards & Recognition | Vijayalakshmi Group Of Companies</title>
-	<!-- Favicon -->
+	<meta name="theme-color" content="#08201b">
+	<title>Leadership & Awards | Vijayalakshmi Group Of Companies</title>
 	<link rel="icon" type="image/png" sizes="56x56" href="images/fav-icon/icon.png">
-	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="all">
-	<!-- Main style sheet -->
 	<link rel="stylesheet" type="text/css" href="css/style.min.css" media="all">
-	<!-- responsive style sheet -->
 	<link rel="stylesheet" type="text/css" href="css/responsive.css" media="all">
 	<link rel="stylesheet" type="text/css" href="css/custom.css" media="all">
-
-	<!-- Fix Internet Explorer ______________________________________-->
-	<!--[if lt IE 9]>
-			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-			<script src="vendor/html5shiv.js"></script>
-			<script src="vendor/respond.js"></script>
-		<![endif]-->
-<style>
+	<style>
 		@media (min-width: 992px) {
-
 			.adani-nav-fx {
 				padding: 0;
-				align-self: top;
-				margin: 0;
 				background: #08201b;
-				border: none !important;
-				box-shadow: none !important;
-				width: 100%;
-
-				/* FIX: lock to top */
 				position: fixed;
 				top: 0;
 				left: 0;
 				z-index: 9999;
-			}
-
-			.adani-nav-fx .inner-content {
-				padding: 0;
-				margin: 0;
-				animation: adaniNavReveal 0.75s cubic-bezier(0.22, 1, 0.36, 1);
-			}
-
-			.adani-nav-fx .top-header {
-				position: relative;
-				padding: 18px 20px;
-				margin: 0;
 				width: 100%;
-				border-radius: 0;
-				transition: padding 0.45s cubic-bezier(0.22, 1, 0.36, 1);
-				transform: translateZ(0);
-				backface-visibility: hidden;
-				isolation: isolate;
+			}
+			.adani-nav-fx .top-header {
+				padding: 18px 20px;
 			}
 		}
 
-		/* GLASS EFFECT */
+		/* GLASS EFFECT FOR NAV */
 		.adani-nav-fx .top-header::before {
 			content: "";
 			position: absolute;
@@ -84,575 +40,473 @@
 			bottom: -3px;
 			left: 0;
 			right: 0;
-			border-radius: inherit;
-			background: linear-gradient(135deg,
-					var(--vjs-nav-cover-color, #08201b) 0%,
-					rgba(8, 32, 27, 0.82) 50%,
-					rgba(8, 32, 27, 0.88) 100%);
+			background: linear-gradient(135deg, #08201b 0%, rgba(8, 32, 27, 0.82) 50%, rgba(8, 32, 27, 0.88) 100%);
 			backdrop-filter: blur(10px);
-			-webkit-backdrop-filter: blur(10px);
-			transform: translateZ(0);
-			will-change: transform;
 			z-index: 0;
 		}
 
-		/* HARD TOP COVER */
-		.adani-nav-fx::before {
+		.adani-nav-fx .top-header > .d-flex {
+			position: relative;
+			z-index: 2;
+		}
+
+		/* HERO SECTION */
+		.vjs-hero-section {
+			height: 60vh;
+			min-height: 400px;
+			background-size: cover;
+			background-position: center;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			position: relative;
+			margin-top: 80px; 
+		}
+
+		.vjs-hero-section::before {
 			content: "";
 			position: absolute;
 			top: 0;
 			left: 0;
 			width: 100%;
-			height: 3px;
-			background: #08201b;
-			z-index: 10000;
-			padding-top: 0%;
+			height: 100%;
+			background: rgba(8, 32, 27, 0.5);
 		}
 
-		/* keep content above */
-		.adani-nav-fx .top-header>.d-flex {
+		.vjs-hero-content {
 			position: relative;
 			z-index: 2;
+			color: #ffffff;
 		}
 
-		/* LOGO */
-		.adani-nav-fx .logo img {
-			transition: transform 0.45s ease;
-			background-color: #9ec008;
-			border-radius: 50%;
+		.vjs-hero-content h1 {
+			font-size: clamp(32px, 5vw, 64px);
+			font-weight: 800;
+			line-height: 1.1;
+			margin-bottom: 20px;
 		}
 
-		/* NAVBAR */
-		.adani-nav-fx .navbar-nav {
-			gap: 20px;
+		.vjs-hero-content p {
+			font-size: clamp(18px, 2vw, 24px);
+			opacity: 0.9;
+			max-width: 800px;
+			margin: 0 auto;
 		}
 
-		.adani-nav-fx .nav-item .nav-link {
-			padding: 10px 22px;
-			border-radius: 999px;
-			font-size: 15px;
-			font-weight: 500;
-			color: rgba(255, 255, 255, 0.85);
-			transition: all 0.35s ease;
-			display: flex;
-			align-items: center;
-			justify-content: center;
+		/* ADVISORS SECTION */
+		.vjs-advisors-section {
+			background: #ffffff;
+			padding: 120px 0;
 		}
 
-		/* Underline Removal */
-		.adani-nav-fx .nav-item .nav-link::after {
-			display: none !important;
+		.vjs-advisor-card {
+			background: #f8f9f8;
+			border-radius: 20px;
+			overflow: hidden;
+			transition: all 0.4s ease;
+			border: 1px solid rgba(28, 161, 97, 0.05);
+			margin-bottom: 30px;
+			text-align: center;
+			padding-bottom: 25px;
 		}
 
-		/* HOVER */
-		.adani-nav-fx .nav-item:hover>.nav-link,
-		.adani-nav-fx .nav-item.nav-current>.nav-link {
-			color: #dfff7c;
-			transform: translateY(-1px);
+		.vjs-advisor-card:hover {
+			transform: translateY(-10px);
+			box-shadow: 0 20px 40px rgba(28, 161, 97, 0.1);
+			background: #ffffff;
 		}
 
-		/* HOVER INDICATOR */
-		.adani-nav-fx .nav-hover-indicator {
-			position: absolute;
-			top: 0;
-			left: 0;
+		.vjs-advisor-img {
+			width: 100%;
+			height: 300px;
+			object-fit: cover;
+			background: #e9e9e9;
+		}
+
+		.vjs-advisor-card h4 {
+			font-size: 20px;
+			font-weight: 700;
+			color: #08201b;
+			margin-top: 20px;
+		}
+
+		.vjs-advisor-card span {
+			font-size: 14px;
+			color: #1ca161;
+			font-weight: 600;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+		}
+
+		/* AWARDS SECTION */
+		.vjs-awards-section {
+			background: #f4f7f6;
+			padding: 120px 0;
+		}
+
+		.vjs-award-slider-wrap {
+			margin-bottom: 80px;
+		}
+
+		.vjs-award-item {
+			padding: 0 15px;
+		}
+
+		.vjs-award-item img {
+			width: 100%;
+			height: 250px;
+			object-fit: contain;
+			background: #ffffff;
+			border-radius: 15px;
+			padding: 20px;
+			box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+		}
+
+		.vjs-award-card {
+			background: #ffffff;
+			padding: 30px;
+			border-radius: 20px;
+			text-align: center;
 			height: 100%;
-			width: 0;
-			border-radius: 999px;
-			pointer-events: none;
-			opacity: 0;
-			transform: scale(0.92);
-			background: linear-gradient(135deg,
-					rgba(255, 255, 255, 0.18),
-					rgba(255, 255, 255, 0.05));
-			transition: all 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+			transition: all 0.3s ease;
 		}
 
-		/* DROPDOWN */
-		.adani-nav-fx .navbar .dropdown-menu {
-			margin-top: 14px;
-			padding: 14px 8px;
-			border-radius: 24px;
-			border: 1px solid rgba(255, 255, 255, 0.05);
-			background: rgba(253, 253, 253, 0.719);
-			transform: translateY(18px) scale(0.96);
-			clip-path: inset(0 0 100% 0 round 24px);
-			transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
-				opacity 0.3s ease,
-				visibility 0.3s ease,
-				clip-path 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+		.vjs-award-card:hover {
+			background: #1ca161;
 		}
 
-		.adani-nav-fx .navbar .dropdown:hover>.dropdown-menu {
-			transform: translateY(0) scale(1);
-			clip-path: inset(0 0 0 0 round 24px);
+		.vjs-award-card:hover h5, .vjs-award-card:hover p {
+			color: #ffffff;
 		}
 
-		/* STICKY STATE */
-		.adani-nav-fx.fixed {
-			padding-top: 12px;
-			background: #08201b;
+		.vjs-award-card h5 {
+			font-weight: 700;
+			margin-bottom: 10px;
+			color: #08201b;
 		}
 
-		.adani-nav-fx.fixed .top-header {
-			padding: 12px 0;
+		/* SUCCESS STORY */
+		.vjs-success-section {
+			padding: 120px 0;
+			background: #ffffff;
 		}
 
-		.adani-nav-fx.fixed .top-header::before {
-			top: -4px;
-			bottom: -3px;
-			background: linear-gradient(135deg,
-					rgba(8, 32, 27, 0.96) 0%,
-					rgba(8, 32, 27, 0.92) 50%,
-					rgba(8, 32, 27, 0.96) 100%);
-			backdrop-filter: blur(12px);
-			-webkit-backdrop-filter: blur(12px);
+		.vjs-success-img {
+			width: 100%;
+			border-radius: 30px;
+			box-shadow: 20px 20px 60px rgba(28, 161, 97, 0.1);
 		}
 
-		/* LOGO SCALE */
-		.adani-nav-fx.fixed .logo img {
-			transform: scale(0.94);
+		.vjs-success-content {
+			padding-left: 50px;
 		}
 
-		/* MOBILE */
 		@media (max-width: 991px) {
-			.adani-nav-fx .top-header {
-				position: relative;
-				z-index: 5;
-				margin: 0;
-				background: #08201b;
+			.vjs-success-content {
+				padding-left: 0;
+				margin-top: 50px;
 			}
 		}
 
-		/* BODY FIX */
-		html,
-		body {
-			margin: 0;
-			padding: 0;
-			background: #08201b;
-		}
-
-		/* ANIMATION */
-		@keyframes adaniNavReveal {
-			from {
-				opacity: 0;
-				transform: translateY(-18px);
-			}
-
-			to {
-				opacity: 1;
-				transform: translateY(0);
-			}
+		/* FOOTER MODERN STYLES */
+		.footer-modern {
+			background: linear-gradient(to right, #f5f7f8, #e9eef0);
+			padding: 80px 0 40px;
 		}
 	</style>
 </head>
 
 <body>
 	<div class="main-page-wrapper">
-		<!-- ===================================================
-				Loading Transition
-			==================================================== -->
+		<!-- Loading Transition -->
 		<div id="preloader">
 			<div id="ctn-preloader" class="ctn-preloader">
-				<div class="icon"><video class="m-auto d-block site-loader-video" autoplay muted loop playsinline webkit-playsinline preload="auto" disablepictureinpicture aria-label="Loading animation"><source src="images/fav-icon/reload.ani.mp4" type="video/mp4"></video></div>
+				<div class="icon">
+					<video class="m-auto d-block site-loader-video" autoplay muted loop playsinline preload="auto">
+						<source src="images/fav-icon/reload.ani.mp4" type="video/mp4">
+					</video>
+				</div>
 			</div>
 		</div>
 
-		
-		<!-- 
-		=============================================
-				Theme Main Menu
-		============================================== 
-		-->
-		<header class="theme-main-menu menu-overlay menu-style-one white-vr sticky-menu adani-nav-fx">
+		<!-- Theme Main Menu -->
+		<header class="theme-main-menu adani-nav-fx">
 			<div class="inner-content position-relative">
 				<div class="top-header">
 					<div class="d-flex align-items-center justify-content-between">
-						<div class="logo" style="flex: 1; display: flex; justify-content: flex-start;">
+						<div class="logo">
 							<a href="index-2.html" class="d-flex align-items-center">
-								<span class="site-brand-lockup" aria-label="Vijayalakshmi Group Of Companies">
-									<span class="site-brand-lockup__mark-wrap"><img
-											src="images/logo/vijayalakshmi-mark.png" alt=""
-											class="site-brand-lockup__mark"></span>
-									<span class="site-brand-lockup__text">
-										<span class="site-brand-lockup__title">Vijayalakshmi&nbsp;Groups</span>
-										<span class="site-brand-lockup__subtitle">Of Companies</span>
-									</span>
-								</span>
+								<img src="images/logo/vijayalakshmi-mark.png" alt="" style="width: 50px; background: rgba(255,255,255,0.8); border-radius: 50%;">
+								<div class="ms-3">
+									<div style="font-size: 18px; font-weight: 800; color: #fff; line-height: 1;">Vijayalakshmi Groups</div>
+									<div style="font-size: 12px; font-weight: 700; color: #fff; opacity: 0.7; letter-spacing: 1px;">OF COMPANIES</div>
+								</div>
 							</a>
 						</div>
-						<!-- logo -->
-
-						<nav class="navbar navbar-expand-lg p0" style="flex: 0 0 auto; margin-right: 110px;">
-							<button class="navbar-toggler d-block d-lg-none" type="button" data-bs-toggle="collapse"
-								data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-								aria-label="Toggle navigation">
-								<span></span>
-							</button>
-							<div class="collapse navbar-collapse" id="navbarNav">
-								<ul class="navbar-nav align-items-lg-center">
-									<li class="d-block d-lg-none">
-										<div class="logo">
-											<a href="index-2.html" class="d-block">
-												<span class="site-brand-lockup"
-													aria-label="Vijayalakshmi Group Of Companies">
-													<span class="site-brand-lockup__mark-wrap"><img
-															src="images/logo/vijayalakshmi-mark.png" alt=""
-															class="site-brand-lockup__mark"></span>
-													<span class="site-brand-lockup__text">
-														<span class="site-brand-lockup__title">Vijayalakshmi
-															Group</span>
-														<span class="site-brand-lockup__subtitle">OF COMPANIES</span>
-													</span>
-												</span>
-											</a>
-										</div>
-									</li>
-									<li class="nav-item dropdown nav-current">
-										<a class="nav-link dropdown-toggle" href="#" role="button"
-											data-bs-toggle="dropdown" data-bs-auto-close="outside"
-											aria-expanded="false">About Us
-										</a>
-										<ul class="dropdown-menu">
-											<li><a href="about-us-v2.html" class="dropdown-item"><span>Our Group</span></a></li>
-											<li><a href="about-us-v1.html" class="dropdown-item"><span>Our Mission and Vision</span></a></li>
-											<li><a href="service-v1.html" class="dropdown-item"><span>Leadership and Awards</span></a></li>
-										</ul>
-									</li>
-									<li class="nav-item dropdown">
-										<a class="nav-link dropdown-toggle" href="#" role="button"
-											data-bs-toggle="dropdown" data-bs-auto-close="outside"
-											aria-expanded="false">Services
-										</a>
-										<ul class="dropdown-menu">
-											<li><a href="index.html" class="dropdown-item"><span>Finance</span></a></li>
-											<li><a href="index-2.html" class="dropdown-item"><span>Business Consultancy</span></a></li>
-											<li><a href="index-3.html" class="dropdown-item"><span>Banking</span></a></li>
-											<li><a href="index-4.html" class="dropdown-item"><span>Payment Solution</span></a></li>
-											<li><a href="index-5.html" class="dropdown-item"><span>Digital Agency</span></a></li>
-											<li><a href="index-6.html" class="dropdown-item"><span>Marketing</span></a></li>
-											<li><a href="index-7.html" class="dropdown-item"><span>Insurance</span></a></li>
-											<li><a href="index-8.html" class="dropdown-item"><span>Insurance Two</span></a></li>
-										</ul>
-									</li>
-									<li class="nav-item dropdown">
-										<a class="nav-link dropdown-toggle" href="#" role="button"
-											data-bs-toggle="dropdown" data-bs-auto-close="outside"
-											aria-expanded="false">Shop
-										</a>
-										<ul class="dropdown-menu">
-											<li><a href="shop-grid.html" class="dropdown-item"><span>Shop</span></a></li>
-											<li><a href="shop-details.html" class="dropdown-item"><span>Shop Details</span></a></li>
-											<li><a href="cart.html" class="dropdown-item"><span>Cart</span></a></li>
-											<li><a href="checkout.html" class="dropdown-item"><span>Checkout</span></a></li>
-										</ul>
-									</li>
-									<li class="nav-item dropdown">
-										<a class="nav-link dropdown-toggle" href="#" role="button"
-											data-bs-toggle="dropdown" data-bs-auto-close="outside"
-											aria-expanded="false">Blog
-										</a>
-										<ul class="dropdown-menu">
-											<li><a href="blog-v1.html" class="dropdown-item"><span>Blog List</span></a></li>
-											<li><a href="blog-v2.html" class="dropdown-item"><span>Blog Grid</span></a></li>
-											<li><a href="blog-details.html" class="dropdown-item"><span>Blog Details</span></a></li>
-										</ul>
-									</li>
-									<li class="nav-item">
-										<a class="nav-link" href="contact.html" role="button">Contact Us</a>
-									</li>
-									<li class="nav-item dropdown d-md-none mt-10">
-										<a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button"
-											data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
-											<i class="bi bi-universal-access pe-2"></i> Accessibility
-										</a>
-										<div class="dropdown-menu vjs-accessibility-panel border-0">
-											<div class="p-3">
-												<h6 class="mb-2">Adjust Settings</h6>
-												<div class="d-flex gap-2 mb-3">
-													<button class="vjs-adjust-btn w-50 py-1" onclick="vjsSetMode('light')">Light</button>
-													<button class="vjs-adjust-btn w-50 py-1" onclick="vjsSetMode('dark')">Dark</button>
-												</div>
-												<div class="d-flex gap-2">
-													<button class="vjs-adjust-btn w-50 py-1" onclick="vjsSetFontSize('small')">-A</button>
-													<button class="vjs-adjust-btn w-50 py-1" onclick="vjsSetFontSize('large')">+A</button>
-												</div>
-											</div>
-										</div>
-									</li>
-									<li class="nav-item dropdown d-md-none">
-										<a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button"
-											data-bs-toggle="dropdown" aria-expanded="false">
-											<span class="vjs-lang-label">ENG</span>
-										</a>
-										<ul class="dropdown-menu">
-											<li><a class="dropdown-item" href="javascript:translateTo('ta')">Tamil</a></li>
-											<li><a class="dropdown-item" href="javascript:translateTo('en')">English</a></li>
-											<li><a class="dropdown-item" href="javascript:translateTo('hi')">Hindi</a></li>
-										</ul>
-									</li>
-									
-								</ul>
-							</div>
+						<nav class="navbar navbar-expand-lg">
+							<ul class="navbar-nav">
+								<li class="nav-item"><a class="nav-link" href="index-2.html">Home</a></li>
+								<li class="nav-item"><a class="nav-link" href="about-us-v1.html">About Us</a></li>
+								<li class="nav-item"><a class="nav-link active" href="service-v1.html">Leadership</a></li>
+								<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+							</ul>
 						</nav>
-
-						<div class="right-widget d-none d-lg-flex align-items-center">
-							<!-- Accessibility Dropdown -->
-							<div class="vjs-nav-action dropdown ps-3 ps-xl-4">
-								<button class="dropdown-toggle d-flex align-items-center style-none" type="button"
-									data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
-									<i class="bi bi-universal-access fs-5 text-white"></i>
-									<i class="bi bi-chevron-down ms-1 text-white opacity-50" style="font-size: 10px;"></i>
-								</button>
-								<div class="dropdown-menu dropdown-menu-end vjs-accessibility-panel">
-									<h5>Accessibility Adjustments</h5>
-									<p>Choose the right accessibility profile for you</p>
-									<div class="vjs-divider"></div>
-									<div class="vjs-adjust-grid">
-										<button class="vjs-adjust-btn" onclick="vjsSetMode('light')">Light Mode</button>
-										<button class="vjs-adjust-btn" onclick="vjsSetMode('dark')">Dark Mode</button>
-									</div>
-									<div class="vjs-divider"></div>
-									<div class="vjs-font-grid">
-										<button class="vjs-adjust-btn" onclick="vjsSetFontSize('small')">-A</button>
-										<button class="vjs-adjust-btn" onclick="vjsSetFontSize('normal')">A</button>
-										<button class="vjs-adjust-btn" onclick="vjsSetFontSize('large')">+A</button>
-									</div>
-									<div class="vjs-divider"></div>
-									<div class="text-center">
-										<button class="vjs-reset-btn" onclick="vjsResetSettings()">Reset Settings</button>
-									</div>
-								</div>
-							</div>
-							<!-- Language Dropdown -->
-							<div class="vjs-nav-action dropdown ps-3 ps-xl-4">
-								<button class="dropdown-toggle d-flex align-items-center style-none" type="button"
-									data-bs-toggle="dropdown" aria-expanded="false">
-									<span class="text-white fw-500 fs-6 vjs-lang-label">ENG</span>
-									<i class="bi bi-chevron-down ms-1 text-white opacity-50" style="font-size: 10px;"></i>
-								</button>
-								<ul class="dropdown-menu dropdown-menu-end">
-									<li><a class="dropdown-item" href="javascript:translateTo('ta')">Tamil</a></li>
-									<li><a class="dropdown-item" href="javascript:translateTo('en')">English</a></li>
-									<li><a class="dropdown-item" href="javascript:translateTo('hi')">Hindi</a></li>
-								</ul>
-							</div>
-						</div>
 					</div>
-				</div> <!--/.top-header-->
-			</div> <!-- /.inner-content -->
-		</header>
-								<li><a href="about-us-v2.html">About us</a></li>
-								<li><a href="blog-v2.html">Blogs</a></li>
-								<li><a href="faq.html">FAQ�s</a></li>
-								<li><a href="contact.html">Contact</a></li>
-							</ul>
-						</div>
-						<div class="col-xxl-2 col-lg-3 col-sm-4 mb-20">
-							<h5 class="footer-title">Support</h5>
-							<ul class="footer-nav-link style-none">
-								<li><a href="contact.html">Terms of use</a></li>
-								<li><a href="contact.html">Terms & conditions</a></li>
-								<li><a href="contact.html">Privacy</a></li>
-								<li><a href="contact.html">Cookie policy</a></li>
-							</ul>
-						</div>
-					</div>
-					<img src="images/lazy.svg" data-src="images/shape/shape_38.svg" alt="" class="lazy-img shapes shape_01">
-					<img src="images/lazy.svg" data-src="images/shape/shape_39.svg" alt="" class="lazy-img shapes shape_02">
-				</div> <!-- /.inner-wrapper -->
+				</div>
 			</div>
+		</header>
+
+		<!-- SECTION 1: HERO -->
+		<section class="vjs-hero-section" style="background-image: url('vjs_services_hero_bg_1776587462893.png');">
 			<div class="container">
-				<div class="bottom-footer">
-					<div class="row">
-						<div class="col-xl-4 col-lg-3 order-lg-3 mb-15">
-							<ul class="style-none d-flex align-items-center justify-content-center justify-content-lg-end social-icon">
-								<li><a href="#"><i class="bi bi-facebook"></i></a></li>
-								<li><a href="#"><i class="bi bi-dribbble"></i></a></li>
-								<li><a href="#"><i class="bi bi-instagram"></i></a></li>
-							</ul>
+				<div class="vjs-hero-content wow fadeInUp">
+					<h1>Leadership & Excellence</h1>
+					<p>Empowering industries through visionary leadership <br> and a commitment to global excellence.</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- SECTION 2: ADVISORS -->
+		<section class="vjs-advisors-section">
+			<div class="container">
+				<div class="title-one text-center mb-80 wow fadeInUp">
+					<h2>Our Advisor Coordinators</h2>
+					<p class="text-lg">The visionary minds driving growth and innovation across our diverse business verticals.</p>
+				</div>
+				<div class="row">
+					<!-- Card 1 -->
+					<div class="col-lg-3 col-sm-6 wow fadeInUp">
+						<div class="vjs-advisor-card">
+							<img src="images/media/img_27.jpg" alt="" class="vjs-advisor-img">
+							<h4>Zubayer Hasan</h4>
+							<span>Strategy Lead</span>
 						</div>
-						<div class="col-xl-4 col-lg-6 order-lg-2 mb-15">
-							<ul class="style-none bottom-nav d-flex flex-wrap justify-content-center order-lg-last">
-								<li><a href="contact.html">Privacy & Terms</a></li>
-								<li><a href="contact.html">Cookies</a></li>
-								<li><a href="contact.html">Contact Us</a></li>
-							</ul>
+					</div>
+					<!-- Card 2 -->
+					<div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+						<div class="vjs-advisor-card">
+							<img src="images/media/img_28.jpg" alt="" class="vjs-advisor-img">
+							<h4>Maria Escolova</h4>
+							<span>Operations Head</span>
 						</div>
-						<div class="col-xl-4 col-lg-3 order-lg-1 mb-15">
-							<div class="copyright text-center text-lg-start order-lg-first">Copyright @2023 Vijayalakshmi Group Of Companies.</div>
+					</div>
+					<!-- Card 3 -->
+					<div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.2s">
+						<div class="vjs-advisor-card">
+							<img src="images/media/img_29.jpg" alt="" class="vjs-advisor-img">
+							<h4>Rashedul Kabir</h4>
+							<span>Finance Director</span>
+						</div>
+					</div>
+					<!-- Card 4 -->
+					<div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+						<div class="vjs-advisor-card">
+							<img src="images/media/img_30.jpg" alt="" class="vjs-advisor-img">
+							<h4>Cristiano Messi</h4>
+							<span>Supply Chain</span>
+						</div>
+					</div>
+					<!-- Card 5 -->
+					<div class="col-lg-3 col-sm-6 wow fadeInUp">
+						<div class="vjs-advisor-card">
+							<img src="images/media/img_13.jpg" alt="" class="vjs-advisor-img">
+							<h4>John Doe</h4>
+							<span>Technology VP</span>
+						</div>
+					</div>
+					<!-- Card 6 -->
+					<div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+						<div class="vjs-advisor-card">
+							<img src="images/media/img_14.jpg" alt="" class="vjs-advisor-img">
+							<h4>Jane Smith</h4>
+							<span>Legal Advisor</span>
+						</div>
+					</div>
+					<!-- Card 7 -->
+					<div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.2s">
+						<div class="vjs-advisor-card">
+							<img src="images/media/img_15.jpg" alt="" class="vjs-advisor-img">
+							<h4>Robert Brown</h4>
+							<span>HR Director</span>
+						</div>
+					</div>
+					<!-- Card 8 -->
+					<div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+						<div class="vjs-advisor-card">
+							<img src="images/media/img_16.jpg" alt="" class="vjs-advisor-img">
+							<h4>Sarah Wilson</h4>
+							<span>Marketing Lead</span>
 						</div>
 					</div>
 				</div>
-				<!-- /.bottom-footer -->
 			</div>
-		</div> <!-- /.footer-three -->
+		</section>
 
+		<!-- SECTION 3: AWARDS -->
+		<section class="vjs-awards-section">
+			<div class="container">
+				<div class="title-one mb-60 wow fadeInUp">
+					<h2>Global Recognition</h2>
+					<p class="text-lg">Our unwavering commitment to excellence has been recognized by industry leaders worldwide.</p>
+				</div>
+				
+				<!-- Moving images slider -->
+				<div class="vjs-award-slider-wrap wow fadeInUp">
+					<div class="award-slider-one">
+						<div class="item">
+							<div class="vjs-award-item"><img src="vjs_award_excellence_trophy_1776587508170.png" alt=""></div>
+						</div>
+						<div class="item">
+							<div class="vjs-award-item"><img src="images/logo/media_01.png" alt=""></div>
+						</div>
+						<div class="item">
+							<div class="vjs-award-item"><img src="images/logo/media_02.png" alt=""></div>
+						</div>
+						<div class="item">
+							<div class="vjs-award-item"><img src="images/logo/media_03.png" alt=""></div>
+						</div>
+						<div class="item">
+							<div class="vjs-award-item"><img src="vjs_award_excellence_trophy_1776587508170.png" alt=""></div>
+						</div>
+					</div>
+				</div>
 
-		<!-- Modal -->
-        <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-fullscreen modal-dialog-centered">
-                <div class="container">
-                    <div class="user-data-form modal-content">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-						<div class="form-wrapper m-auto">
-							<ul class="nav nav-tabs border-0 w-100" role="tablist">
-								<li class="nav-item" role="presentation">
-									<button class="nav-link active" data-bs-toggle="tab" data-bs-target="#fc1" role="tab">Login</button>
-								</li>
-								<li class="nav-item" role="presentation">
-									<button class="nav-link" data-bs-toggle="tab" data-bs-target="#fc2" role="tab">Signup</button>
-								</li>
-							</ul>
-							<div class="tab-content mt-30">
-								<div class="tab-pane show active" role="tabpanel" id="fc1">
-									<div class="text-center mb-20">
-										<h2>Hi, Welcome Back!</h2>
-										<p>Still don't have an account? <a href="#">Sign up</a></p>
-									</div>
-									<form action="#">
-										<div class="row">
-											<div class="col-12">
-												<div class="input-group-meta position-relative mb-25">
-													<label>Email*</label>
-													<input type="email" placeholder="Youremail@gmail.com">
-												</div>
-											</div>
-											<div class="col-12">
-												<div class="input-group-meta position-relative mb-20">
-													<label>Password*</label>
-													<input type="password" placeholder="Enter Password" class="pass_log_id">
-													<span class="placeholder_icon"><span class="passVicon"><img src="images/icon/icon_13.svg" alt=""></span></span>
-												</div>
-											</div>
-											<div class="col-12">
-												<div class="agreement-checkbox d-flex justify-content-between align-items-center">
-													<div>
-														<input type="checkbox" id="remember">
-														<label for="remember">Keep me logged in</label>
-													</div>
-													<a href="#">Forget Password?</a>
-												</div> <!-- /.agreement-checkbox -->
-											</div>
-											<div class="col-12">
-												<button class="btn-four w-100 tran3s d-block mt-20">Login</button>
-											</div>
-										</div>
-									</form>
-								</div>
-								<!-- /.tab-pane -->
-								<div class="tab-pane" role="tabpanel" id="fc2">
-									<div class="text-center mb-20">
-										<h2>Register</h2>
-										<p>Already have an account? <a href="#">Login</a></p>
-									</div>
-									<form action="#">
-										<div class="row">
-											<div class="col-12">
-												<div class="input-group-meta position-relative mb-25">
-													<label>Name*</label>
-													<input type="text" placeholder="Zubayer Hasan">
-												</div>
-											</div>
-											<div class="col-12">
-												<div class="input-group-meta position-relative mb-25">
-													<label>Email*</label>
-													<input type="email" placeholder="zubayerhasan@gmail.com">
-												</div>
-											</div>
-											<div class="col-12">
-												<div class="input-group-meta position-relative mb-20">
-													<label>Password*</label>
-													<input type="password" placeholder="Enter Password" class="pass_log_id">
-													<span class="placeholder_icon"><span class="passVicon"><img src="images/icon/icon_13.svg" alt=""></span></span>
-												</div>
-											</div>
-											<div class="col-12">
-												<div class="agreement-checkbox d-flex justify-content-between align-items-center">
-													<div>
-														<input type="checkbox" id="remember2">
-														<label for="remember2">By hitting the "Register" button, you agree to the <a href="#">Terms conditions</a> & <a href="#">Privacy Policy</a></label>
-													</div>
-												</div> <!-- /.agreement-checkbox -->
-											</div>
-											<div class="col-12">
-												<button class="btn-four w-100 tran3s d-block mt-20">Sign up</button>
-											</div>
-										</div>
-									</form>
-								</div>
-								<!-- /.tab-pane -->
+				<!-- Award Cards Below -->
+				<div class="row">
+					<div class="col-md-3 col-sm-6 mb-30 wow fadeInUp">
+						<div class="vjs-award-card">
+							<h5>Excellence 2024</h5>
+							<p>Highest industry safety and quality standards recognition.</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 mb-30 wow fadeInUp" data-wow-delay="0.1s">
+						<div class="vjs-award-card">
+							<h5>Innovation Award</h5>
+							<p>Breakthrough solutions in green energy and utilities.</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 mb-30 wow fadeInUp" data-wow-delay="0.2s">
+						<div class="vjs-award-card">
+							<h5>Sustainability Lead</h5>
+							<p>Commemorated for sustainable supply chain practices.</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 mb-30 wow fadeInUp" data-wow-delay="0.3s">
+						<div class="vjs-award-card">
+							<h5>Leadership Gold</h5>
+							<p>Recognized for outstanding corporate governance.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- SECTION 4: SUCCESS STORY -->
+		<section class="vjs-success-section">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-lg-6 wow fadeInLeft">
+						<img src="images/media/img_12.jpg" alt="" class="vjs-success-img">
+					</div>
+					<div class="col-lg-6 wow fadeInRight">
+						<div class="vjs-success-content">
+							<div class="title-one mb-30">
+								<h2>Our Success Story</h2>
 							</div>
-							
-							<div class="d-flex align-items-center mt-30 mb-10">
-								<div class="line"></div>
-								<span class="pe-3 ps-3 fs-6">OR</span>
-								<div class="line"></div>
-							</div>
-							<div class="row">
-								<div class="col-sm-6">
-									<a href="#" class="social-use-btn d-flex align-items-center justify-content-center tran3s w-100 mt-10">
-										<img src="images/icon/google.png" alt="">
-										<span class="ps-3">Signup with Google</span>
-									</a>
-								</div>
-								<div class="col-sm-6">
-									<a href="#" class="social-use-btn d-flex align-items-center justify-content-center tran3s w-100 mt-10">
-										<img src="images/icon/facebook.png" alt="">
-										<span class="ps-3">Signup with Facebook</span>
-									</a>
-								</div>
+							<p class="text-lg text-dark mb-40">From a local enterprise to a diversified global group, our journey has been defined by resilience, innovation, and long-term value creation for our stakeholders.</p>
+							<p class="mb-40">Vijayalakshmi Group started with a single vision: to deliver excellence across boundaries. Today, we are proud to stand at the forefront of the infrastructure, energy, and logistics sectors, driving the economy forward with integrity and a futuristic outlook.</p>
+							<a href="about-us-v1.html" class="btn-five">Read Full Journey</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- SECTION 5: FOOTER -->
+		<footer class="footer-modern">
+			<div class="footer-container">
+				<div class="footer-top d-flex flex-wrap justify-content-between">
+					<div class="footer-brand" style="flex: 1 1 300px;">
+						<div class="footer-logo d-flex align-items-center mb-4">
+							<img src="images/logo/vijayalakshmi-mark.png" alt="" style="width: 50px;">
+							<div class="ms-3">
+								<div style="font-size: 18px; font-weight: 800; color: #08201b; line-height: 1;">Vijayalakshmi Group</div>
+								<div style="font-size: 14px; font-weight: 700; color: #08201b; opacity: 0.6; letter-spacing: 2px;">OF COMPANIES</div>
 							</div>
 						</div>
-						<!-- /.form-wrapper -->
-                    </div>
-                    <!-- /.user-data-form -->
-                </div>
-            </div>
-        </div>
+						<div class="social-icons d-flex gap-2">
+							<a href="#" class="rounded-circle bg-white shadow-sm p-2"><i class="bi bi-facebook"></i></a>
+							<a href="#" class="rounded-circle bg-white shadow-sm p-2"><i class="bi bi-instagram"></i></a>
+							<a href="#" class="rounded-circle bg-white shadow-sm p-2"><i class="bi bi-linkedin"></i></a>
+						</div>
+					</div>
+					<div class="footer-col" style="flex: 1 1 150px;">
+						<h5 class="fw-bold mb-4">About Us</h5>
+						<ul class="list-unstyled opacity-75">
+							<li><a href="about-us-v1.html" class="text-decoration-none text-dark">Company</a></li>
+							<li><a href="service-v1.html" class="text-decoration-none text-dark">Leadership</a></li>
+							<li><a href="service-v1.html" class="text-decoration-none text-dark">Awards</a></li>
+						</ul>
+					</div>
+					<div class="footer-col" style="flex: 1 1 150px;">
+						<h5 class="fw-bold mb-4">Businesses</h5>
+						<ul class="list-unstyled opacity-75">
+							<li>Infrastructure</li>
+							<li>Energy</li>
+							<li>Logistics</li>
+						</ul>
+					</div>
+					<div class="footer-col" style="flex: 1 1 150px;">
+						<h5 class="fw-bold mb-4">Support</h5>
+						<ul class="list-unstyled opacity-75">
+							<li><a href="contact.html" class="text-decoration-none text-dark">Contact Us</a></li>
+							<li>Terms & Conditions</li>
+						</ul>
+					</div>
+				</div>
+				<hr class="my-5 opacity-10">
+				<div class="footer-bottom d-flex justify-content-between flex-wrap">
+					<p class="m-0">© 2025 Vijayalakshmi Group Of Companies</p>
+					<div class="footer-links d-flex gap-4">
+						<a href="#" class="text-decoration-none text-dark opacity-50">Privacy Notice</a>
+						<a href="#" class="text-decoration-none text-dark opacity-50">Cookie Policy</a>
+					</div>
+				</div>
+			</div>
+		</footer>
 
+		<button class="scroll-top"><i class="bi bi-arrow-up-short"></i></button>
 
-		<button class="scroll-top">
-			<i class="bi bi-arrow-up-short"></i>
-		</button>
-
-
-
-
-		<!-- Optional JavaScript _____________________________  -->
-
-		<!-- jQuery first, then Bootstrap JS -->
-		<!-- jQuery -->
+		<!-- JavaScript -->
 		<script src="vendor/jquery.min.js"></script>
-		<!-- Bootstrap JS -->
 		<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-		<!-- WOW js -->
 		<script src="vendor/wow/wow.min.js"></script>
-		<!-- Slick Slider -->
 		<script src="vendor/slick/slick.min.js"></script>
-		<!-- Fancybox -->
-		<script src="vendor/fancybox/dist/jquery.fancybox.min.js"></script>
-		<!-- Lazy -->
 		<script src="vendor/jquery.lazy.min.js"></script>
-		<!-- js Counter -->
-		<script src="vendor/jquery.counterup.min.js"></script>
-		<script src="vendor/jquery.waypoints.min.js"></script>
-		
-		<!-- validator js -->
-		<script src="vendor/validator.js"></script>
-
-		<!-- Theme js -->
 		<script src="js/theme.js"></script>
-		<!-- Navbar Hover Animation -->
-		<script src="js/navbar-hover.js"></script>
-	</div> <!-- /.main-page-wrapper -->
-	<script src="js/site-utils.js"></script>
-	<div id="google_translate_element" style="display:none;"></div>
-	<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+		<script>
+			$(document).ready(function () {
+				if($('.award-slider-one').length) {
+					$('.award-slider-one').slick({
+						dots: false,
+						arrows: false,
+						lazyLoad: 'ondemand',
+						infinite: true,
+						speed: 300,
+						slidesToShow: 4,
+						slidesToScroll: 1,
+						autoplay: true,
+						autoplaySpeed: 2000,
+						responsive: [
+							{ breakpoint: 992, settings: { slidesToShow: 3 } },
+							{ breakpoint: 768, settings: { slidesToShow: 2 } },
+							{ breakpoint: 576, settings: { slidesToShow: 1 } }
+						]
+					});
+				}
+			});
+		</script>
+	</div>
 </body>
-
 </html>
-
-
-
-
