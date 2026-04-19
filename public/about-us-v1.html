@@ -439,25 +439,6 @@
 			background: rgba(28, 161, 97, 0.06);
 			border-radius: 50%;
 			animation: flowUp 15s infinite linear;
-			filter: blur(2px);
-		}
-
-		@keyframes flowUp {
-			0% {
-				transform: translateY(0) rotate(0deg);
-				opacity: 0;
-			}
-
-			10% {
-				opacity: 1;
-			}
-
-			90% {
-				opacity: 1;
-			}
-
-			100% {
-				transform: translateY(-1500px) rotate(360deg);
 				opacity: 0;
 			}
 		}
@@ -567,258 +548,6 @@
 			background: #ffffff !important;
 		}
 
-		.partner-logo-one .logo img {
-			filter: grayscale(1) opacity(0.6);
-			transition: all 0.3s ease;
-		}
-
-		.partner-logo-one .logo img:hover {
-			filter: grayscale(0) opacity(1);
-		}
-
-		/* FLOATING BUBBLES ANIMATION */
-		@keyframes flowUp {
-			0% { transform: translateY(0) rotate(0deg); opacity: 0; }
-			10% { opacity: 1; }
-			90% { opacity: 1; }
-			100% { transform: translateY(-1500px) rotate(360deg); opacity: 0; }
-		}
-
-		.vjs-bubble:nth-child(1) { width: 80px; height: 80px; left: 10%; animation-duration: 20s; animation-delay: 2s; }
-		.vjs-bubble:nth-child(2) { width: 120px; height: 120px; left: 25%; animation-duration: 15s; animation-delay: 0s; }
-		.vjs-bubble:nth-child(3) { width: 50px; height: 50px; left: 45%; animation-duration: 18s; animation-delay: 5s; }
-		.vjs-bubble:nth-child(4) { width: 100px; height: 100px; left: 70%; animation-duration: 22s; animation-delay: 1s; }
-		.vjs-bubble:nth-child(5) { width: 60px; height: 60px; left: 85%; animation-duration: 16s; animation-delay: 8s; }
-		.vjs-bubble:nth-child(6) { width: 90px; height: 90px; left: 15%; animation-duration: 25s; animation-delay: 4s; }
-
-		/* FOOTER MODERN STYLES */
-		.footer-modern {
-			background: linear-gradient(to right, #f5f7f8, #e9eef0);
-			padding: 80px 0 40px;
-			font-family: 'Inter', sans-serif;
-			border-top: 1px solid rgba(0, 0, 0, 0.03);
-			position: relative;
-			z-index: 1;
-		}
-
-		.footer-modern::before {
-			content: "";
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			height: 100px;
-			background: linear-gradient(to bottom, rgba(158, 192, 8, 0.04), transparent);
-			pointer-events: none;
-		}
-
-		.footer-container {
-			max-width: 1200px;
-			margin: auto;
-			padding: 0 20px;
-		}
-
-		.footer-top {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: space-between;
-			gap: 40px;
-		}
-
-		.footer-brand {
-			flex: 1 1 300px;
-		}
-
-		.footer-logo {
-			display: flex;
-			align-items: center;
-			margin-bottom: 25px;
-		}
-
-		.footer-logo img {
-			width: 64px;
-			margin-right: 18px;
-		}
-
-		.footer-logo-text {
-			display: flex;
-			flex-direction: column;
-		}
-
-		.footer-logo-text .text-main {
-			font-size: 18px;
-			font-weight: 800;
-			color: #08201b;
-			letter-spacing: -0.01em;
-			line-height: 1.2;
-			text-transform: uppercase;
-		}
-
-		.footer-logo-text .text-sub {
-			font-size: 14px;
-			font-weight: 700;
-			color: #08201b;
-			opacity: 0.6;
-			letter-spacing: 0.2em;
-			margin-top: 2px;
-		}
-
-		.social-icons {
-			display: flex;
-			gap: 12px;
-			margin-top: 20px;
-		}
-
-		.social-icons a {
-			width: 40px;
-			height: 40px;
-			background: #ffffff;
-			border-radius: 50%;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			color: #08201b;
-			font-size: 17px;
-			transition: all 0.3s ease;
-			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
-		}
-
-		.social-icons a:hover {
-			background: #1ca161;
-			color: #ffffff;
-			transform: translateY(-3px);
-			box-shadow: 0 8px 20px rgba(28, 161, 97, 0.2);
-		}
-
-		.footer-col {
-			flex: 1 1 150px;
-		}
-
-		.footer-col h5 {
-			font-size: 17px;
-			margin-bottom: 25px;
-			font-weight: 700;
-			color: #08201b;
-			position: relative;
-		}
-
-		.footer-col h5::after {
-			content: "";
-			position: absolute;
-			bottom: -8px;
-			left: 0;
-			width: 30px;
-			height: 2px;
-			background: #1ca161;
-			border-radius: 2px;
-		}
-
-		.footer-col ul {
-			list-style: none;
-			padding: 0;
-		}
-
-		.footer-col ul li {
-			margin-bottom: 12px;
-		}
-
-		.footer-col ul li a {
-			text-decoration: none;
-			color: rgba(8, 32, 27, 0.6);
-			font-size: 14px;
-			font-weight: 500;
-			transition: all 0.3s ease;
-		}
-
-		.footer-col ul li a:hover {
-			color: #1ca161;
-			padding-left: 5px;
-		}
-
-		.footer-bottom {
-			border-top: 1px solid rgba(0, 0, 0, 0.06);
-			margin-top: 60px;
-			padding-top: 30px;
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			flex-wrap: wrap;
-			font-size: 14px;
-		}
-
-		.footer-copyright {
-			display: flex;
-			align-items: center;
-			color: rgba(8, 32, 27, 0.8);
-			font-weight: 500;
-		}
-
-		.footer-copyright img {
-			width: 28px;
-			margin-right: 12px;
-		}
-
-		.footer-bottom-links {
-			display: flex;
-			gap: 25px;
-		}
-
-		.footer-bottom-links a {
-			text-decoration: none;
-			color: rgba(8, 32, 27, 0.5);
-			transition: color 0.3s ease;
-		}
-
-		.footer-bottom-links a:hover {
-			color: #1ca161;
-		}
-
-		@media (max-width: 991px) {
-			.footer-top {
-				flex-direction: column;
-				gap: 30px;
-			}
-
-			.footer-bottom {
-				flex-direction: column;
-				gap: 20px;
-				text-align: center;
-			}
-
-			.footer-bottom-links {
-				justify-content: center;
-				gap: 15px;
-			}
-		}
-	</style>
-</head>
-
-<body>
-	<div class="main-page-wrapper">
-		<!-- ===================================================
-				Loading Transition
-			==================================================== -->
-		<div id="preloader">
-			<div id="ctn-preloader" class="ctn-preloader">
-				<div class="icon"><video class="m-auto d-block site-loader-video" autoplay muted loop playsinline
-						webkit-playsinline preload="auto" disablepictureinpicture aria-label="Loading animation">
-						<source src="images/fav-icon/reload.ani.mp4" type="video/mp4">
-					</video></div>
-			</div>
-		</div>
-
-
-		<!-- 
-		=============================================
-				Theme Main Menu
-		============================================== 
-		-->
-		<header class="theme-main-menu menu-overlay menu-style-one white-vr sticky-menu adani-nav-fx">
-			<div class="inner-content position-relative">
-				<div class="top-header">
-					<div class="d-flex align-items-center justify-content-between">
-						<div class="logo" style="flex: 1; display: flex; justify-content: flex-start;">
-							<a href="index-2.html" class="d-flex align-items-center">
 								<span class="site-brand-lockup" aria-label="Vijayalakshmi Group Of Companies">
 									<span class="site-brand-lockup__mark-wrap"><img
 											src="images/logo/vijayalakshmi-mark.png" alt=""
@@ -831,8 +560,7 @@
 							</a>
 						</div>
 						<!-- logo -->
-
-						<nav class="navbar navbar-expand-lg p0" style="flex: 0 0 auto; margin-right: 110px;">
+						<nav class="navbar navbar-expand-lg p0" style="flex: 0 0 auto; margin-right: 60px;">
 							<button class="navbar-toggler d-block d-lg-none" type="button" data-bs-toggle="collapse"
 								data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
 								aria-label="Toggle navigation">
@@ -850,7 +578,7 @@
 															class="site-brand-lockup__mark"></span>
 													<span class="site-brand-lockup__text">
 														<span class="site-brand-lockup__title">Vijayalakshmi
-															Group</span>
+															Groups</span>
 														<span class="site-brand-lockup__subtitle">OF COMPANIES</span>
 													</span>
 												</span>
@@ -863,12 +591,9 @@
 											aria-expanded="false">About Us
 										</a>
 										<ul class="dropdown-menu">
-											<li><a href="about-us-v2.html" class="dropdown-item"><span>Our
-														Group</span></a></li>
-											<li><a href="about-us-v1.html" class="dropdown-item"><span>Our Mission and
-														Vision</span></a></li>
-											<li><a href="service-v1.html" class="dropdown-item"><span>Leadership and
-														Awards</span></a></li>
+											<li><a href="about-us-v2.html" class="dropdown-item"><span>Our Group</span></a></li>
+											<li><a href="about-us-v1.html" class="dropdown-item"><span>Our Mission and Vision</span></a></li>
+											<li><a href="service-v1.html" class="dropdown-item"><span>Leadership and Awards</span></a></li>
 										</ul>
 									</li>
 									<li class="nav-item dropdown">
@@ -878,20 +603,13 @@
 										</a>
 										<ul class="dropdown-menu">
 											<li><a href="index.html" class="dropdown-item"><span>Finance</span></a></li>
-											<li><a href="index-2.html" class="dropdown-item"><span>Business
-														Consultancy</span></a></li>
-											<li><a href="index-3.html" class="dropdown-item"><span>Banking</span></a>
-											</li>
-											<li><a href="index-4.html" class="dropdown-item"><span>Payment
-														Solution</span></a></li>
-											<li><a href="index-5.html" class="dropdown-item"><span>Digital
-														Agency</span></a></li>
-											<li><a href="index-6.html" class="dropdown-item"><span>Marketing</span></a>
-											</li>
-											<li><a href="index-7.html" class="dropdown-item"><span>Insurance</span></a>
-											</li>
-											<li><a href="index-8.html" class="dropdown-item"><span>Insurance
-														Two</span></a></li>
+											<li><a href="index-2.html" class="dropdown-item"><span>Business Consultancy</span></a></li>
+											<li><a href="index-3.html" class="dropdown-item"><span>Banking</span></a></li>
+											<li><a href="index-4.html" class="dropdown-item"><span>Payment Solution</span></a></li>
+											<li><a href="index-5.html" class="dropdown-item"><span>Digital Agency</span></a></li>
+											<li><a href="index-6.html" class="dropdown-item"><span>Marketing</span></a></li>
+											<li><a href="index-7.html" class="dropdown-item"><span>Insurance</span></a></li>
+											<li><a href="index-8.html" class="dropdown-item"><span>Insurance Two</span></a></li>
 										</ul>
 									</li>
 									<li class="nav-item dropdown">
@@ -900,13 +618,10 @@
 											aria-expanded="false">Shop
 										</a>
 										<ul class="dropdown-menu">
-											<li><a href="shop-grid.html" class="dropdown-item"><span>Shop</span></a>
-											</li>
-											<li><a href="shop-details.html" class="dropdown-item"><span>Shop
-														Details</span></a></li>
+											<li><a href="shop-grid.html" class="dropdown-item"><span>Shop Grid</span></a></li>
+											<li><a href="shop-details.html" class="dropdown-item"><span>Shop Details</span></a></li>
 											<li><a href="cart.html" class="dropdown-item"><span>Cart</span></a></li>
-											<li><a href="checkout.html" class="dropdown-item"><span>Checkout</span></a>
-											</li>
+											<li><a href="checkout.html" class="dropdown-item"><span>Checkout</span></a></li>
 										</ul>
 									</li>
 									<li class="nav-item dropdown">
@@ -915,59 +630,18 @@
 											aria-expanded="false">Blog
 										</a>
 										<ul class="dropdown-menu">
-											<li><a href="blog-v1.html" class="dropdown-item"><span>Blog List</span></a>
-											</li>
-											<li><a href="blog-v2.html" class="dropdown-item"><span>Blog Grid</span></a>
-											</li>
-											<li><a href="blog-details.html" class="dropdown-item"><span>Blog
-														Details</span></a></li>
+											<li><a href="blog-v1.html" class="dropdown-item"><span>Blog List</span></a></li>
+											<li><a href="blog-v2.html" class="dropdown-item"><span>Blog Grid</span></a></li>
+											<li><a href="blog-details.html" class="dropdown-item"><span>Blog Details</span></a></li>
 										</ul>
 									</li>
 									<li class="nav-item">
 										<a class="nav-link" href="contact.html" role="button">Contact Us</a>
 									</li>
-									<li class="nav-item dropdown d-md-none mt-10">
-										<a class="nav-link dropdown-toggle d-flex align-items-center" href="#"
-											role="button" data-bs-toggle="dropdown" aria-expanded="false"
-											data-bs-auto-close="outside">
-											<i class="bi bi-universal-access pe-2"></i> Accessibility
-										</a>
-										<div class="dropdown-menu vjs-accessibility-panel border-0">
-											<div class="p-3">
-												<h6 class="mb-2">Adjust Settings</h6>
-												<div class="d-flex gap-2 mb-3">
-													<button class="vjs-adjust-btn w-50 py-1"
-														onclick="vjsSetMode('light')">Light</button>
-													<button class="vjs-adjust-btn w-50 py-1"
-														onclick="vjsSetMode('dark')">Dark</button>
-												</div>
-												<div class="d-flex gap-2">
-													<button class="vjs-adjust-btn w-50 py-1"
-														onclick="vjsSetFontSize('small')">-A</button>
-													<button class="vjs-adjust-btn w-50 py-1"
-														onclick="vjsSetFontSize('large')">+A</button>
-												</div>
-											</div>
-										</div>
-									</li>
-									<li class="nav-item dropdown d-md-none">
-										<a class="nav-link dropdown-toggle d-flex align-items-center" href="#"
-											role="button" data-bs-toggle="dropdown" aria-expanded="false">
-											<span class="vjs-lang-label">ENG</span>
-										</a>
-										<ul class="dropdown-menu">
-											<li><a class="dropdown-item" href="javascript:translateTo('ta')">Tamil</a>
-											</li>
-											<li><a class="dropdown-item" href="javascript:translateTo('en')">English</a>
-											</li>
-											<li><a class="dropdown-item" href="javascript:translateTo('hi')">Hindi</a>
-											</li>
-										</ul>
-									</li>
-
 								</ul>
 							</div>
 						</nav>
+
 
 						<div class="right-widget d-none d-lg-flex align-items-center">
 							<!-- Accessibility Dropdown -->

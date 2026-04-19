@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -323,6 +323,7 @@
 			.hero-slider-one .item {
 				min-height: 700px;
 			}
+
 			.hero-banner-one .hero-heading.hero-heading-glass {
 				max-width: 100%;
 				padding: 18px 20px 22px;
@@ -496,7 +497,8 @@
 			margin: 20px 0;
 		}
 
-		.vjs-adjust-grid, .vjs-font-grid {
+		.vjs-adjust-grid,
+		.vjs-font-grid {
 			display: grid;
 			grid-template-columns: repeat(2, 1fr);
 			gap: 12px;
@@ -609,14 +611,14 @@
 															class="site-brand-lockup__mark"></span>
 													<span class="site-brand-lockup__text">
 														<span class="site-brand-lockup__title">Vijayalakshmi
-															Group</span>
+															Groups</span>
 														<span class="site-brand-lockup__subtitle">OF COMPANIES</span>
 													</span>
 												</span>
 											</a>
 										</div>
 									</li>
-									<li class="nav-item dropdown nav-current">
+									<li class="nav-item dropdown">
 										<a class="nav-link dropdown-toggle" href="#" role="button"
 											data-bs-toggle="dropdown" data-bs-auto-close="outside"
 											aria-expanded="false">About Us
@@ -659,8 +661,8 @@
 											aria-expanded="false">Shop
 										</a>
 										<ul class="dropdown-menu">
-											<li><a href="shop-grid.html" class="dropdown-item"><span>Shop</span></a>
-											</li>
+											<li><a href="shop-grid.html" class="dropdown-item"><span>Shop
+														Grid</span></a></li>
 											<li><a href="shop-details.html" class="dropdown-item"><span>Shop
 														Details</span></a></li>
 											<li><a href="cart.html" class="dropdown-item"><span>Cart</span></a></li>
@@ -685,36 +687,6 @@
 									<li class="nav-item">
 										<a class="nav-link" href="contact.html" role="button">Contact Us</a>
 									</li>
-									<li class="nav-item dropdown d-md-none mt-10">
-										<a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button"
-											data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
-											<i class="bi bi-universal-access pe-2"></i> Accessibility
-										</a>
-										<div class="dropdown-menu vjs-accessibility-panel border-0">
-											<div class="p-3">
-												<h6 class="mb-2">Adjust Settings</h6>
-												<div class="d-flex gap-2 mb-3">
-													<button class="vjs-adjust-btn w-50 py-1" onclick="vjsSetMode('light')">Light</button>
-													<button class="vjs-adjust-btn w-50 py-1" onclick="vjsSetMode('dark')">Dark</button>
-												</div>
-												<div class="d-flex gap-2">
-													<button class="vjs-adjust-btn w-50 py-1" onclick="vjsSetFontSize('small')">-A</button>
-													<button class="vjs-adjust-btn w-50 py-1" onclick="vjsSetFontSize('large')">+A</button>
-												</div>
-											</div>
-										</div>
-									</li>
-									<li class="nav-item dropdown d-md-none">
-										<a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button"
-											data-bs-toggle="dropdown" aria-expanded="false">
-											<span class="vjs-lang-label">ENG</span>
-										</a>
-										<ul class="dropdown-menu">
-											<li><a class="dropdown-item" href="javascript:translateTo('ta')">Tamil</a></li>
-											<li><a class="dropdown-item" href="javascript:translateTo('en')">English</a></li>
-											<li><a class="dropdown-item" href="javascript:translateTo('hi')">Hindi</a></li>
-										</ul>
-									</li>
 								</ul>
 							</div>
 						</nav>
@@ -725,7 +697,8 @@
 								<button class="dropdown-toggle d-flex align-items-center style-none" type="button"
 									data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
 									<i class="bi bi-universal-access fs-5 text-white"></i>
-									<i class="bi bi-chevron-down ms-1 text-white opacity-50" style="font-size: 10px;"></i>
+									<i class="bi bi-chevron-down ms-1 text-white opacity-50"
+										style="font-size: 10px;"></i>
 								</button>
 								<div class="dropdown-menu dropdown-menu-end vjs-accessibility-panel">
 									<h5>Accessibility Adjustments</h5>
@@ -743,7 +716,8 @@
 									</div>
 									<div class="vjs-divider"></div>
 									<div class="text-center">
-										<button class="vjs-reset-btn" onclick="vjsResetSettings()">Reset Settings</button>
+										<button class="vjs-reset-btn" onclick="vjsResetSettings()">Reset
+											Settings</button>
 									</div>
 								</div>
 							</div>
@@ -752,7 +726,8 @@
 								<button class="dropdown-toggle d-flex align-items-center style-none" type="button"
 									data-bs-toggle="dropdown" aria-expanded="false">
 									<span class="text-white fw-500 fs-6 vjs-lang-label">ENG</span>
-									<i class="bi bi-chevron-down ms-1 text-white opacity-50" style="font-size: 10px;"></i>
+									<i class="bi bi-chevron-down ms-1 text-white opacity-50"
+										style="font-size: 10px;"></i>
 								</button>
 								<ul class="dropdown-menu dropdown-menu-end">
 									<li><a class="dropdown-item" href="javascript:translateTo('ta')">Tamil</a></li>
@@ -780,14 +755,17 @@
 					<div class="container position-relative">
 						<div class="row">
 							<div class="col-xl-6 col-lg-7 ms-auto">
-								<h1 class="hero-heading hero-heading-glass d-inline-block position-relative wow fadeInUp">
+								<h1
+									class="hero-heading hero-heading-glass d-inline-block position-relative wow fadeInUp">
 									Smart Business Solutions Partner</h1>
 								<p class="text-xl text-white pt-35 pb-25 wow fadeInUp" data-wow-delay="0.1s">
-									Empowering businesses with innovative strategies, integrated services, and actionable
+									Empowering businesses with innovative strategies, integrated services, and
+									actionable
 									solutions across technology, education, wellness, and global trade.</p>
 								<a href="contact.html" class="btn-two icon-link wow fadeInUp" data-wow-delay="0.2s">
 									<span>Let’s Talk</span>
-									<img src="images/lazy.svg" data-src="images/icon/icon_02.svg" alt="" class="lazy-img icon ms-2">
+									<img src="images/lazy.svg" data-src="images/icon/icon_02.svg" alt=""
+										class="lazy-img icon ms-2">
 								</a>
 							</div>
 						</div>
@@ -798,14 +776,16 @@
 					<div class="container position-relative">
 						<div class="row">
 							<div class="col-xl-6 col-lg-7 ms-auto">
-								<h1 class="hero-heading hero-heading-glass d-inline-block position-relative wow fadeInUp">
+								<h1
+									class="hero-heading hero-heading-glass d-inline-block position-relative wow fadeInUp">
 									Digital Transformation & Innovation</h1>
 								<p class="text-xl text-white pt-35 pb-25 wow fadeInUp" data-wow-delay="0.1s">
-									Driving growth through cutting-edge technology, software development, and 
+									Driving growth through cutting-edge technology, software development, and
 									future-ready digital solutions for modern enterprises.</p>
 								<a href="contact.html" class="btn-two icon-link wow fadeInUp" data-wow-delay="0.2s">
 									<span>Explore Tech</span>
-									<img src="images/lazy.svg" data-src="images/icon/icon_02.svg" alt="" class="lazy-img icon ms-2">
+									<img src="images/lazy.svg" data-src="images/icon/icon_02.svg" alt=""
+										class="lazy-img icon ms-2">
 								</a>
 							</div>
 						</div>
@@ -816,14 +796,16 @@
 					<div class="container position-relative">
 						<div class="row">
 							<div class="col-xl-6 col-lg-7 ms-auto">
-								<h1 class="hero-heading hero-heading-glass d-inline-block position-relative wow fadeInUp">
+								<h1
+									class="hero-heading hero-heading-glass d-inline-block position-relative wow fadeInUp">
 									Global Trade & Export Excellence</h1>
 								<p class="text-xl text-white pt-35 pb-25 wow fadeInUp" data-wow-delay="0.1s">
-									Connecting global markets with premium agricultural products and strategic 
+									Connecting global markets with premium agricultural products and strategic
 									consulting for sustainable business scaling.</p>
 								<a href="contact.html" class="btn-two icon-link wow fadeInUp" data-wow-delay="0.2s">
 									<span>View Products</span>
-									<img src="images/lazy.svg" data-src="images/icon/icon_02.svg" alt="" class="lazy-img icon ms-2">
+									<img src="images/lazy.svg" data-src="images/icon/icon_02.svg" alt=""
+										class="lazy-img icon ms-2">
 								</a>
 							</div>
 						</div>
@@ -922,20 +904,23 @@
 				</div>
 			</div>
 			<!-- /.upper-wrapper -->
-			
+
 			<!-- Leadership Statement Section -->
 			<div class="vjs-leadership-banner">
 				<div class="container">
 					<div class="row align-items-center">
 						<div class="col-lg-5 wow fadeInLeft">
 							<div class="leader-portrait-wrap">
-								<img src="images/media/chairman_portrait.png" alt="Mr. Vijayalakshmi" class="leader-portrait lazy-img">
+								<img src="images/media/chairman_portrait.png" alt="Mr. Vijayalakshmi"
+									class="leader-portrait lazy-img">
 							</div>
 						</div>
 						<div class="col-lg-7 wow fadeInRight">
 							<div class="vjs-quote-wrapper">
 								<div class="vjs-quote-box">
-									<p>"Empowerment is not just about providing technology or services; it's about building an ecosystem where innovation and trust create a legacy of sustainable growth for everyone."</p>
+									<p>"Empowerment is not just about providing technology or services; it's about
+										building an ecosystem where innovation and trust create a legacy of sustainable
+										growth for everyone."</p>
 									<div class="vjs-leader-meta">
 										<h5>Ms. S. Vijayalakshmi</h5>
 										<p>Managing Director of VJS Group</p>
@@ -1117,16 +1102,25 @@
 									<!-- Inner Circle (Official Mark with Divine Glow) -->
 									<div class="inner-circle d-flex align-items-center justify-content-center rounded-circle shadow-lg tran3s"
 										style="width: 170px; height: 170px; background: radial-gradient(circle, rgba(255, 223, 112, 0.45) 0%, rgba(255, 255, 255, 1) 70%); position: relative; z-index: 1; overflow: hidden;">
-										<img src="images/logo/vijayalakshmi-mark.png" alt="VJS Mark" style="width: 110px; height: auto; position: relative; z-index: 2; filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.2));">
+										<img src="images/logo/vijayalakshmi-mark.png" alt="VJS Mark"
+											style="width: 110px; height: auto; position: relative; z-index: 2; filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.2));">
 										<!-- Subtle ray effect -->
-										<div class="divine-rays position-absolute" style="inset: 0; background: conic-gradient(from 0deg, transparent, rgba(255, 215, 0, 0.1), transparent 10deg); animation: rotateRays 20s linear infinite;"></div>
+										<div class="divine-rays position-absolute"
+											style="inset: 0; background: conic-gradient(from 0deg, transparent, rgba(255, 215, 0, 0.1), transparent 10deg); animation: rotateRays 20s linear infinite;">
+										</div>
 									</div>
 
 									<style>
 										@keyframes rotateRays {
-											from { transform: rotate(0deg); }
-											to { transform: rotate(360deg); }
+											from {
+												transform: rotate(0deg);
+											}
+
+											to {
+												transform: rotate(360deg);
+											}
 										}
+
 										.experience-badge-wrapper:hover .outer-circle {
 											transform: rotate(45deg) scale(1.1);
 											opacity: 1;
@@ -1292,7 +1286,7 @@
 					color: #fff;
 					position: relative;
 					transition: 0.3s;
-					border-bottom: 1px solid rgba(255,255,255,0.1);
+					border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 				}
 
 				.sidebar-tab::before {
@@ -1340,645 +1334,663 @@
 				}
 			</style>
 
-		<div class="purpose-section mt-75 lg-mt-50">
-			<div class="purpose-container">
+			<div class="purpose-section mt-75 lg-mt-50">
+				<div class="purpose-container">
 
-				<!-- PANE 1: Sustainability -->
-				<div class="purpose-pane active" style="--bg: url('images/media/sustainability_bg.png')">
-					<div class="pane-indicator"></div>
-					<div class="pane-label">Sustainability</div>
-					<div class="content-wrap">
-						<div class="title">FOR A <br> SUSTAINABLE <br> TOMORROW</div>
-						<div class="csr-card">
-							<h3>100 MILLION TREES PLEDGED</h3>
-							<a href="#">View Environmental Impact →</a>
+					<!-- PANE 1: Sustainability -->
+					<div class="purpose-pane active" style="--bg: url('images/media/sustainability_bg.png')">
+						<div class="pane-indicator"></div>
+						<div class="pane-label">Sustainability</div>
+						<div class="content-wrap">
+							<div class="title">FOR A <br> SUSTAINABLE <br> TOMORROW</div>
+							<div class="csr-card">
+								<h3>100 MILLION TREES PLEDGED</h3>
+								<a href="#">View Environmental Impact →</a>
+							</div>
 						</div>
 					</div>
-				</div>
 
-				<!-- PANE 2: Solutions -->
-				<div class="purpose-pane" style="--bg: url('images/media/img_47.jpg')">
-					<div class="pane-indicator"></div>
-					<div class="pane-label">Solutions</div>
-					<div class="content-wrap">
-						<div class="title">Building Powerful <br> Full-Stack & Mobile Solutions</div>
-						<div class="csr-card">
-							<h3>ENTERPRISE-GRADE SOLUTIONS</h3>
-							<a href="#">Explore Solutions →</a>
+					<!-- PANE 2: Solutions -->
+					<div class="purpose-pane" style="--bg: url('images/media/img_47.jpg')">
+						<div class="pane-indicator"></div>
+						<div class="pane-label">Solutions</div>
+						<div class="content-wrap">
+							<div class="title">Building Powerful <br> Full-Stack & Mobile Solutions</div>
+							<div class="csr-card">
+								<h3>ENTERPRISE-GRADE SOLUTIONS</h3>
+								<a href="#">Explore Solutions →</a>
+							</div>
 						</div>
 					</div>
-				</div>
 
-				<!-- PANE 3: Education -->
-				<div class="purpose-pane" style="--bg: url('images/media/communities_bg.png')">
-					<div class="pane-indicator"></div>
-					<div class="pane-label">Education</div>
-					<div class="content-wrap">
-						<div class="title">Empowering Students <br>With Future-Ready Skills</div>
-						<div class="csr-card">
-							<h3>15,000+ STUDENTS EDUCATED</h3>
-							<a href="#">See Global Impact →</a>
+					<!-- PANE 3: Education -->
+					<div class="purpose-pane" style="--bg: url('images/media/communities_bg.png')">
+						<div class="pane-indicator"></div>
+						<div class="pane-label">Education</div>
+						<div class="content-wrap">
+							<div class="title">Empowering Students <br>With Future-Ready Skills</div>
+							<div class="csr-card">
+								<h3>15,000+ STUDENTS EDUCATED</h3>
+								<a href="#">See Global Impact →</a>
+							</div>
 						</div>
 					</div>
-				</div>
 
-				<!-- PANE 4: Wellness -->
-				<div class="purpose-pane" style="--bg: url('images/media/img_52.jpg')">
-					<div class="pane-indicator"></div>
-					<div class="pane-label">Wellness</div>
-					<div class="content-wrap">
-						<div class="title">Holistic Healing <br> Through Ayurveda & Yoga</div>
-						<div class="csr-card">
-							<h3>5000+ WELLNESS JOURNEYS</h3>
-							<a href="#">Discover Wellness →</a>
+					<!-- PANE 4: Wellness -->
+					<div class="purpose-pane" style="--bg: url('images/media/img_52.jpg')">
+						<div class="pane-indicator"></div>
+						<div class="pane-label">Wellness</div>
+						<div class="content-wrap">
+							<div class="title">Holistic Healing <br> Through Ayurveda & Yoga</div>
+							<div class="csr-card">
+								<h3>5000+ WELLNESS JOURNEYS</h3>
+								<a href="#">Discover Wellness →</a>
+							</div>
 						</div>
 					</div>
+
+					<style>
+						/* Dynamic background images for the panes */
+						.purpose-pane:nth-child(1)::before {
+							background-image: url('images/media/sustainability_bg.png');
+						}
+
+						.purpose-pane:nth-child(2)::before {
+							background-image: url('images/media/img_47.jpg');
+						}
+
+						.purpose-pane:nth-child(3)::before {
+							background-image: url('images/media/communities_bg.png');
+						}
+
+						.purpose-pane:nth-child(4)::before {
+							background-image: url('images/media/img_52.jpg');
+						}
+					</style>
+
 				</div>
 
-				<style>
-					/* Dynamic background images for the panes */
-					.purpose-pane:nth-child(1)::before { background-image: url('images/media/sustainability_bg.png'); }
-					.purpose-pane:nth-child(2)::before { background-image: url('images/media/img_47.jpg'); }
-					.purpose-pane:nth-child(3)::before { background-image: url('images/media/communities_bg.png'); }
-					.purpose-pane:nth-child(4)::before { background-image: url('images/media/img_52.jpg'); }
-				</style>
+				<!-- UPDATED ACCORDION SCRIPT -->
+				<script>
+					document.addEventListener("DOMContentLoaded", function () {
+						const panes = document.querySelectorAll(".purpose-pane");
 
-			</div>
-
-			<!-- UPDATED ACCORDION SCRIPT -->
-			<script>
-				document.addEventListener("DOMContentLoaded", function () {
-					const panes = document.querySelectorAll(".purpose-pane");
-
-					panes.forEach((pane) => {
-						pane.addEventListener("click", () => {
-							panes.forEach(p => p.classList.remove("active"));
-							pane.classList.add("active");
+						panes.forEach((pane) => {
+							pane.addEventListener("click", () => {
+								panes.forEach(p => p.classList.remove("active"));
+								pane.classList.add("active");
+							});
 						});
 					});
-				});
-			</script>
+				</script>
 
-		</div>
-		<!-- /.purpose-section -->
+			</div>
+			<!-- /.purpose-section -->
 
 
-		<!--
+			<!--
 		=====================================================
 			Blog Section One
 		=====================================================
 		-->
-		<div class="blog-section-one position-relative mt-60 lg-mt-40 pt-80 lg-pt-60">
-			<div class="container">
-				<div class="position-relative">
-					<div class="title-one mb-20 lg-mb-10">
-						<h2>Latest News.</h2>
-					</div>
-					<!-- /.title-one -->
-					<p class="text-lg mb-40 lg-mb-10">Get the latest update, trips & tricks from our expert.</p>
-
-					<div class="row gx-xxl-5">
-						<div class="col-md-6">
-							<article class="blog-meta-one mt-35 sm-mt-30 wow fadeInUp">
-								<div class="post-data">
-									<div class="post-info"><span class="fw-500 text-dark">Rashed Ka -</span> 18 Jul 2023
-									</div>
-									<a href="blog-details.html" class="mt-15">
-										<h4 class="tran3s blog-title">Wise Spending Habits, 13 Tips for Maximizing Your
-											Money.</h4>
-									</a>
-								</div>
-								<figure class="post-img position-relative d-flex justify-content-end align-items-end m0"
-									style="background-image: url(images/blog/blog_img_01.jpg);">
-									<a href="blog-details.html"
-										class="round-btn stretched-link rounded-circle d-flex align-items-center justify-content-center tran3s"><i
-											class="bi bi-arrow-up-right"></i></a>
-								</figure>
-							</article>
-							<!-- /.blog-meta-one -->
+			<div class="blog-section-one position-relative mt-60 lg-mt-40 pt-80 lg-pt-60">
+				<div class="container">
+					<div class="position-relative">
+						<div class="title-one mb-20 lg-mb-10">
+							<h2>Latest News.</h2>
 						</div>
-						<div class="col-md-6">
-							<article class="blog-meta-one mt-35 sm-mt-30 wow fadeInUp" data-wow-delay="0.1s">
-								<div class="post-data">
-									<div class="post-info"><span class="fw-500 text-dark">Mark Joe -</span> 09 Feb 2023
-									</div>
-									<a href="blog-details.html" class="mt-15">
-										<h4 class="tran3s blog-title">Lessons from Visionary Leaders for Success in
-											Business.</h4>
-									</a>
-								</div>
-								<figure class="post-img position-relative d-flex justify-content-end align-items-end m0"
-									style="background-image: url(images/blog/blog_img_02.jpg);">
-									<a href="blog-details.html"
-										class="round-btn stretched-link rounded-circle d-flex align-items-center justify-content-center tran3s"><i
-											class="bi bi-arrow-up-right"></i></a>
-								</figure>
-							</article>
-							<!-- /.blog-meta-one -->
-						</div>
-					</div>
+						<!-- /.title-one -->
+						<p class="text-lg mb-40 lg-mb-10">Get the latest update, trips & tricks from our expert.</p>
 
-					<div class="section-btn sm-mt-40">
-						<a href="blog-v2.html" class="btn-five icon-link">
-							<span class="text">See all blogs</span>
-							<div class="icon tran3s rounded-circle d-flex align-items-center justify-content-center"><i
-									class="bi bi-arrow-up-right"></i></div>
-						</a>
+						<div class="row gx-xxl-5">
+							<div class="col-md-6">
+								<article class="blog-meta-one mt-35 sm-mt-30 wow fadeInUp">
+									<div class="post-data">
+										<div class="post-info"><span class="fw-500 text-dark">Rashed Ka -</span> 18 Jul
+											2023
+										</div>
+										<a href="blog-details.html" class="mt-15">
+											<h4 class="tran3s blog-title">Wise Spending Habits, 13 Tips for Maximizing
+												Your
+												Money.</h4>
+										</a>
+									</div>
+									<figure
+										class="post-img position-relative d-flex justify-content-end align-items-end m0"
+										style="background-image: url(images/blog/blog_img_01.jpg);">
+										<a href="blog-details.html"
+											class="round-btn stretched-link rounded-circle d-flex align-items-center justify-content-center tran3s"><i
+												class="bi bi-arrow-up-right"></i></a>
+									</figure>
+								</article>
+								<!-- /.blog-meta-one -->
+							</div>
+							<div class="col-md-6">
+								<article class="blog-meta-one mt-35 sm-mt-30 wow fadeInUp" data-wow-delay="0.1s">
+									<div class="post-data">
+										<div class="post-info"><span class="fw-500 text-dark">Mark Joe -</span> 09 Feb
+											2023
+										</div>
+										<a href="blog-details.html" class="mt-15">
+											<h4 class="tran3s blog-title">Lessons from Visionary Leaders for Success in
+												Business.</h4>
+										</a>
+									</div>
+									<figure
+										class="post-img position-relative d-flex justify-content-end align-items-end m0"
+										style="background-image: url(images/blog/blog_img_02.jpg);">
+										<a href="blog-details.html"
+											class="round-btn stretched-link rounded-circle d-flex align-items-center justify-content-center tran3s"><i
+												class="bi bi-arrow-up-right"></i></a>
+									</figure>
+								</article>
+								<!-- /.blog-meta-one -->
+							</div>
+						</div>
+
+						<div class="section-btn sm-mt-40">
+							<a href="blog-v2.html" class="btn-five icon-link">
+								<span class="text">See all blogs</span>
+								<div
+									class="icon tran3s rounded-circle d-flex align-items-center justify-content-center">
+									<i class="bi bi-arrow-up-right"></i></div>
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<!-- /.blog-section-one -->
+			<!-- /.blog-section-one -->
 
 
-		<!--
+			<!--
 		=====================================================
 			Fancy Banner Two
 		=====================================================
 		-->
-		<div class="fancy-banner-two quote-section mt-150 lg-mt-80 mb-0">
+			<div class="fancy-banner-two quote-section mt-150 lg-mt-80 mb-0">
 
-			<style>
-				.quote-section {
-					background: linear-gradient(135deg, #f8fbfb, #eef7f6);
-					padding: 100px 20px;
-					border-radius: 40px 40px 0 0;
-					position: relative;
-					overflow: hidden;
-					text-align: center;
-					border: 1px solid rgba(198, 255, 77, 0.15);
-					border-bottom: none;
-					box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.03);
-				}
-
-				/* SOFT GLOW */
-				.quote-section::before {
-					content: "";
-					position: absolute;
-					width: 300px;
-					height: 300px;
-					background: rgba(198, 255, 77, 0.25);
-					filter: blur(120px);
-					top: -60px;
-					left: -60px;
-				}
-
-				.quote-container {
-					max-width: 850px;
-					margin: auto;
-					position: relative;
-					z-index: 2;
-				}
-
-				/* QUOTE TEXT */
-				.quote-text {
-					font-size: 26px;
-					line-height: 1.8;
-					color: #0b2f2f;
-					font-weight: 500;
-					margin-bottom: 40px;
-					position: relative;
-					display: inline-block;
-					padding: 0 30px;
-					animation: floatText 4s ease-in-out infinite;
-				}
-
-				/* FLOAT ANIMATION */
-				@keyframes floatText {
-
-					0%,
-					100% {
-						transform: translateY(0);
+				<style>
+					.quote-section {
+						background: linear-gradient(135deg, #f8fbfb, #eef7f6);
+						padding: 100px 20px;
+						border-radius: 40px 40px 0 0;
+						position: relative;
+						overflow: hidden;
+						text-align: center;
+						border: 1px solid rgba(198, 255, 77, 0.15);
+						border-bottom: none;
+						box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.03);
 					}
 
-					50% {
-						transform: translateY(-8px);
-					}
-				}
-
-				/* OPENING QUOTE */
-				.quote-text::before {
-					content: "“";
-					font-size: 55px;
-					position: absolute;
-					left: 0;
-					top: -20px;
-					color: #c6ff4d;
-					opacity: 0.8;
-				}
-
-				/* CLOSING QUOTE */
-				.quote-text::after {
-					content: "”";
-					font-size: 55px;
-					position: absolute;
-					right: 0;
-					bottom: -20px;
-					color: #c6ff4d;
-					opacity: 0.8;
-				}
-
-				/* ✨ SPARKLES */
-				.spark {
-					position: absolute;
-					width: 6px;
-					height: 6px;
-					background: #c6ff4d;
-					border-radius: 50%;
-					box-shadow: 0 0 10px #c6ff4d;
-					animation: sparkle 3s infinite ease-in-out;
-				}
-
-				.spark:nth-child(1) {
-					top: 20%;
-					left: 10%;
-				}
-
-				.spark:nth-child(2) {
-					top: 30%;
-					right: 15%;
-				}
-
-				.spark:nth-child(3) {
-					bottom: 25%;
-					left: 20%;
-				}
-
-				.spark:nth-child(4) {
-					bottom: 20%;
-					right: 10%;
-				}
-
-				@keyframes sparkle {
-
-					0%,
-					100% {
-						transform: scale(0.5);
-						opacity: 0.3;
+					/* SOFT GLOW */
+					.quote-section::before {
+						content: "";
+						position: absolute;
+						width: 300px;
+						height: 300px;
+						background: rgba(198, 255, 77, 0.25);
+						filter: blur(120px);
+						top: -60px;
+						left: -60px;
 					}
 
-					50% {
-						transform: scale(1.5);
-						opacity: 1;
+					.quote-container {
+						max-width: 850px;
+						margin: auto;
+						position: relative;
+						z-index: 2;
 					}
-				}
 
-				/* AUTHOR SECTION */
-				.quote-author {
-					margin-top: 30px;
-					text-align: center;
-				}
-
-				.quote-by {
-					font-size: 13px;
-					color: #888;
-					letter-spacing: 2px;
-					margin-bottom: 8px;
-				}
-
-				.quote-name {
-					font-size: 22px;
-					font-weight: 700;
-					color: #0b2f2f;
-					letter-spacing: 1px;
-				}
-
-				.quote-role {
-					font-size: 14px;
-					color: #555;
-					margin-top: 6px;
-					letter-spacing: 1px;
-				}
-
-				/* DIVIDER */
-				.quote-divider {
-					width: 50px;
-					height: 3px;
-					background: #c6ff4d;
-					margin: 30px auto;
-					border-radius: 10px;
-				}
-
-				@media (max-width: 768px) {
+					/* QUOTE TEXT */
 					.quote-text {
-						font-size: 18px;
+						font-size: 26px;
+						line-height: 1.8;
+						color: #0b2f2f;
+						font-weight: 500;
+						margin-bottom: 40px;
+						position: relative;
+						display: inline-block;
+						padding: 0 30px;
+						animation: floatText 4s ease-in-out infinite;
 					}
-				}
-			</style>
 
-			<!-- SPARK ELEMENTS -->
-			<div class="spark"></div>
-			<div class="spark"></div>
-			<div class="spark"></div>
-			<div class="spark"></div>
+					/* FLOAT ANIMATION */
+					@keyframes floatText {
 
-			<div class="quote-container">
+						0%,
+						100% {
+							transform: translateY(0);
+						}
 
-				<div class="quote-text">
-					Our vision is to build a future where innovation, sustainability, and people
-					come together to create meaningful impact for generations ahead.
-				</div>
+						50% {
+							transform: translateY(-8px);
+						}
+					}
 
-				<div class="quote-divider"></div>
+					/* OPENING QUOTE */
+					.quote-text::before {
+						content: "“";
+						font-size: 55px;
+						position: absolute;
+						left: 0;
+						top: -20px;
+						color: #c6ff4d;
+						opacity: 0.8;
+					}
 
-				<div class="quote-author">
-					<div class="quote-by">BY</div>
-					<div class="quote-name">Ms. S. Vijayalakshmi</div>
-					<div class="quote-role">Managing Director</div>
+					/* CLOSING QUOTE */
+					.quote-text::after {
+						content: "”";
+						font-size: 55px;
+						position: absolute;
+						right: 0;
+						bottom: -20px;
+						color: #c6ff4d;
+						opacity: 0.8;
+					}
+
+					/* ✨ SPARKLES */
+					.spark {
+						position: absolute;
+						width: 6px;
+						height: 6px;
+						background: #c6ff4d;
+						border-radius: 50%;
+						box-shadow: 0 0 10px #c6ff4d;
+						animation: sparkle 3s infinite ease-in-out;
+					}
+
+					.spark:nth-child(1) {
+						top: 20%;
+						left: 10%;
+					}
+
+					.spark:nth-child(2) {
+						top: 30%;
+						right: 15%;
+					}
+
+					.spark:nth-child(3) {
+						bottom: 25%;
+						left: 20%;
+					}
+
+					.spark:nth-child(4) {
+						bottom: 20%;
+						right: 10%;
+					}
+
+					@keyframes sparkle {
+
+						0%,
+						100% {
+							transform: scale(0.5);
+							opacity: 0.3;
+						}
+
+						50% {
+							transform: scale(1.5);
+							opacity: 1;
+						}
+					}
+
+					/* AUTHOR SECTION */
+					.quote-author {
+						margin-top: 30px;
+						text-align: center;
+					}
+
+					.quote-by {
+						font-size: 13px;
+						color: #888;
+						letter-spacing: 2px;
+						margin-bottom: 8px;
+					}
+
+					.quote-name {
+						font-size: 22px;
+						font-weight: 700;
+						color: #0b2f2f;
+						letter-spacing: 1px;
+					}
+
+					.quote-role {
+						font-size: 14px;
+						color: #555;
+						margin-top: 6px;
+						letter-spacing: 1px;
+					}
+
+					/* DIVIDER */
+					.quote-divider {
+						width: 50px;
+						height: 3px;
+						background: #c6ff4d;
+						margin: 30px auto;
+						border-radius: 10px;
+					}
+
+					@media (max-width: 768px) {
+						.quote-text {
+							font-size: 18px;
+						}
+					}
+				</style>
+
+				<!-- SPARK ELEMENTS -->
+				<div class="spark"></div>
+				<div class="spark"></div>
+				<div class="spark"></div>
+				<div class="spark"></div>
+
+				<div class="quote-container">
+
+					<div class="quote-text">
+						Our vision is to build a future where innovation, sustainability, and people
+						come together to create meaningful impact for generations ahead.
+					</div>
+
+					<div class="quote-divider"></div>
+
+					<div class="quote-author">
+						<div class="quote-by">BY</div>
+						<div class="quote-name">Ms. S. Vijayalakshmi</div>
+						<div class="quote-role">Managing Director</div>
+					</div>
+
 				</div>
 
 			</div>
 
-		</div>
 
 
 
-
-		<!--
+			<!--
 		=====================================================
 			Footer One
 		=====================================================
 		-->
-		<div class="footer-modern">
+			<div class="footer-modern">
 
-			<style>
-				.footer-modern {
-					background: linear-gradient(to right, #f5f7f8, #e9eef0);
-					padding: 60px 0 20px;
-					font-family: Arial, sans-serif;
-					border-top: 1px solid rgba(0, 0, 0, 0.03);
-					position: relative;
-					z-index: 1;
-				}
+				<style>
+					.footer-modern {
+						background: linear-gradient(to right, #f5f7f8, #e9eef0);
+						padding: 60px 0 20px;
+						font-family: Arial, sans-serif;
+						border-top: 1px solid rgba(0, 0, 0, 0.03);
+						position: relative;
+						z-index: 1;
+					}
 
-				.footer-modern::before {
-					content: "";
-					position: absolute;
-					top: 0;
-					left: 0;
-					right: 0;
-					height: 100px;
-					background: linear-gradient(to bottom, rgba(198, 255, 77, 0.04), transparent);
-					pointer-events: none;
-				}
+					.footer-modern::before {
+						content: "";
+						position: absolute;
+						top: 0;
+						left: 0;
+						right: 0;
+						height: 100px;
+						background: linear-gradient(to bottom, rgba(198, 255, 77, 0.04), transparent);
+						pointer-events: none;
+					}
 
-				.footer-container {
-					max-width: 1200px;
-					margin: auto;
-					padding: 0 20px;
-				}
+					.footer-container {
+						max-width: 1200px;
+						margin: auto;
+						padding: 0 20px;
+					}
 
-				.footer-top {
-					display: flex;
-					flex-wrap: wrap;
-					justify-content: space-between;
-					gap: 40px;
-				}
-
-				/* LEFT LOGO SECTION */
-				.footer-logo {
-					display: flex;
-					align-items: center;
-					margin-bottom: 25px;
-				}
-
-				.footer-logo img {
-					width: 64px;
-					margin-right: 15px;
-					margin-bottom: 0;
-				}
-
-				.footer-logo-text {
-					display: flex;
-					flex-direction: column;
-				}
-
-				.footer-logo-text .text-main {
-					font-family: Arial, sans-serif;
-					font-size: 20px;
-					font-weight: 700;
-					color: #000;
-					letter-spacing: 0.2px;
-				}
-
-				.footer-logo-text .text-sub {
-					font-family: Arial, sans-serif;
-					font-size: 11px;
-					font-weight: 700;
-					color: #000;
-					letter-spacing: 1.2px;
-					margin-top: 2px;
-				}
-
-				.social-icons a {
-					margin-right: 15px;
-					color: #000;
-					font-size: 16px;
-					transition: 0.3s;
-				}
-
-				.social-icons a:hover {
-					color: #c6ff4d;
-				}
-
-				/* COLUMNS */
-				.footer-col h5 {
-					font-size: 16px;
-					margin-bottom: 15px;
-					font-weight: 600;
-					color: #111;
-				}
-
-				.footer-col ul {
-					list-style: none;
-					padding: 0;
-				}
-
-				.footer-col ul li {
-					margin-bottom: 10px;
-				}
-
-				.footer-col ul li a {
-					text-decoration: none;
-					color: #555;
-					font-size: 14px;
-					transition: 0.3s;
-				}
-
-				.footer-col ul li a:hover {
-					color: #000;
-				}
-
-				/* BOTTOM BAR */
-				.footer-bottom {
-					border-top: 1px solid #ddd;
-					margin-top: 40px;
-					padding-top: 15px;
-					display: flex;
-					justify-content: space-between;
-					align-items: center;
-					flex-wrap: wrap;
-					font-size: 13px;
-					color: #666;
-				}
-
-				.footer-copyright {
-					display: flex;
-					align-items: center;
-					color: #000;
-					font-size: 15px;
-					font-weight: 500;
-				}
-
-				.footer-copyright img {
-					width: 24px;
-					height: auto;
-					margin-right: 10px;
-				}
-
-				.footer-bottom-links a {
-					margin-left: 20px;
-					text-decoration: none;
-					color: #666;
-				}
-
-				.footer-bottom-links a:hover {
-					color: #000;
-				}
-
-				/* RESPONSIVE */
-				@media(max-width:768px) {
 					.footer-top {
+						display: flex;
+						flex-wrap: wrap;
+						justify-content: space-between;
+						gap: 40px;
+					}
+
+					/* LEFT LOGO SECTION */
+					.footer-logo {
+						display: flex;
+						align-items: center;
+						margin-bottom: 25px;
+					}
+
+					.footer-logo img {
+						width: 64px;
+						margin-right: 15px;
+						margin-bottom: 0;
+					}
+
+					.footer-logo-text {
+						display: flex;
 						flex-direction: column;
 					}
 
+					.footer-logo-text .text-main {
+						font-family: Arial, sans-serif;
+						font-size: 20px;
+						font-weight: 700;
+						color: #000;
+						letter-spacing: 0.2px;
+					}
+
+					.footer-logo-text .text-sub {
+						font-family: Arial, sans-serif;
+						font-size: 11px;
+						font-weight: 700;
+						color: #000;
+						letter-spacing: 1.2px;
+						margin-top: 2px;
+					}
+
+					.social-icons a {
+						margin-right: 15px;
+						color: #000;
+						font-size: 16px;
+						transition: 0.3s;
+					}
+
+					.social-icons a:hover {
+						color: #c6ff4d;
+					}
+
+					/* COLUMNS */
+					.footer-col h5 {
+						font-size: 16px;
+						margin-bottom: 15px;
+						font-weight: 600;
+						color: #111;
+					}
+
+					.footer-col ul {
+						list-style: none;
+						padding: 0;
+					}
+
+					.footer-col ul li {
+						margin-bottom: 10px;
+					}
+
+					.footer-col ul li a {
+						text-decoration: none;
+						color: #555;
+						font-size: 14px;
+						transition: 0.3s;
+					}
+
+					.footer-col ul li a:hover {
+						color: #000;
+					}
+
+					/* BOTTOM BAR */
 					.footer-bottom {
-						flex-direction: column;
-						gap: 10px;
-						text-align: center;
+						border-top: 1px solid #ddd;
+						margin-top: 40px;
+						padding-top: 15px;
+						display: flex;
+						justify-content: space-between;
+						align-items: center;
+						flex-wrap: wrap;
+						font-size: 13px;
+						color: #666;
+					}
+
+					.footer-copyright {
+						display: flex;
+						align-items: center;
+						color: #000;
+						font-size: 15px;
+						font-weight: 500;
+					}
+
+					.footer-copyright img {
+						width: 24px;
+						height: auto;
+						margin-right: 10px;
 					}
 
 					.footer-bottom-links a {
-						margin: 0 10px;
+						margin-left: 20px;
+						text-decoration: none;
+						color: #666;
 					}
-				}
-			</style>
 
-			<div class="footer-container">
+					.footer-bottom-links a:hover {
+						color: #000;
+					}
 
-				<!-- TOP SECTION -->
-				<div class="footer-top">
+					/* RESPONSIVE */
+					@media(max-width:768px) {
+						.footer-top {
+							flex-direction: column;
+						}
 
-					<!-- LOGO + SOCIAL -->
-					<div class="footer-brand">
-						<div class="footer-logo">
-							<img src="images/logo/vijayalakshmi-mark.png" alt="Logo Mark">
-							<div class="footer-logo-text">
-								<div class="text-main">Vijayalakshmi Group</div>
-								<div class="text-sub">OF COMPANIES</div>
+						.footer-bottom {
+							flex-direction: column;
+							gap: 10px;
+							text-align: center;
+						}
+
+						.footer-bottom-links a {
+							margin: 0 10px;
+						}
+					}
+				</style>
+
+				<div class="footer-container">
+
+					<!-- TOP SECTION -->
+					<div class="footer-top">
+
+						<!-- LOGO + SOCIAL -->
+						<div class="footer-brand">
+							<div class="footer-logo">
+								<img src="images/logo/vijayalakshmi-mark.png" alt="Logo Mark">
+								<div class="footer-logo-text">
+									<div class="text-main">Vijayalakshmi Group</div>
+									<div class="text-sub">OF COMPANIES</div>
+								</div>
+							</div>
+
+							<div class="social-icons">
+								<a href="#"><i class="bi bi-facebook"></i></a>
+								<a href="#"><i class="bi bi-instagram"></i></a>
+								<a href="#"><i class="bi bi-youtube"></i></a>
+								<a href="#"><i class="bi bi-linkedin"></i></a>
+								<a href="#"><i class="bi bi-twitter-x"></i></a>
 							</div>
 						</div>
 
-						<div class="social-icons">
-							<a href="#"><i class="bi bi-facebook"></i></a>
-							<a href="#"><i class="bi bi-instagram"></i></a>
-							<a href="#"><i class="bi bi-youtube"></i></a>
-							<a href="#"><i class="bi bi-linkedin"></i></a>
-							<a href="#"><i class="bi bi-twitter-x"></i></a>
+						<!-- ABOUT -->
+						<div class="footer-col">
+							<h5>About Us</h5>
+							<ul>
+								<li><a href="#">About Company</a></li>
+								<li><a href="#">Chairman’s Office</a></li>
+								<li><a href="#">Leadership</a></li>
+								<li><a href="#">Our Journey</a></li>
+								<li><a href="#">Awards</a></li>
+							</ul>
+						</div>
+
+						<!-- BUSINESSES -->
+						<div class="footer-col">
+							<h5>Businesses</h5>
+							<ul>
+								<li><a href="#">Infrastructure</a></li>
+								<li><a href="#">Energy & Utilities</a></li>
+								<li><a href="#">Transport & Logistics</a></li>
+								<li><a href="#">Consumer Products</a></li>
+								<li><a href="#">Real Estate</a></li>
+							</ul>
+						</div>
+
+						<!-- RIGHT LINKS -->
+						<div class="footer-col">
+							<h5>Quick Links</h5>
+							<ul>
+								<li><a href="#">Sustainability</a></li>
+								<li><a href="#">Investors</a></li>
+								<li><a href="#">Newsroom</a></li>
+								<li><a href="#">Careers</a></li>
+								<li><a href="#">Contact Us</a></li>
+							</ul>
+						</div>
+
+					</div>
+
+					<!-- BOTTOM -->
+					<div class="footer-bottom">
+						<div class="footer-copyright">
+							<img src="images/logo/vijayalakshmi-mark.png" alt="Logo">
+							© 2025 Vijayalakshmi Group Of Companies
+						</div>
+
+						<div class="footer-bottom-links">
+							<a href="#">Legal Disclaimer</a>
+							<a href="#">Privacy Notice</a>
+							<a href="#">Terms & Conditions</a>
+							<a href="#">Cookie Policy</a>
 						</div>
 					</div>
 
-					<!-- ABOUT -->
-					<div class="footer-col">
-						<h5>About Us</h5>
-						<ul>
-							<li><a href="#">About Company</a></li>
-							<li><a href="#">Chairman’s Office</a></li>
-							<li><a href="#">Leadership</a></li>
-							<li><a href="#">Our Journey</a></li>
-							<li><a href="#">Awards</a></li>
-						</ul>
-					</div>
-
-					<!-- BUSINESSES -->
-					<div class="footer-col">
-						<h5>Businesses</h5>
-						<ul>
-							<li><a href="#">Infrastructure</a></li>
-							<li><a href="#">Energy & Utilities</a></li>
-							<li><a href="#">Transport & Logistics</a></li>
-							<li><a href="#">Consumer Products</a></li>
-							<li><a href="#">Real Estate</a></li>
-						</ul>
-					</div>
-
-					<!-- RIGHT LINKS -->
-					<div class="footer-col">
-						<h5>Quick Links</h5>
-						<ul>
-							<li><a href="#">Sustainability</a></li>
-							<li><a href="#">Investors</a></li>
-							<li><a href="#">Newsroom</a></li>
-							<li><a href="#">Careers</a></li>
-							<li><a href="#">Contact Us</a></li>
-						</ul>
-					</div>
-
-				</div>
-
-				<!-- BOTTOM -->
-				<div class="footer-bottom">
-					<div class="footer-copyright">
-						<img src="images/logo/vijayalakshmi-mark.png" alt="Logo">
-						© 2025 Vijayalakshmi Group Of Companies
-					</div>
-
-					<div class="footer-bottom-links">
-						<a href="#">Legal Disclaimer</a>
-						<a href="#">Privacy Notice</a>
-						<a href="#">Terms & Conditions</a>
-						<a href="#">Cookie Policy</a>
-					</div>
 				</div>
 
 			</div>
 
-		</div>
 
 
+			<!-- Optional JavaScript _____________________________  -->
 
-		<!-- Optional JavaScript _____________________________  -->
+			<!-- jQuery first, then Bootstrap JS -->
+			<!-- jQuery -->
+			<script src="vendor/jquery.min.js"></script>
+			<!-- Bootstrap JS -->
+			<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+			<!-- WOW js -->
+			<script src="vendor/wow/wow.min.js"></script>
+			<!-- Slick Slider -->
+			<script src="vendor/slick/slick.min.js"></script>
+			<!-- Fancybox -->
+			<script src="vendor/fancybox/dist/jquery.fancybox.min.js"></script>
+			<!-- Lazy -->
+			<script src="vendor/jquery.lazy.min.js"></script>
+			<!-- js Counter -->
+			<script src="vendor/jquery.counterup.min.js"></script>
+			<script src="vendor/jquery.waypoints.min.js"></script>
 
-		<!-- jQuery first, then Bootstrap JS -->
-		<!-- jQuery -->
-		<script src="vendor/jquery.min.js"></script>
-		<!-- Bootstrap JS -->
-		<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-		<!-- WOW js -->
-		<script src="vendor/wow/wow.min.js"></script>
-		<!-- Slick Slider -->
-		<script src="vendor/slick/slick.min.js"></script>
-		<!-- Fancybox -->
-		<script src="vendor/fancybox/dist/jquery.fancybox.min.js"></script>
-		<!-- Lazy -->
-		<script src="vendor/jquery.lazy.min.js"></script>
-		<!-- js Counter -->
-		<script src="vendor/jquery.counterup.min.js"></script>
-		<script src="vendor/jquery.waypoints.min.js"></script>
+			<!-- validator js -->
+			<script src="vendor/validator.js"></script>
 
-		<!-- validator js -->
-		<script src="vendor/validator.js"></script>
-
-		<!-- Theme js -->
-		<script src="js/theme.js"></script>
-		<!-- Navbar Hover Animation -->
-		<script src="js/navbar-hover.js"></script>
-	</div> <!-- /.main-page-wrapper -->
-	<!-- Vijayalakshmi Group Site Utils -->
-	<script src="js/site-utils.js"></script>
-	<!-- Google Translate Element -->
-	<div id="google_translate_element" style="display:none;"></div>
-	<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+			<!-- Theme js -->
+			<script src="js/theme.js"></script>
+			<!-- Navbar Hover Animation -->
+			<script src="js/navbar-hover.js"></script>
+		</div> <!-- /.main-page-wrapper -->
+		<!-- Vijayalakshmi Group Site Utils -->
+		<script src="js/site-utils.js"></script>
+		<!-- Google Translate Element -->
+		<div id="google_translate_element" style="display:none;"></div>
+		<script type="text/javascript"
+			src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 
 </html>
