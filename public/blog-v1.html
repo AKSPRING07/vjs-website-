@@ -283,7 +283,7 @@
 			left: 0;
 			width: 100%;
 			height: 100%;
-			background: linear-gradient(to right, rgba(0,0,0,0.65), rgba(0,0,0,0.2));
+			background: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.2));
 		}
 
 		/* THE WOW FACTOR - Premium Prism Glass Heading */
@@ -291,15 +291,15 @@
 			position: relative;
 			padding: 40px 60px;
 			border-radius: 35px 35px 35px 10px;
-			background: linear-gradient(135deg, 
-				rgba(255, 255, 255, 0.18) 0%, 
-				rgba(255, 255, 255, 0.05) 100%);
+			background: linear-gradient(135deg,
+					rgba(255, 255, 255, 0.18) 0%,
+					rgba(255, 255, 255, 0.05) 100%);
 			backdrop-filter: blur(25px) saturate(180%);
 			-webkit-backdrop-filter: blur(25px) saturate(180%);
 			border: 1.5px solid rgba(255, 255, 255, 0.25);
 			border-top: 2px solid rgba(255, 255, 255, 0.4);
 			border-left: 2px solid rgba(255, 255, 255, 0.4);
-			
+
 			color: #fff;
 			font-size: min(64px, 11vw);
 			line-height: 1.1;
@@ -308,12 +308,12 @@
 			width: fit-content;
 			max-width: 950px !important;
 			letter-spacing: -1px;
-			
-			text-shadow: 0 10px 30px rgba(0,0,0,0.3);
-			box-shadow: 
+
+			text-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+			box-shadow:
 				0 25px 50px -12px rgba(0, 0, 0, 0.5),
 				inset 0 0 20px rgba(255, 255, 255, 0.1);
-				
+
 			animation: premiumReveal 1.4s cubic-bezier(0.16, 1, 0.3, 1);
 		}
 
@@ -330,17 +330,37 @@
 		}
 
 		@keyframes premiumReveal {
-			0% { opacity: 0; transform: translateY(40px) scale(0.95) rotate(-1deg); filter: blur(10px); }
-			100% { opacity: 1; transform: translateY(0) scale(1) rotate(0); filter: blur(0); }
+			0% {
+				opacity: 0;
+				transform: translateY(40px) scale(0.95) rotate(-1deg);
+				filter: blur(10px);
+			}
+
+			100% {
+				opacity: 1;
+				transform: translateY(0) scale(1) rotate(0);
+				filter: blur(0);
+			}
 		}
 
 		@media (max-width: 991px) {
-			.hero-banner-one .item { min-height: 600px; padding: 180px 0 100px; }
+			.hero-banner-one .item {
+				min-height: 600px;
+				padding: 180px 0 100px;
+			}
 		}
 
 		@media (max-width: 767px) {
-			.hero-heading-glass { font-size: 34px; padding: 25px 30px; max-width: 100% !important; }
-			.hero-banner-one .item { padding: 150px 0 80px; min-height: 500px; }
+			.hero-heading-glass {
+				font-size: 34px;
+				padding: 25px 30px;
+				max-width: 100% !important;
+			}
+
+			.hero-banner-one .item {
+				padding: 150px 0 80px;
+				min-height: 500px;
+			}
 		}
 
 		/* ANIMATION */
@@ -355,7 +375,6 @@
 				transform: translateY(0);
 			}
 		}
-
 	</style>
 </head>
 
@@ -560,7 +579,8 @@
 					<div class="container position-relative">
 						<div class="row">
 							<div class="col-xl-7 col-lg-8">
-								<h1 class="hero-heading hero-heading-glass d-inline-block position-relative wow fadeInUp">
+								<h1
+									class="hero-heading hero-heading-glass d-inline-block position-relative wow fadeInUp">
 									Empowering the Next Generation</h1>
 							</div>
 						</div>
@@ -572,7 +592,8 @@
 					<div class="container position-relative">
 						<div class="row">
 							<div class="col-xl-7 col-lg-8">
-								<h1 class="hero-heading hero-heading-glass d-inline-block position-relative wow fadeInUp">
+								<h1
+									class="hero-heading hero-heading-glass d-inline-block position-relative wow fadeInUp">
 									A Healthy Tomorrow for All</h1>
 							</div>
 						</div>
@@ -584,7 +605,8 @@
 					<div class="container position-relative">
 						<div class="row">
 							<div class="col-xl-7 col-lg-8">
-								<h1 class="hero-heading hero-heading-glass d-inline-block position-relative wow fadeInUp">
+								<h1
+									class="hero-heading hero-heading-glass d-inline-block position-relative wow fadeInUp">
 									Protecting Our Environment</h1>
 							</div>
 						</div>
@@ -596,7 +618,8 @@
 					<div class="container position-relative">
 						<div class="row">
 							<div class="col-xl-7 col-lg-8">
-								<h1 class="hero-heading hero-heading-glass d-inline-block position-relative wow fadeInUp">
+								<h1
+									class="hero-heading hero-heading-glass d-inline-block position-relative wow fadeInUp">
 									Skills & Independence for All</h1>
 							</div>
 						</div>
@@ -608,7 +631,8 @@
 					<div class="container position-relative">
 						<div class="row">
 							<div class="col-xl-7 col-lg-8">
-								<h1 class="hero-heading hero-heading-glass d-inline-block position-relative wow fadeInUp">
+								<h1
+									class="hero-heading hero-heading-glass d-inline-block position-relative wow fadeInUp">
 									Helping People, Changing Lives</h1>
 							</div>
 						</div>
@@ -624,20 +648,34 @@
 			Quote Section (Second Section)
 		=====================================================
 		-->
-		<div class="quote-section-one pt-120 pb-120" style="background: #fdfdfd; border-top: 1px solid #eee; border-bottom: 1px solid #eee;">
+		<div class="quote-section-one pt-120 pb-120"
+			style="background: #fdfdfd; border-top: 1px solid #eee; border-bottom: 1px solid #eee;">
 			<div class="container">
 				<div class="row">
 					<div class="col-xl-10 m-auto">
-						<div class="blog-meta-four text-center wow fadeInUp" style="background: linear-gradient(135deg, #092c23 0%, #081c17 100%); padding: 80px 40px; border-radius: 40px; border: 2px solid rgba(158, 192, 8, 0.3); box-shadow: 0 40px 100px rgba(0,0,0,0.5), inset 0 0 30px rgba(158, 192, 8, 0.1);">
+						<div class="blog-meta-four text-center wow fadeInUp"
+							style="background: linear-gradient(135deg, #092c23 0%, #081c17 100%); padding: 80px 40px; border-radius: 40px; border: 2px solid rgba(158, 192, 8, 0.3); box-shadow: 0 40px 100px rgba(0,0,0,0.5), inset 0 0 30px rgba(158, 192, 8, 0.1);">
 							<div class="post-data">
-								<div class="icon rounded-circle d-flex align-items-center justify-content-center m-auto mb-40" style="background: #9ec008; width: 90px; height: 90px; box-shadow: 0 0 30px rgba(158, 192, 8, 0.4);">
-									<img src="images/icon/icon_93.svg" alt="" style="width: 45px; filter: brightness(0);">
+								<div class="icon rounded-circle d-flex align-items-center justify-content-center m-auto mb-40"
+									style="background: #9ec008; width: 90px; height: 90px; box-shadow: 0 0 30px rgba(158, 192, 8, 0.4);">
+									<img src="images/icon/icon_93.svg" alt=""
+										style="width: 45px; filter: brightness(0);">
 								</div>
-								<h2 class="text-white fw-500 mb-50" style="font-size: 42px; line-height: 1.4; letter-spacing: -0.5px; text-shadow: 0 4px 10px rgba(0,0,0,0.3);">"Budget your desires, investing knowledge, & let compound interest build your future."</h2>
+								<h2 class="text-white fw-500 mb-50"
+									style="font-size: 42px; line-height: 1.4; letter-spacing: -0.5px; text-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+									"Budget your desires, investing knowledge, & let compound interest build your
+									future."</h2>
 								<div class="d-flex align-items-center justify-content-center">
-									<div style="height: 1px; width: 50px; background: rgba(255,255,255,0.2); margin-right: 20px;"></div>
-									<h6 class="post-info text-white m0" style="font-size: 19px; letter-spacing: 1.5px; text-transform: uppercase;">James Bond. <span style="color: #9ec008; font-weight: 700; margin-left: 10px;">Founder Agro</span></h6>
-									<div style="height: 1px; width: 50px; background: rgba(255,255,255,0.2); margin-left: 20px;"></div>
+									<div
+										style="height: 1px; width: 50px; background: rgba(255,255,255,0.2); margin-right: 20px;">
+									</div>
+									<h6 class="post-info text-white m0"
+										style="font-size: 19px; letter-spacing: 1.5px; text-transform: uppercase;">James
+										Bond. <span style="color: #9ec008; font-weight: 700; margin-left: 10px;">Founder
+											Agro</span></h6>
+									<div
+										style="height: 1px; width: 50px; background: rgba(255,255,255,0.2); margin-left: 20px;">
+									</div>
 								</div>
 							</div>
 						</div>
@@ -652,138 +690,191 @@
 			At A Glance Section
 		=====================================================
 		-->
-		<div class="at-a-glance-section mb-150 lg-mb-80">
+		<div class="at-a-glance-section pt-150 pb-150 lg-pt-80 lg-pb-80"
+			style="background: #fdfdfb; position: relative; overflow: hidden;">
+			<!-- Background Decorative Shape -->
+			<div
+				style="position: absolute; top: -100px; right: -100px; width: 400px; height: 400px; background: rgba(158, 192, 8, 0.05); border-radius: 50%; blur: 80px;">
+			</div>
+
 			<div class="container">
-				<div class="title-style-one mb-60 lg-mb-40">
-					<h2 class="main-title text-uppercase fw-800" style="font-size: 38px; color: #333; letter-spacing: 1px;">At a Glance</h2>
+				<div class="title-style-one mb-80 lg-mb-40 text-center">
+					<h2 class="main-title text-uppercase fw-800"
+						style="font-size: 42px; color: #081c17; letter-spacing: 2px;">At a Glance</h2>
+					<div class="m-auto"
+						style="height: 4px; width: 80px; background: #9ec008; margin-top: 20px !important;"></div>
 				</div>
 
 				<div class="row gx-xl-5 gy-5">
 					<!-- Card 1: Education -->
 					<div class="col-lg-4 col-md-6 wow fadeInUp">
-						<div class="glance-card">
-							<div class="img-box mb-25" style="aspect-ratio: 16/9; overflow: hidden; border-radius: 4px;">
-								<img src="images/media/glance_education.png" alt="Education" class="w-100 h-100" style="object-fit: cover;">
+						<div class="glance-card-premium"
+							style="background: #fff; border-radius: 24px; overflow: hidden; height: 100%; transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1); border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 15px 35px rgba(0,0,0,0.06);">
+							<div class="img-box" style="aspect-ratio: 16/10; overflow: hidden; position: relative;">
+								<img src="images/media/glance_education.png" alt="Education" class="w-100 h-100 tran4s"
+									style="object-fit: cover;">
+								<div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 4px; background: #9ec008; transform: scaleX(0); transition: transform 0.5s ease; transform-origin: left;"
+									class="accent-bar"></div>
 							</div>
-							<p class="fs-18 opacity-75" style="line-height: 1.6; color: #555;">29+ years of empowering communities across 22 states.</p>
+							<div class="p-4 pt-30 pb-40 px-xl-5">
+								<h5 class="fw-bold mb-15"
+									style="color: #081c17; font-size: 24px; letter-spacing: -0.5px;">Education</h5>
+								<p class="m0" style="line-height: 1.7; color: #666; font-size: 17px;">29+ years of
+									empowering communities across 22 states with literacy and knowledge.</p>
+							</div>
 						</div>
 					</div>
 
 					<!-- Card 2: Skilling -->
 					<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-						<div class="glance-card">
-							<div class="img-box mb-25" style="aspect-ratio: 16/9; overflow: hidden; border-radius: 4px;">
-								<img src="images/media/glance_skilling.png" alt="Skilling" class="w-100 h-100" style="object-fit: cover;">
+						<div class="glance-card-premium"
+							style="background: #fff; border-radius: 24px; overflow: hidden; height: 100%; transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1); border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 15px 35px rgba(0,0,0,0.06);">
+							<div class="img-box" style="aspect-ratio: 16/10; overflow: hidden; position: relative;">
+								<img src="images/media/glance_skilling.png" alt="Skilling" class="w-100 h-100 tran4s"
+									style="object-fit: cover;">
+								<div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 4px; background: #9ec008; transform: scaleX(0); transition: transform 0.5s ease; transform-origin: left;"
+									class="accent-bar"></div>
 							</div>
-							<p class="fs-18 opacity-75" style="line-height: 1.6; color: #555;">More than 1.86 lakh people trained under Vijayalakshmi SAKSHAM.</p>
+							<div class="p-4 pt-30 pb-40 px-xl-5">
+								<h5 class="fw-bold mb-15"
+									style="color: #081c17; font-size: 24px; letter-spacing: -0.5px;">Skilling</h5>
+								<p class="m0" style="line-height: 1.7; color: #666; font-size: 17px;">More than 1.86
+									lakh people trained under the Vijayalakshmi SAKSHAM initiative.</p>
+							</div>
 						</div>
 					</div>
 
 					<!-- Card 3: Empowerment -->
 					<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-						<div class="glance-card">
-							<div class="img-box mb-25" style="aspect-ratio: 16/9; overflow: hidden; border-radius: 4px;">
-								<img src="images/media/glance_empowerment.png" alt="Empowerment" class="w-100 h-100" style="object-fit: cover;">
+						<div class="glance-card-premium"
+							style="background: #fff; border-radius: 24px; overflow: hidden; height: 100%; transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1); border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 15px 35px rgba(0,0,0,0.06);">
+							<div class="img-box" style="aspect-ratio: 16/10; overflow: hidden; position: relative;">
+								<img src="images/media/glance_empowerment.png" alt="Empowerment"
+									class="w-100 h-100 tran4s" style="object-fit: cover;">
+								<div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 4px; background: #9ec008; transform: scaleX(0); transition: transform 0.5s ease; transform-origin: left;"
+									class="accent-bar"></div>
 							</div>
-							<p class="fs-18 opacity-75" style="line-height: 1.6; color: #555;">Exponentially empowered over 2 million girls and women across India through education, skilling and entrepreneurship.</p>
+							<div class="p-4 pt-30 pb-40 px-xl-5">
+								<h5 class="fw-bold mb-15"
+									style="color: #081c17; font-size: 24px; letter-spacing: -0.5px;">Empowerment</h5>
+								<p class="m0" style="line-height: 1.7; color: #666; font-size: 17px;">Exponentially
+									empowered over 2 million girls and women across India through skilling.</p>
+							</div>
 						</div>
 					</div>
 
 					<!-- Card 4: Healthcare -->
 					<div class="col-lg-4 col-md-6 wow fadeInUp">
-						<div class="glance-card">
-							<div class="img-box mb-25" style="aspect-ratio: 16/9; overflow: hidden; border-radius: 4px;">
-								<img src="images/media/glance_healthcare.png" alt="Healthcare" class="w-100 h-100" style="object-fit: cover;">
+						<div class="glance-card-premium"
+							style="background: #fff; border-radius: 24px; overflow: hidden; height: 100%; transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1); border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 15px 35px rgba(0,0,0,0.06);">
+							<div class="img-box" style="aspect-ratio: 16/10; overflow: hidden; position: relative;">
+								<img src="images/media/glance_healthcare.png" alt="Healthcare"
+									class="w-100 h-100 tran4s" style="object-fit: cover;">
+								<div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 4px; background: #9ec008; transform: scaleX(0); transition: transform 0.5s ease; transform-origin: left;"
+									class="accent-bar"></div>
 							</div>
-							<p class="fs-18 opacity-75" style="line-height: 1.6; color: #555;">Reached over 1,500 villages with accessible healthcare through mobile medical units.</p>
+							<div class="p-4 pt-30 pb-40 px-xl-5">
+								<h5 class="fw-bold mb-15"
+									style="color: #081c17; font-size: 24px; letter-spacing: -0.5px;">Healthcare</h5>
+								<p class="m0" style="line-height: 1.7; color: #666; font-size: 17px;">Reached 1,500+
+									remote villages with quality mobile medical healthcare units.</p>
+							</div>
 						</div>
 					</div>
 
 					<!-- Card 5: Environment -->
 					<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-						<div class="glance-card">
-							<div class="img-box mb-25" style="aspect-ratio: 16/9; overflow: hidden; border-radius: 4px;">
-								<img src="images/media/glance_environment.png" alt="Environment" class="w-100 h-100" style="object-fit: cover;">
+						<div class="glance-card-premium"
+							style="background: #fff; border-radius: 24px; overflow: hidden; height: 100%; transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1); border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 15px 35px rgba(0,0,0,0.06);">
+							<div class="img-box" style="aspect-ratio: 16/10; overflow: hidden; position: relative;">
+								<img src="images/media/glance_environment.png" alt="Environment"
+									class="w-100 h-100 tran4s" style="object-fit: cover;">
+								<div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 4px; background: #9ec008; transform: scaleX(0); transition: transform 0.5s ease; transform-origin: left;"
+									class="accent-bar"></div>
 							</div>
-							<p class="fs-18 opacity-75" style="line-height: 1.6; color: #555;">Pioneering sustainability with 5 million+ trees planted and significant water restoration.</p>
+							<div class="p-4 pt-30 pb-40 px-xl-5">
+								<h5 class="fw-bold mb-15"
+									style="color: #081c17; font-size: 24px; letter-spacing: -0.5px;">Environment</h5>
+								<p class="m0" style="line-height: 1.7; color: #666; font-size: 17px;">5 million+ trees
+									planted and sustainable water bodies restored across the nation.</p>
+							</div>
 						</div>
 					</div>
 
 					<!-- Card 6: Sports -->
 					<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-						<div class="glance-card">
-							<div class="img-box mb-25" style="aspect-ratio: 16/9; overflow: hidden; border-radius: 4px;">
-								<img src="images/media/glance_sports.png" alt="Sports" class="w-100 h-100" style="object-fit: cover;">
+						<div class="glance-card-premium"
+							style="background: #fff; border-radius: 24px; overflow: hidden; height: 100%; transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1); border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 15px 35px rgba(0,0,0,0.06);">
+							<div class="img-box" style="aspect-ratio: 16/10; overflow: hidden; position: relative;">
+								<img src="images/media/glance_sports.png" alt="Sports" class="w-100 h-100 tran4s"
+									style="object-fit: cover;">
+								<div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 4px; background: #9ec008; transform: scaleX(0); transition: transform 0.5s ease; transform-origin: left;"
+									class="accent-bar"></div>
 							</div>
-							<p class="fs-18 opacity-75" style="line-height: 1.6; color: #555;">Nurturing global-standard athletes through our grassroots sports excellence programs.</p>
+							<div class="p-4 pt-30 pb-40 px-xl-5">
+								<h5 class="fw-bold mb-15"
+									style="color: #081c17; font-size: 24px; letter-spacing: -0.5px;">Sports</h5>
+								<p class="m0" style="line-height: 1.7; color: #666; font-size: 17px;">Nurturing
+									promising grassroots athletes through professional sports development.</p>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+
+			<!-- Add Custom CSS for Hover Effect -->
+			<style>
+				.glance-card-premium:hover {
+					transform: translateY(-12px);
+					box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12) !important;
+					border-color: rgba(158, 192, 8, 0.2) !important;
+				}
+
+				.glance-card-premium:hover .accent-bar {
+					transform: scaleX(1) !important;
+				}
+
+				.glance-card-premium:hover img {
+					transform: scale(1.08);
+				}
+			</style>
 		</div>
 		<!-- /.at-a-glance-section -->
 
 
 
 
-		<!--
-		=====================================================
-			Fancy Banner Three
-		=====================================================
-		-->
-		<div class="fancy-banner-three position-relative wow fadeInUp">
+		<div class="foundation-visit-section pb-100 lg-pb-50">
 			<div class="container">
-				<div class="row align-content-center">
-					<div class="col-lg-8 col-md-9">
-						<div class="title-one mb-20 lg-mb-10">
-							<h2 class="text-white">Want to Chat? Feel free to Contact our Team.</h2>
+				<div class="fancy-banner-three position-relative wow fadeInUp" style="background: url(images/media/foundation_visit_bg.png) no-repeat center center; background-size: cover; padding: 100px 0; border-radius: 30px; overflow: hidden; box-shadow: 0 40px 80px rgba(0,0,0,0.15);">
+					<!-- Dark Bottom-Heavy Gradient Overlay -->
+					<div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.8) 100%);"></div>
+					
+					<div class="container position-relative" style="z-index: 1;">
+						<div class="row">
+							<div class="col-12 text-center">
+								<h4 class="text-white fw-500 mb-30" style="font-size: 24px; letter-spacing: 0.5px;">To Know More About Vijayalakshmi Foundation</h4>
+								<a href="#" class="btn-visit-website d-inline-block" style="padding: 12px 45px; border: 1.5px solid #fff; color: #fff; border-radius: 8px; font-weight: 600; text-decoration: none; transition: all 0.3s ease; font-size: 18px;">Visit Website</a>
+							</div>
 						</div>
-						<!-- /.title-one -->
-						<p class="text-lg m0 text-white opacity-75">If you have anything in mind just contact us with
-							our expert.</p>
-					</div>
-					<div class="col-lg-4 col-md-3">
-						<a href="contact.html"
-							class="quote-btn color-two tran5s rounded-circle d-flex align-items-center justify-content-center ms-auto">
-							<img src="images/lazy.svg" data-src="images/icon/icon_30.svg" alt="" class="lazy-img">
-						</a>
 					</div>
 				</div>
 			</div>
+			
+			<style>
+				.btn-visit-website:hover {
+					background: #fff;
+					color: #08201b !important;
+					transform: translateY(-3px);
+					box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+				}
+			</style>
 		</div>
 		<!-- /.fancy-banner-three -->
 
 
 
 
-		<!--
-		=====================================================
-			Newsletter Banner
-		=====================================================
-		-->
-		<div class="newsletter-banner">
-			<div class="container">
-				<div class="main-wrapper bottom-border">
-					<div class="row">
-						<div class="col-lg-6">
-							<h2 class="fw-bold">Our Newsletter.</h2>
-							<p class="text-lg md-pb-20">Get instant news by subscribe to our daily newsletter</p>
-						</div>
-						<div class="col-lg-6">
-							<form action="#" class="me-auto ms-auto me-lg-0">
-								<div class="d-flex align-items-center justify-content-between">
-									<input type="email" placeholder="Enter your email address">
-									<button class="rounded-circle tran3s"><i class="bi bi-arrow-right"></i></button>
-								</div>
-								<p class="text-center text-lg-end m0 pt-5">Already subscribed? <a href="#"
-										class="text-dark fw-500">Unsubscribe</a></p>
-							</form>
-						</div>
-					</div>
-				</div>
-				<!-- /.main-wrapper -->
-			</div>
-		</div>
 
 
 		<!--
@@ -995,35 +1086,35 @@
 
 		<!-- jQuery first, then Bootstrap JS -->
 		<!-- jQuery -->
-	<script src="vendor/jquery.min.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-	<script src="vendor/wow/wow.min.js"></script>
-	<script src="vendor/slick/slick.min.js"></script>
-	<script src="vendor/fancybox/dist/jquery.fancybox.min.js"></script>
-	<script src="vendor/jquery.lazy.min.js"></script>
-	<script src="vendor/jquery.counterup.min.js"></script>
-	<script src="vendor/jquery.waypoints.min.js"></script>
-	<script src="vendor/validator.js"></script>
-	<script src="js/theme.js"></script>
-	<script src="js/navbar-hover.js"></script>
-	<script src="js/site-utils.js"></script>
+		<script src="vendor/jquery.min.js"></script>
+		<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="vendor/wow/wow.min.js"></script>
+		<script src="vendor/slick/slick.min.js"></script>
+		<script src="vendor/fancybox/dist/jquery.fancybox.min.js"></script>
+		<script src="vendor/jquery.lazy.min.js"></script>
+		<script src="vendor/jquery.counterup.min.js"></script>
+		<script src="vendor/jquery.waypoints.min.js"></script>
+		<script src="vendor/validator.js"></script>
+		<script src="js/theme.js"></script>
+		<script src="js/navbar-hover.js"></script>
+		<script src="js/site-utils.js"></script>
 
-	<script>
-		$(document).ready(function() {
-			if ($(".hero-slider-one").length) {
-				$(".hero-slider-one").slick({
-					dots: false,
-					arrows: false,
-					fade: true,
-					infinite: true,
-					autoplay: true,
-					autoplaySpeed: 5000,
-					pauseOnHover: false,
-					speed: 1500
-				});
-			}
-		});
-	</script>
+		<script>
+			$(document).ready(function () {
+				if ($(".hero-slider-one").length) {
+					$(".hero-slider-one").slick({
+						dots: false,
+						arrows: false,
+						fade: true,
+						infinite: true,
+						autoplay: true,
+						autoplaySpeed: 5000,
+						pauseOnHover: false,
+						speed: 1500
+					});
+				}
+			});
+		</script>
 	</div> <!-- /.main-page-wrapper -->
 	<div id="google_translate_element" style="display:none;"></div>
 	<script type="text/javascript"
