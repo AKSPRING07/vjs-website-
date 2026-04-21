@@ -179,39 +179,210 @@
 				</div> <!-- /.inner-content -->
 		</header>
 
+		<style>
+			.custom-header-highlight {
+				background: #ffffff;
+				color: #081c17;
+				padding: 12px 30px;
+				border-radius: 8px;
+				display: inline-block;
+				box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+				font-weight: 800;
+				font-size: 48px;
+			}
+
+			.vjs-asset-card {
+				background: #fff;
+				border-radius: 4px;
+				overflow: hidden;
+				margin-bottom: 30px;
+				transition: all 0.3s ease;
+			}
+
+			.vjs-asset-img-box {
+				height: 250px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding: 20px;
+			}
+
+			.vjs-asset-label {
+				padding: 15px 0 5px;
+				font-weight: 600;
+				color: #333;
+				font-size: 16px;
+			}
+
+			.vjs-download-link {
+				color: #8a2be2;
+				/* Adani-style purple link */
+				text-decoration: underline;
+				font-weight: 600;
+				font-size: 14px;
+			}
+
+			.vjs-category-tab {
+				color: #08201b;
+				border-bottom: 3px solid #08201b;
+				padding-bottom: 5px;
+				font-weight: 700;
+			}
+		</style>
+
 		<div class="inner-banner-one pt-225 lg-pt-200 md-pt-150 pb-100 md-pb-70 position-relative"
-			style="background-image: url(images/media/img_32.jpg);">
+			style="background-image: url(images/media/contact_banner_bg.png);">
 			<div class="container position-relative">
 				<div class="row align-items-center">
 					<div class="col-lg-6">
-						<h1 class="hero-heading d-inline-block position-relative">Media Kit<img
-								src="images/shape/shape_34.svg" alt=""></h1>
+						<h1 class="custom-header-highlight">Media Kit</h1>
 					</div>
-					<div class="col-xl-4 col-lg-5 ms-auto">
-						<ul class="style-none d-inline-flex pager">
-							<li><a href="index.html">Home</a></li>
-							<li>/</li>
-							<li>Media Kit</li>
+					<div class="col-xl-4 col-lg-5 ms-auto text-lg-end">
+						<ul class="style-none d-inline-flex pager"
+							style="background: rgba(0,0,0,0.4); padding: 8px 20px; border-radius: 30px; backdrop-filter: blur(5px);">
+							<li><a href="index-2.html" class="text-white">Home</a></li>
+							<li class="text-white mx-2">/</li>
+							<li class="text-white">Media Kit</li>
 						</ul>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<div class="blog-section-six position-relative mt-150 lg-mt-80 mb-150 lg-mb-80">
+		<div class="media-kit-content-section pt-100 pb-150 lg-pt-80 lg-pb-100">
 			<div class="container">
+				<div class="d-flex justify-content-between align-items-center mb-60 border-bottom pb-20">
+					<h2 class="fw-bold m-0" style="color: #08201b; font-size: 32px; letter-spacing: 1px;">MEDIA KIT</h2>
+					<div class="vjs-category-tab">Brand Identity</div>
+				</div>
+
 				<div class="row">
-					<div class="col-12 text-center">
-						<h2>Resources Coming Soon</h2>
-						<p class="text-lg mt-30">Our official brand assets and media resources will be available here
-							soon.</p>
+					<!-- Card 1: White on Black -->
+					<div class="col-lg-4 col-md-6">
+						<div class="vjs-asset-card">
+							<div class="vjs-asset-img-box" style="background: #111;">
+								<img src="images/logo/vijayalakshmi-logo.svg" alt="White on Black"
+									style="width: 200px; filter: brightness(0) invert(1);">
+							</div>
+							<div class="vjs-asset-label">Vijayalakshmi Group Logo (white on black)</div>
+							<a href="#" class="vjs-download-link">Download</a>
+						</div>
+					</div>
+
+					<!-- Card 2: Colour Gradient -->
+					<div class="col-lg-4 col-md-6">
+						<div class="vjs-asset-card">
+							<div class="vjs-asset-img-box" style="background: #f8f8f8; border: 1px solid #eee;">
+								<img src="images/logo/vijayalakshmi-logo.svg" alt="Main Logo" style="width: 200px;">
+							</div>
+							<div class="vjs-asset-label">Vijayalakshmi Group Logo (corporate)</div>
+							<a href="#" class="vjs-download-link">Download</a>
+						</div>
+					</div>
+
+					<!-- Card 3: Brand Unit -->
+					<div class="col-lg-4 col-md-6">
+						<div class="vjs-asset-card">
+							<div class="vjs-asset-img-box" style="background: #fff; border: 1px solid #eee;">
+								<div class="d-flex align-items-center">
+									<img src="images/logo/vijayalakshmi-mark.png" alt="" style="width: 50px;">
+									<div class="ms-3 border-start ps-3">
+										<div
+											style="font-size: 14px; font-weight: 700; color: #081c17; line-height: 1.2;">
+											Vijayalakshmi Group</div>
+										<div
+											style="font-size: 10px; color: #666; font-weight: 400; font-family: sans-serif;">
+											Growth with Goodness</div>
+									</div>
+								</div>
+							</div>
+							<div class="vjs-asset-label">Vijayalakshmi Group Logo (brand unit)</div>
+							<a href="#" class="vjs-download-link">Download</a>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<footer class="footer-modern">
-			<!-- Footer will be synced here or is already static -->
+		<footer class="footer-modern" style="background: #f4f6f6; padding-top: 40px; font-family: sans-serif;">
+			<div class="container">
+				<div class="footer-top row pb-30">
+					<!-- Brand Column (Moved Left) -->
+					<div class="col-lg-3 col-md-12 mb-25">
+						<div class="footer-logo d-flex align-items-center mb-25">
+							<img src="images/logo/vijayalakshmi-mark.png" alt="" style="width: 50px; filter: invert(21%) sepia(100%) saturate(2371%) hue-rotate(345deg) brightness(94%) contrast(94%);">
+							<div class="ms-3">
+								<div style="font-size: 18px; font-weight: 800; color: #111; line-height: 1; text-transform: uppercase;">Vijayalakshmi Group</div>
+								<div style="font-size: 10px; color: #666; letter-spacing: 1.1px; text-transform: uppercase; margin-top: 3px; font-weight: 600;">Of Companies</div>
+							</div>
+						</div>
+						<div class="social-icons d-flex gap-3">
+							<a href="#" class="rounded-circle bg-white shadow-sm d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; color: #000; font-size: 14px;"><i class="bi bi-facebook"></i></a>
+							<a href="#" class="rounded-circle bg-white shadow-sm d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; color: #000; font-size: 14px;"><i class="bi bi-instagram"></i></a>
+							<a href="#" class="rounded-circle bg-white shadow-sm d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; color: #000; font-size: 14px;"><i class="bi bi-youtube"></i></a>
+							<a href="#" class="rounded-circle bg-white shadow-sm d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; color: #000; font-size: 14px;"><i class="bi bi-linkedin"></i></a>
+						</div>
+					</div>
+
+					<!-- About Us Column (Moved Left) -->
+					<div class="col-lg-2 col-md-4 col-6">
+						<div class="mb-20">
+							<h5 class="fw-bold mb-8" style="color: #111; font-size: 15px;">About Us</h5>
+							<div style="width: 25px; height: 2px; background: #28a745;"></div>
+						</div>
+						<ul class="list-unstyled">
+							<li class="mb-8"><a href="about-us-v1.html" class="text-decoration-none" style="color: #666; font-size: 13px;">About Company</a></li>
+							<li class="mb-8"><a href="#" class="text-decoration-none" style="color: #666; font-size: 13px;">Chairman's Office</a></li>
+							<li class="mb-8"><a href="service-v1.html" class="text-decoration-none" style="color: #666; font-size: 13px;">Leadership</a></li>
+							<li class="mb-8"><a href="about-us-v1.html" class="text-decoration-none" style="color: #666; font-size: 13px;">Our Journey</a></li>
+							<li class="mb-8"><a href="service-v1.html" class="text-decoration-none" style="color: #666; font-size: 13px;">Awards</a></li>
+						</ul>
+					</div>
+
+					<!-- Businesses Column (Moved Left) -->
+					<div class="col-lg-3 col-md-4 col-6">
+						<div class="mb-20">
+							<h5 class="fw-bold mb-8" style="color: #111; font-size: 15px;">Businesses</h5>
+							<div style="width: 25px; height: 2px; background: #28a745;"></div>
+						</div>
+						<ul class="list-unstyled">
+							<li class="mb-8"><a href="#" class="text-decoration-none" style="color: #666; font-size: 13px;">Infrastructure</a></li>
+							<li class="mb-8"><a href="#" class="text-decoration-none" style="color: #666; font-size: 13px;">Energy & Utilities</a></li>
+							<li class="mb-8"><a href="#" class="text-decoration-none" style="color: #666; font-size: 13px;">Transport & Logistics</a></li>
+							<li class="mb-8"><a href="#" class="text-decoration-none" style="color: #666; font-size: 13px;">Consumer Products</a></li>
+							<li class="mb-8"><a href="#" class="text-decoration-none" style="color: #666; font-size: 13px;">Real Estate</a></li>
+						</ul>
+					</div>
+
+					<!-- Quick Links Column (Terminal Right) -->
+					<div class="col-lg-4 col-md-4 col-6">
+						<div class="mb-20">
+							<h5 class="fw-bold mb-8" style="color: #111; font-size: 15px;">Quick Links</h5>
+							<div style="width: 25px; height: 2px; background: #28a745;"></div>
+						</div>
+						<ul class="list-unstyled">
+							<li class="mb-8"><a href="#" class="text-decoration-none" style="color: #666; font-size: 13px;">Sustainability</a></li>
+							<li class="mb-8"><a href="#" class="text-decoration-none" style="color: #666; font-size: 13px;">Investors</a></li>
+							<li class="mb-8"><a href="media-release.html" class="text-decoration-none" style="color: #666; font-size: 13px;">Newsroom</a></li>
+							<li class="mb-8"><a href="#" class="text-decoration-none" style="color: #666; font-size: 13px;">Careers</a></li>
+							<li class="mb-8"><a href="contact.html" class="text-decoration-none" style="color: #666; font-size: 13px;">Contact Us</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="footer-bottom d-flex justify-content-between align-items-center flex-wrap pt-15 pb-15 border-top mt-10">
+					<div class="d-flex align-items-center">
+						<img src="images/logo/vijayalakshmi-mark.png" alt="" style="width: 25px; margin-right: 12px; filter: invert(21%) sepia(100%) saturate(2371%) hue-rotate(345deg) brightness(94%) contrast(94%);">
+						<p class="m-0" style="font-size: 12px; font-weight: 500; color: #333;">© 2025 Vijayalakshmi Group Of Companies</p>
+					</div>
+					<div class="footer-links d-flex gap-3">
+						<a href="#" class="text-decoration-none" style="color: #777; font-size: 11px;">Legal Disclaimer</a>
+						<a href="#" class="text-decoration-none" style="color: #777; font-size: 11px;">Privacy Notice</a>
+						<a href="#" class="text-decoration-none" style="color: #777; font-size: 11px;">Terms & Conditions</a>
+						<a href="#" class="text-decoration-none" style="color: #777; font-size: 11px;">Cookie Policy</a>
+					</div>
+				</div>
+			</div>
 		</footer>
 	</div>
 

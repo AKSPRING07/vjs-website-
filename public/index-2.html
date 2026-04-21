@@ -671,7 +671,8 @@
 										</ul>
 									</li>
 									<li class="nav-item">
-										<a class="nav-link" href="blog-v1.html" role="button">Vijayalakshmi Foundation</a>
+										<a class="nav-link" href="blog-v1.html" role="button">Vijayalakshmi
+											Foundation</a>
 									</li>
 									<li class="nav-item dropdown">
 										<a class="nav-link dropdown-toggle" href="#" role="button"
@@ -679,8 +680,10 @@
 											aria-expanded="false">Newsroom
 										</a>
 										<ul class="dropdown-menu">
-											<li><a href="media-release.html" class="dropdown-item"><span>Media Release</span></a></li>
-											<li><a href="media-kit.html" class="dropdown-item"><span>Media Kit</span></a></li>
+											<li><a href="media-release.html" class="dropdown-item"><span>Media
+														Release</span></a></li>
+											<li><a href="media-kit.html" class="dropdown-item"><span>Media
+														Kit</span></a></li>
 										</ul>
 									</li>
 								</ul>
@@ -1489,7 +1492,8 @@
 								<span class="text">See all blogs</span>
 								<div
 									class="icon tran3s rounded-circle d-flex align-items-center justify-content-center">
-									<i class="bi bi-arrow-up-right"></i></div>
+									<i class="bi bi-arrow-up-right"></i>
+								</div>
 							</a>
 						</div>
 					</div>
@@ -1706,99 +1710,123 @@
 			Footer One
 		=====================================================
 		-->
-			<div class="footer-modern">
+			<div class="footer-mini">
 
 				<style>
-					.footer-modern {
-						background: linear-gradient(to right, #f5f7f8, #e9eef0);
-						padding: 60px 0 20px;
-						font-family: Arial, sans-serif;
-						border-top: 1px solid rgba(0, 0, 0, 0.03);
-						position: relative;
-						z-index: 1;
+					/* RESET (removes unwanted gaps) */
+					* {
+						box-sizing: border-box;
 					}
 
-					.footer-modern::before {
-						content: "";
-						position: absolute;
-						top: 0;
-						left: 0;
-						right: 0;
-						height: 100px;
-						background: linear-gradient(to bottom, rgba(198, 255, 77, 0.04), transparent);
-						pointer-events: none;
+					html,
+					body {
+						margin: 0;
+						padding: 0;
 					}
 
+					/* FULL WIDTH FOOTER */
+					.footer-mini {
+						width: 100%;
+						background: #f5f7f8;
+						border-top: 1px solid #e5e7ea;
+					}
+
+					/* INNER CONTAINER */
 					.footer-container {
 						max-width: 1200px;
-						margin: auto;
-						padding: 0 20px;
+						margin: 0 auto;
+						padding: 90px 40px 35px;
+						/* 🔥 pushes content downward */
+						font-family: "Helvetica Neue", Arial, sans-serif;
 					}
 
+					/* TOP SECTION */
 					.footer-top {
 						display: flex;
-						flex-wrap: wrap;
 						justify-content: space-between;
-						gap: 40px;
+						align-items: flex-start;
+						gap: 60px;
+						margin-top: 10px;
 					}
 
-					/* LEFT LOGO SECTION */
-					.footer-logo {
+					/* LOGO & BRAND POSITIONING */
+					.footer-brand {
+						margin-top: 65px;
+						/* 🔥 Move further down */
+						margin-left: 35px;
+						/* 🔥 Move slightly back to the left */
+					}
+
+					.footer-logo-group {
 						display: flex;
+						flex-direction: row;
+						/* 🔥 Back to side-by-side */
 						align-items: center;
+						padding-right: 20px;
+						gap: 12px;
 						margin-bottom: 25px;
 					}
 
-					.footer-logo img {
-						width: 64px;
-						margin-right: 15px;
-						margin-bottom: 0;
+					.footer-logo-group img {
+						height: 46px;
+						width: auto;
 					}
 
 					.footer-logo-text {
 						display: flex;
 						flex-direction: column;
+						line-height: 1.1;
 					}
 
-					.footer-logo-text .text-main {
-						font-family: Arial, sans-serif;
-						font-size: 20px;
-						font-weight: 700;
-						color: #000;
-						letter-spacing: 0.2px;
-					}
-
-					.footer-logo-text .text-sub {
-						font-family: Arial, sans-serif;
-						font-size: 11px;
-						font-weight: 700;
-						color: #000;
-						letter-spacing: 1.2px;
-						margin-top: 2px;
-					}
-
-					.social-icons a {
-						margin-right: 15px;
-						color: #000;
+					.footer-logo-text span:first-child {
 						font-size: 16px;
+						font-weight: 700;
+						color: #000;
+						letter-spacing: 0.5px;
+						text-transform: uppercase;
+					}
+
+					.footer-logo-text span:last-child {
+						font-size: 10px;
+						font-weight: 600;
+						color: #666;
+						letter-spacing: 1.5px;
+					}
+
+					.social-icons-mini {
+						display: inline-flex;
+						/* 🔥 Borders only span icon area */
+						gap: 14px;
+						margin-top: -10px;
+						/* 🔥 Move closer to text */
+						margin-left: 58px;
+						padding: 4px 0;
+						border-top: 1px solid #7030a0;
+						border-bottom: 1px solid #7030a0;
+					}
+
+					.social-icons-mini a {
+						color: #000;
+						font-size: 14px;
 						transition: 0.3s;
 					}
 
-					.social-icons a:hover {
-						color: #c6ff4d;
+					.social-icons-mini a:hover {
+						opacity: 0.6;
 					}
 
 					/* COLUMNS */
 					.footer-col h5 {
-						font-size: 16px;
-						margin-bottom: 15px;
+						font-size: 14px;
 						font-weight: 600;
-						color: #111;
+						margin-bottom: 16px;
+						color: #000;
 					}
 
 					.footer-col ul {
 						list-style: none;
 						padding: 0;
+						margin: 0;
 					}
 
 					.footer-col ul li {
@@ -1807,8 +1835,8 @@
 
 					.footer-col ul li a {
 						text-decoration: none;
-						color: #555;
-						font-size: 14px;
+						font-size: 12px;
+						color: #666;
 						transition: 0.3s;
 					}
 
@@ -1816,35 +1844,43 @@
 						color: #000;
 					}
 
+					/* RIGHT SIDE LINKS */
+					.footer-right {
+						display: flex;
+						flex-direction: column;
+						gap: 12px;
+					}
+
+					.footer-right a {
+						text-decoration: none;
+						font-size: 13px;
+						font-weight: 500;
+						color: #000;
+					}
+
 					/* BOTTOM BAR */
 					.footer-bottom {
-						border-top: 1px solid #ddd;
-						margin-top: 40px;
-						padding-top: 15px;
+						border-top: 1px solid #e5e7ea;
+						margin-top: 50px;
+						/* 🔥 spacing like Adani */
+						padding-top: 20px;
 						display: flex;
 						justify-content: space-between;
 						align-items: center;
-						flex-wrap: wrap;
-						font-size: 13px;
+						font-size: 12px;
 						color: #666;
 					}
 
-					.footer-copyright {
+					.footer-bottom-links {
 						display: flex;
-						align-items: center;
-						color: #000;
-						font-size: 15px;
-						font-weight: 500;
-					}
-
-					.footer-copyright img {
-						width: 24px;
-						height: auto;
-						margin-right: 10px;
+						gap: 25px;
+						margin-left: auto;
+						/* 🔥 pushes links to the right */
+						padding-left: 500px;
+						/* 🔥 adds small right offset */
 					}
 
 					.footer-bottom-links a {
-						margin-left: 20px;
 						text-decoration: none;
 						color: #666;
 					}
@@ -1857,41 +1893,37 @@
 					@media(max-width:768px) {
 						.footer-top {
 							flex-direction: column;
+							gap: 30px;
 						}
 
 						.footer-bottom {
 							flex-direction: column;
-							gap: 10px;
 							text-align: center;
-						}
-
-						.footer-bottom-links a {
-							margin: 0 10px;
+							gap: 10px;
 						}
 					}
 				</style>
 
+
 				<div class="footer-container">
 
-					<!-- TOP SECTION -->
 					<div class="footer-top">
 
-						<!-- LOGO + SOCIAL -->
+						<!-- LOGO & BRAND -->
 						<div class="footer-brand">
-							<div class="footer-logo">
+							<div class="footer-logo-group">
 								<img src="images/logo/vijayalakshmi-mark.png" alt="Logo Mark">
 								<div class="footer-logo-text">
-									<div class="text-main">Vijayalakshmi Group</div>
-									<div class="text-sub">OF COMPANIES</div>
+									<span>Vijayalakshmi Group</span>
+									<span>OF COMPANIES</span>
 								</div>
 							</div>
 
-							<div class="social-icons">
+							<div class="social-icons-mini">
 								<a href="#"><i class="bi bi-facebook"></i></a>
 								<a href="#"><i class="bi bi-instagram"></i></a>
 								<a href="#"><i class="bi bi-youtube"></i></a>
 								<a href="#"><i class="bi bi-linkedin"></i></a>
-								<a href="#"><i class="bi bi-twitter-x"></i></a>
 							</div>
 						</div>
 
@@ -1907,7 +1939,7 @@
 							</ul>
 						</div>
 
-						<!-- BUSINESSES -->
+						<!-- BUSINESS -->
 						<div class="footer-col">
 							<h5>Businesses</h5>
 							<ul>
@@ -1919,7 +1951,7 @@
 							</ul>
 						</div>
 
-						<!-- RIGHT LINKS -->
+						<!-- QUICK LINKS -->
 						<div class="footer-col">
 							<h5>Quick Links</h5>
 							<ul>
@@ -1931,62 +1963,60 @@
 							</ul>
 						</div>
 
-					</div>
 
-					<!-- BOTTOM -->
-					<div class="footer-bottom">
-						<div class="footer-copyright">
-							<img src="images/logo/vijayalakshmi-mark.png" alt="Logo">
-							© 2025 Vijayalakshmi Group Of Companies
+						<!-- BOTTOM -->
+						<div class="footer-bottom">
+							<div style="display: flex; align-items: center; gap: 8px;">
+								<img src="images/logo/vijayalakshmi-mark.png" alt="Mark" style="height: 20px; width: auto;">
+								<span>© 2025 Vijayalakshmi Group</span>
+							</div>
+
+
+							<div class="footer-bottom-links">
+								<a href="#">Legal Disclaimer</a>
+								<a href="#">Privacy Notice</a>
+								<a href="#">Terms & Conditions</a>
+								<a href="#">Cookie Policy</a>
+							</div>
 						</div>
 
-						<div class="footer-bottom-links">
-							<a href="#">Legal Disclaimer</a>
-							<a href="#">Privacy Notice</a>
-							<a href="#">Terms & Conditions</a>
-							<a href="#">Cookie Policy</a>
-						</div>
 					</div>
-
 				</div>
 
-			</div>
 
+				<!-- Optional JavaScript _____________________________  -->
 
+				<!-- jQuery first, then Bootstrap JS -->
+				<!-- jQuery -->
+				<script src="vendor/jquery.min.js"></script>
+				<!-- Bootstrap JS -->
+				<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+				<!-- WOW js -->
+				<script src="vendor/wow/wow.min.js"></script>
+				<!-- Slick Slider -->
+				<script src="vendor/slick/slick.min.js"></script>
+				<!-- Fancybox -->
+				<script src="vendor/fancybox/dist/jquery.fancybox.min.js"></script>
+				<!-- Lazy -->
+				<script src="vendor/jquery.lazy.min.js"></script>
+				<!-- js Counter -->
+				<script src="vendor/jquery.counterup.min.js"></script>
+				<script src="vendor/jquery.waypoints.min.js"></script>
 
-			<!-- Optional JavaScript _____________________________  -->
+				<!-- validator js -->
+				<script src="vendor/validator.js"></script>
 
-			<!-- jQuery first, then Bootstrap JS -->
-			<!-- jQuery -->
-			<script src="vendor/jquery.min.js"></script>
-			<!-- Bootstrap JS -->
-			<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-			<!-- WOW js -->
-			<script src="vendor/wow/wow.min.js"></script>
-			<!-- Slick Slider -->
-			<script src="vendor/slick/slick.min.js"></script>
-			<!-- Fancybox -->
-			<script src="vendor/fancybox/dist/jquery.fancybox.min.js"></script>
-			<!-- Lazy -->
-			<script src="vendor/jquery.lazy.min.js"></script>
-			<!-- js Counter -->
-			<script src="vendor/jquery.counterup.min.js"></script>
-			<script src="vendor/jquery.waypoints.min.js"></script>
-
-			<!-- validator js -->
-			<script src="vendor/validator.js"></script>
-
-			<!-- Theme js -->
-			<script src="js/theme.js"></script>
-			<!-- Navbar Hover Animation -->
-			<script src="js/navbar-hover.js"></script>
-		</div> <!-- /.main-page-wrapper -->
-		<!-- Vijayalakshmi Group Site Utils -->
-		<script src="js/site-utils.js"></script>
-		<!-- Google Translate Element -->
-		<div id="google_translate_element" style="display:none;"></div>
-		<script type="text/javascript"
-			src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+				<!-- Theme js -->
+				<script src="js/theme.js"></script>
+				<!-- Navbar Hover Animation -->
+				<script src="js/navbar-hover.js"></script>
+			</div> <!-- /.main-page-wrapper -->
+			<!-- Vijayalakshmi Group Site Utils -->
+			<script src="js/site-utils.js"></script>
+			<!-- Google Translate Element -->
+			<div id="google_translate_element" style="display:none;"></div>
+			<script type="text/javascript"
+				src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 
 </html>
