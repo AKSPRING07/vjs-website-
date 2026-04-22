@@ -11,358 +11,12 @@
 	<link rel="stylesheet" type="text/css" href="css/responsive.css" media="all">
 	<link rel="stylesheet" type="text/css" href="css/custom.css" media="all">
 	<link rel="stylesheet" type="text/css" href="css/navbar-vjs.css" media="all">
-<!-- VJS-NAVBAR-CSS-START -->
-<style>
-		@media (min-width: 992px) {
-
-			.adani-nav-fx {
-				padding: 0;
-				align-self: top;
-				margin: 0;
-				background: #08201b;
-				border: none !important;
-				box-shadow: none !important;
-				width: 100%;
-
-				/* 🔥 FIX: lock to top */
-				position: fixed;
-				top: 0;
-				left: 0;
-				z-index: 9999;
-			}
-
-			.adani-nav-fx .inner-content {
-				padding: 0;
-				margin: 0;
-				animation: adaniNavReveal 0.75s cubic-bezier(0.22, 1, 0.36, 1);
-			}
-
-			.adani-nav-fx .top-header {
-				position: relative;
-				padding: 18px 20px;
-
-				/* ❌ REMOVE this (causes line) */
-				/* margin: -1px 0; */
-
-				margin: 0;
-
-				width: 100%;
-				border-radius: 0;
-				transition: padding 0.45s cubic-bezier(0.22, 1, 0.36, 1);
-
-				transform: translateZ(0);
-				backface-visibility: hidden;
-				isolation: isolate;
-			}
-		}
-
-		/* ================= GLASS EFFECT ================= */
-
-		.adani-nav-fx .top-header::before {
-			content: "";
-			position: absolute;
-
-			/* 🔥 STRONG FIX */
-			top: -4px;
-			bottom: -3px;
-			left: 0;
-			right: 0;
-
-			border-radius: inherit;
-
-			background: linear-gradient(135deg,
-					rgba(8, 32, 27, 0.88) 0%,
-					rgba(8, 32, 27, 0.82) 50%,
-					rgba(8, 32, 27, 0.88) 100%);
-
-			backdrop-filter: blur(10px);
-			-webkit-backdrop-filter: blur(10px);
-
-			transform: translateZ(0);
-			will-change: transform;
-
-			z-index: 0;
-		}
-
-		/* 🔥 HARD TOP COVER (FINAL LINE KILLER) */
-		.adani-nav-fx::before {
-			content: "";
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 3px;
-			background: #08201b;
-			z-index: 10000;
-			padding-top: 0%;
-		}
-
-		/* keep content above */
-		.adani-nav-fx .top-header>.d-flex {
-			position: relative;
-			z-index: 2;
-		}
-
-		/* LOGO */
-		.adani-nav-fx .logo img {
-			transition: transform 0.45s ease;
-			background-color: #9ec008;
-			border-radius: 50%;
-		}
-
-		/* NAVBAR */
-		.adani-nav-fx .navbar-nav {
-			gap: 20px;
-		}
-
-		.adani-nav-fx .nav-item .nav-link {
-			padding: 6px 16px;
-			border-radius: 999px;
-			font-size: 14px;
-			color: rgba(255, 255, 255, 0.85);
-			transition: all 0.35s ease;
-		}
-
-		/* HOVER */
-		.adani-nav-fx .nav-item:hover>.nav-link,
-		.adani-nav-fx .nav-item.nav-current>.nav-link {
-			color: #dfff7c;
-			transform: translateY(-0.5px);
-		}
-
-		/* HOVER INDICATOR */
-		.adani-nav-fx .nav-hover-indicator {
-			position: absolute;
-			top: 0;
-			left: 0;
-			height: 100%;
-			width: 0;
-			border-radius: 999px;
-			pointer-events: none;
-			opacity: 0;
-			transform: scale(0.92);
-
-			background: linear-gradient(135deg,
-					rgba(255, 255, 255, 0.18),
-					rgba(255, 255, 255, 0.05));
-
-			transition: all 0.45s cubic-bezier(0.22, 1, 0.36, 1);
-		}
-
-		/* DROPDOWN */
-		.adani-nav-fx .navbar .dropdown-menu {
-			margin-top: 14px;
-			padding: 14px 8px;
-			border-radius: 24px;
-			border: 1px solid rgba(255, 255, 255, 0.05);
-			background: rgba(253, 253, 253, 0.719);
-
-			transform: translateY(18px) scale(0.96);
-			clip-path: inset(0 0 100% 0 round 24px);
-
-			transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
-				opacity 0.3s ease,
-				visibility 0.3s ease,
-				clip-path 0.45s cubic-bezier(0.22, 1, 0.36, 1);
-		}
-
-		.adani-nav-fx .navbar .dropdown:hover>.dropdown-menu {
-			transform: translateY(0) scale(1);
-			clip-path: inset(0 0 0 0 round 24px);
-		}
-
-		/* ================= STICKY STATE ================= */
-
-		.adani-nav-fx.fixed {
-			padding-top: 12px;
-			background: #08201b;
-		}
-
-		.adani-nav-fx.fixed .top-header {
-			padding: 12px 0;
-		}
-
-		.adani-nav-fx.fixed .top-header::before {
-			top: -4px;
-			bottom: -3px;
-
-			background: linear-gradient(135deg,
-					rgba(8, 32, 27, 0.96) 0%,
-					rgba(8, 32, 27, 0.92) 50%,
-					rgba(8, 32, 27, 0.96) 100%);
-
-			backdrop-filter: blur(12px);
-			-webkit-backdrop-filter: blur(12px);
-		}
-
-		/* LOGO SCALE */
-		.adani-nav-fx.fixed .logo img {
-			transform: scale(0.94);
-		}
-
-		/* MOBILE */
-		@media (max-width: 991px) {
-			.adani-nav-fx .top-header {
-				position: relative;
-				z-index: 5;
-				margin: 0;
-				background: #08201b;
-			}
-		}
-
-		/* BODY FIX */
-		html,
-		body {
-			margin: 0;
-			padding: 0;
-			background: #08201b;
-		}
-
-		/* Hero Slider Styles */
-		.hero-banner-one {
-			position: relative;
-			overflow: hidden;
-		}
-
-		.hero-banner-one .vjs-hero-slider {
-			position: relative !important;
-			z-index: 1;
-			height: auto !important;
-			overflow: hidden;
-		}
-
-		.vjs-hero-slider .item {
-			position: relative;
-			padding: 0 0 120px;
-			min-height: 800px;
-			display: flex !important;
-			align-items: flex-end;
-		}
-
-		.vjs-hero-slider .hero-img {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background-size: cover;
-			background-position: center;
-			background-repeat: no-repeat;
-			z-index: -1;
-			transition: transform 5s linear;
-		}
-
-		.hero-banner-one .hero-img::after {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.2));
-		}
-
-		/* THE WOW FACTOR - Premium Prism Glass Heading */
-		.hero-heading-glass {
-			position: relative;
-			padding: 40px 60px;
-			border-radius: 35px 35px 35px 10px;
-			background: linear-gradient(135deg,
-					rgba(255, 255, 255, 0.18) 0%,
-					rgba(255, 255, 255, 0.05) 100%);
-			backdrop-filter: blur(25px) saturate(180%);
-			-webkit-backdrop-filter: blur(25px) saturate(180%);
-			border: 1.5px solid rgba(255, 255, 255, 0.25);
-			border-top: 2px solid rgba(255, 255, 255, 0.4);
-			border-left: 2px solid rgba(255, 255, 255, 0.4);
-
-			color: #fff;
-			font-size: min(64px, 11vw);
-			line-height: 1.1;
-			font-weight: 800;
-			display: inline-block;
-			width: fit-content;
-			max-width: 950px !important;
-			letter-spacing: -1px;
-
-			text-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-			box-shadow:
-				0 25px 50px -12px rgba(0, 0, 0, 0.5),
-				inset 0 0 20px rgba(255, 255, 255, 0.1);
-
-			animation: premiumReveal 1.4s cubic-bezier(0.16, 1, 0.3, 1);
-		}
-
-		.hero-heading-glass::before {
-			content: "";
-			position: absolute;
-			left: 20px;
-			top: 25%;
-			height: 50%;
-			width: 6px;
-			background: #9ec008;
-			border-radius: 99px;
-			box-shadow: 0 0 15px rgba(158, 192, 8, 0.6);
-		}
-
-		@keyframes premiumReveal {
-			0% {
-				opacity: 0;
-				transform: translateY(40px) scale(0.95) rotate(-1deg);
-				filter: blur(10px);
-			}
-
-			100% {
-				opacity: 1;
-				transform: translateY(0) scale(1) rotate(0);
-				filter: blur(0);
-			}
-		}
-
-		@media (max-width: 991px) {
-			.hero-banner-one .item {
-				min-height: 600px;
-				padding: 180px 0 100px;
-			}
-		}
-
-		@media (max-width: 767px) {
-			.hero-heading-glass {
-				font-size: 34px;
-				padding: 25px 30px;
-				max-width: 100% !important;
-			}
-
-			.hero-banner-one .item {
-				padding: 150px 0 80px;
-				min-height: 500px;
-			}
-		}
-
-		/* ANIMATION */
-		@keyframes adaniNavReveal {
-			from {
-				opacity: 0;
-				transform: translateY(-18px);
-			}
-
-			to {
-				opacity: 1;
-				transform: translateY(0);
-			}
-		}
-	</style>
-<!-- VJS-NAVBAR-CSS-END -->
 </head>
 
 <body>
 	<div class="main-page-wrapper">
-				<!-- 
-		=============================================
-				Theme Main Menu
-		============================================== 
-		-->
-						<header class="theme-main-menu menu-overlay menu-style-one white-vr sticky-menu adani-nav-fx">
+		<!-- Theme Main Menu -->
+		<header class="theme-main-menu menu-overlay menu-style-one white-vr sticky-menu adani-nav-fx">
 			<div class="inner-content position-relative">
 				<div class="top-header">
 					<div class="d-flex align-items-center justify-content-between">
@@ -379,7 +33,6 @@
 								</span>
 							</a>
 						</div>
-						<!-- logo -->
 
 						<nav class="navbar navbar-expand-lg p0" style="flex: 0 0 auto; margin-right: 60px;">
 							<button class="navbar-toggler d-block d-lg-none" type="button" data-bs-toggle="collapse"
@@ -523,8 +176,9 @@
 								</ul>
 							</div>
 						</div>
-					</div> <!--/.top-header-->
-				</div> <!-- /.inner-content -->
+					</div>
+				</div>
+			</div>
 		</header>
 
 		<style>
@@ -539,42 +193,94 @@
 				font-size: 48px;
 			}
 
+			/* ===== PREMIUM ASSET CARDS ===== */
+			.media-kit-content-section {
+				background: linear-gradient(180deg, #f4f9f0 0%, #ffffff 60%, #f4f9f0 100%) !important;
+			}
+
 			.vjs-asset-card {
 				background: #fff;
-				border-radius: 4px;
+				border-radius: 20px;
 				overflow: hidden;
 				margin-bottom: 30px;
-				transition: all 0.3s ease;
+				border: 1px solid rgba(158, 192, 8, 0.12);
+				box-shadow: 0 4px 20px rgba(8, 32, 27, 0.06);
+				transition: transform 0.38s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.38s ease;
+			}
+
+			.vjs-asset-card:hover {
+				transform: translateY(-8px);
+				box-shadow: 0 20px 50px rgba(8, 32, 27, 0.13);
+				border-color: rgba(158, 192, 8, 0.35);
 			}
 
 			.vjs-asset-img-box {
-				height: 250px;
+				height: 220px;
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				padding: 20px;
+				padding: 30px;
+				position: relative;
+				overflow: hidden;
+			}
+
+			.vjs-asset-img-box img {
+				transition: transform 0.4s ease;
+			}
+
+			.vjs-asset-card:hover .vjs-asset-img-box img {
+				transform: scale(1.06);
+			}
+
+			.vjs-asset-body {
+				padding: 20px 22px 22px;
+				border-top: 1px solid #f0f5ec;
 			}
 
 			.vjs-asset-label {
-				padding: 15px 0 5px;
-				font-weight: 600;
-				color: #333;
-				font-size: 16px;
+				padding: 0 0 8px;
+				font-weight: 700;
+				color: #081c17;
+				font-size: 15px;
+				letter-spacing: -0.2px;
+				line-height: 1.4;
 			}
 
 			.vjs-download-link {
-				color: #8a2be2;
-				/* Adani-style purple link */
-				text-decoration: underline;
-				font-weight: 600;
+				display: inline-flex;
+				align-items: center;
+				gap: 6px;
+				padding: 7px 18px;
+				background: #9ec008;
+				color: #081c17 !important;
+				border-radius: 30px;
+				font-weight: 700;
+				font-size: 13px;
+				text-decoration: none !important;
+				margin-top: 4px;
+				transition: all 0.25s ease;
+				border: none;
+			}
+
+			.vjs-download-link:hover {
+				background: #081c17;
+				color: #9ec008 !important;
+				transform: translateX(2px);
+			}
+
+			.vjs-download-link::before {
+				content: '↓';
 				font-size: 14px;
 			}
 
 			.vjs-category-tab {
 				color: #08201b;
-				border-bottom: 3px solid #08201b;
+				border-bottom: 3px solid #9ec008;
 				padding-bottom: 5px;
 				font-weight: 700;
+				font-size: 13px;
+				letter-spacing: 1px;
+				text-transform: uppercase;
 			}
 		</style>
 
@@ -605,331 +311,224 @@
 				</div>
 
 				<div class="row">
-					<!-- Card 1: White on Black -->
+					<!-- Card 1: Logo White on Dark -->
 					<div class="col-lg-4 col-md-6">
 						<div class="vjs-asset-card">
-							<div class="vjs-asset-img-box" style="background: #111;">
+							<div class="vjs-asset-img-box" style="background: #0d1117; border-radius: 16px 16px 0 0;">
 								<img src="images/logo/vijayalakshmi-logo.svg" alt="White on Black"
-									style="width: 200px; filter: brightness(0) invert(1);">
+									style="width: 190px; filter: brightness(0) invert(1);">
 							</div>
-							<div class="vjs-asset-label">Vijayalakshmi Group Logo (white on black)</div>
-							<a href="#" class="vjs-download-link">Download</a>
+							<div class="vjs-asset-body">
+								<div class="vjs-asset-label">Logo — White on Dark</div>
+								<a href="#" class="vjs-download-link">Download</a>
+							</div>
 						</div>
 					</div>
 
-					<!-- Card 2: Colour Gradient -->
+					<!-- Card 2: Corporate Logo -->
 					<div class="col-lg-4 col-md-6">
 						<div class="vjs-asset-card">
-							<div class="vjs-asset-img-box" style="background: #f8f8f8; border: 1px solid #eee;">
-								<img src="images/logo/vijayalakshmi-logo.svg" alt="Main Logo" style="width: 200px;">
+							<div class="vjs-asset-img-box" style="background: #f8fbf4; border-radius: 16px 16px 0 0;">
+								<img src="images/logo/vijayalakshmi-logo.svg" alt="Main Logo" style="width: 190px;">
 							</div>
-							<div class="vjs-asset-label">Vijayalakshmi Group Logo (corporate)</div>
-							<a href="#" class="vjs-download-link">Download</a>
+							<div class="vjs-asset-body">
+								<div class="vjs-asset-label">Logo — Corporate (Full Colour)</div>
+								<a href="#" class="vjs-download-link">Download</a>
+							</div>
 						</div>
 					</div>
 
 					<!-- Card 3: Brand Unit -->
 					<div class="col-lg-4 col-md-6">
 						<div class="vjs-asset-card">
-							<div class="vjs-asset-img-box" style="background: #fff; border: 1px solid #eee;">
-								<div class="d-flex align-items-center">
-									<img src="images/logo/vijayalakshmi-mark.png" alt="" style="width: 50px;">
-									<div class="ms-3 border-start ps-3">
-										<div
-											style="font-size: 14px; font-weight: 700; color: #081c17; line-height: 1.2;">
-											Vijayalakshmi Group</div>
-										<div
-											style="font-size: 10px; color: #666; font-weight: 400; font-family: sans-serif;">
-											Growth with Goodness</div>
+							<div class="vjs-asset-img-box" style="background: #fff; border-radius: 16px 16px 0 0; border-bottom: 1px solid #f0f5ec;">
+								<div class="d-flex align-items-center gap-3">
+									<img src="images/logo/vijayalakshmi-mark.png" alt="" style="width: 54px; height: 54px; object-fit: contain;">
+									<div style="border-left: 2px solid #9ec008; padding-left: 14px;">
+										<div style="font-size: 15px; font-weight: 800; color: #081c17; line-height: 1.2; letter-spacing: -0.3px;">Vijayalakshmi Group</div>
+										<div style="font-size: 10px; color: #9ec008; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-top: 3px;">Growth with Goodness</div>
 									</div>
 								</div>
 							</div>
-							<div class="vjs-asset-label">Vijayalakshmi Group Logo (brand unit)</div>
-							<a href="#" class="vjs-download-link">Download</a>
+							<div class="vjs-asset-body">
+								<div class="vjs-asset-label">Logo — Brand Unit (Horizontal)</div>
+								<a href="#" class="vjs-download-link">Download</a>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<!--
-		=====================================================
-			Footer One
-		=====================================================
-		-->
-			<div class="footer-mini">
+		<!-- Footer -->
+		<div class="footer-mini">
+			<style>
+				.footer-mini {
+					width: 100%;
+					background: #f5f7f8;
+					border-top: 1px solid #e5e7ea;
+				}
 
-				<style>
-					/* RESET (removes unwanted gaps) */
-					* {
-						box-sizing: border-box;
-					}
+				.footer-container {
+					max-width: 1200px;
+					margin: 0 auto;
+					padding: 90px 40px 35px;
+					font-family: "Helvetica Neue", Arial, sans-serif;
+				}
 
-					html,
-					body {
-						margin: 0;
-						padding: 0;
-					}
+				.footer-top {
+					display: flex;
+					justify-content: space-between;
+					align-items: flex-start;
+					gap: 60px;
+					margin-top: 10px;
+				}
 
-					/* FULL WIDTH FOOTER */
-					.footer-mini {
-						width: 100%;
-						background: #f5f7f8;
-						border-top: 1px solid #e5e7ea;
-					}
+				.footer-brand {
+					margin-top: 65px;
+					margin-left: 35px;
+				}
 
-					/* INNER CONTAINER */
-					.footer-container {
-						max-width: 1200px;
-						margin: 0 auto;
-						padding: 90px 40px 35px;
-						/* ?? pushes content downward */
-						font-family: "Helvetica Neue", Arial, sans-serif;
-					}
+				.footer-logo-group {
+					display: flex;
+					align-items: center;
+					gap: 12px;
+					margin-bottom: 25px;
+				}
 
-					/* TOP SECTION */
-					.footer-top {
-						display: flex;
-						justify-content: space-between;
-						align-items: flex-start;
-						gap: 60px;
-						margin-top: 10px;
-					}
+				.footer-logo-group img {
+					height: 46px;
+					width: auto;
+				}
 
-					/* LOGO & BRAND POSITIONING */
-					.footer-brand {
-						margin-top: 65px;
-						/* ?? Move further down */
-						margin-left: 35px;
-						/* ?? Move slightly back to the left */
-					}
+				.footer-logo-text {
+					display: flex;
+					flex-direction: column;
+					line-height: 1.1;
+				}
 
-					.footer-logo-group {
-						display: flex;
-						flex-direction: row;
-						/* ?? Back to side-by-side */
-						align-items: center;
-						padding-right: 20px;
-						gap: 12px;
-						margin-bottom: 25px;
-					}
+				.footer-logo-text span:first-child {
+					font-size: 16px;
+					font-weight: 700;
+					color: #000;
+					letter-spacing: 0.5px;
+					text-transform: uppercase;
+				}
 
-					.footer-logo-group img {
-						height: 46px;
-						width: auto;
-					}
+				.footer-logo-text span:last-child {
+					font-size: 10px;
+					font-weight: 600;
+					color: #666;
+					letter-spacing: 1.5px;
+				}
 
-					.footer-logo-text {
-						display: flex;
-						flex-direction: column;
-						line-height: 1.1;
-					}
+				.social-icons-mini {
+					display: inline-flex;
+					gap: 14px;
+					margin-left: 58px;
+					padding: 4px 0;
+					border-top: 1px solid #7030a0;
+					border-bottom: 1px solid #7030a0;
+				}
 
-					.footer-logo-text span:first-child {
-						font-size: 16px;
-						font-weight: 700;
-						color: #000;
-						letter-spacing: 0.5px;
-						text-transform: uppercase;
-					}
+				.social-icons-mini a {
+					color: #000;
+					font-size: 14px;
+					transition: 0.3s;
+				}
 
-					.footer-logo-text span:last-child {
-						font-size: 10px;
-						font-weight: 600;
-						color: #666;
-						letter-spacing: 1.5px;
-					}
+				.footer-col h5 {
+					font-size: 14px;
+					font-weight: 600;
+					margin-bottom: 16px;
+					color: #000;
+				}
 
-					.social-icons-mini {
-						display: inline-flex;
-						/* ?? Borders only span icon area */
-						gap: 14px;
-						margin-top: -10px;
-						/* ?? Move closer to text */
-						margin-left: 58px;
-						padding: 4px 0;
-						border-top: 1px solid #7030a0;
-						border-bottom: 1px solid #7030a0;
-					}
+				.footer-col ul {
+					list-style: none;
+					padding: 0;
+					margin: 0;
+				}
 
-					.social-icons-mini a {
-						color: #000;
-						font-size: 14px;
-						transition: 0.3s;
-					}
+				.footer-col ul li a {
+					text-decoration: none;
+					font-size: 12px;
+					color: #666;
+					transition: 0.3s;
+				}
 
-					.social-icons-mini a:hover {
-						opacity: 0.6;
-					}
+				.footer-bottom {
+					border-top: 1px solid #e5e7ea;
+					margin-top: 50px;
+					padding-top: 20px;
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					font-size: 12px;
+					color: #666;
+				}
 
-					/* COLUMNS */
-					.footer-col h5 {
-						font-size: 14px;
-						font-weight: 600;
-						margin-bottom: 16px;
-						color: #000;
-					}
+				.footer-bottom-links {
+					display: flex;
+					gap: 25px;
+				}
 
-					.footer-col ul {
-						list-style: none;
-						padding: 0;
-						margin: 0;
-					}
+				.footer-bottom-links a {
+					text-decoration: none;
+					color: #666;
+				}
+			</style>
 
-					.footer-col ul li {
-						margin-bottom: 10px;
-					}
-
-					.footer-col ul li a {
-						text-decoration: none;
-						font-size: 12px;
-						color: #666;
-						transition: 0.3s;
-					}
-
-					.footer-col ul li a:hover {
-						color: #000;
-					}
-
-					/* RIGHT SIDE LINKS */
-					.footer-right {
-						display: flex;
-						flex-direction: column;
-						gap: 12px;
-					}
-
-					.footer-right a {
-						text-decoration: none;
-						font-size: 13px;
-						font-weight: 500;
-						color: #000;
-					}
-
-					/* BOTTOM BAR */
-					.footer-bottom {
-						border-top: 1px solid #e5e7ea;
-						margin-top: 50px;
-						/* ?? spacing like Adani */
-						padding-top: 20px;
-						display: flex;
-						justify-content: space-between;
-						align-items: center;
-						font-size: 12px;
-						color: #666;
-					}
-
-					.footer-bottom-links {
-						display: flex;
-						gap: 25px;
-						margin-left: auto;
-						/* ?? pushes links to the right */
-						padding-left: 500px;
-						/* ?? adds small right offset */
-					}
-
-					.footer-bottom-links a {
-						text-decoration: none;
-						color: #666;
-					}
-
-					.footer-bottom-links a:hover {
-						color: #000;
-					}
-
-					/* RESPONSIVE */
-					@media(max-width:768px) {
-						.footer-top {
-							flex-direction: column;
-							gap: 30px;
-						}
-
-						.footer-bottom {
-							flex-direction: column;
-							text-align: center;
-							gap: 10px;
-						}
-					}
-				</style>
-
-
-				<div class="footer-container">
-
-					<div class="footer-top">
-
-						<!-- LOGO & BRAND -->
-						<div class="footer-brand">
-							<div class="footer-logo-group">
-								<img src="images/logo/vijayalakshmi-mark.png" alt="Logo Mark">
-								<div class="footer-logo-text">
-									<span>Vijayalakshmi Group</span>
-									<span>OF COMPANIES</span>
-								</div>
-							</div>
-
-							<div class="social-icons-mini">
-								<a href="#"><i class="bi bi-facebook"></i></a>
-								<a href="#"><i class="bi bi-instagram"></i></a>
-								<a href="#"><i class="bi bi-youtube"></i></a>
-								<a href="#"><i class="bi bi-linkedin"></i></a>
+			<div class="footer-container">
+				<div class="footer-top">
+					<div class="footer-brand">
+						<div class="footer-logo-group">
+							<img src="images/logo/vijayalakshmi-mark.png" alt="Logo Mark">
+							<div class="footer-logo-text">
+								<span>Vijayalakshmi Group</span>
+								<span>OF COMPANIES</span>
 							</div>
 						</div>
-
-						<!-- ABOUT -->
-						<div class="footer-col">
-							<h5>About Us</h5>
-							<ul>
-								<li><a href="#">About Company</a></li>
-								<li><a href="#">Chairman�s Office</a></li>
-								<li><a href="#">Leadership</a></li>
-								<li><a href="#">Our Journey</a></li>
-								<li><a href="#">Awards</a></li>
-							</ul>
+						<div class="social-icons-mini">
+							<a href="#"><i class="bi bi-facebook"></i></a>
+							<a href="#"><i class="bi bi-instagram"></i></a>
+							<a href="#"><i class="bi bi-youtube"></i></a>
+							<a href="#"><i class="bi bi-linkedin"></i></a>
 						</div>
+					</div>
 
-						<!-- BUSINESS -->
-						<div class="footer-col">
-							<h5>Businesses</h5>
-							<ul>
-								<li><a href="#">Infrastructure</a></li>
-								<li><a href="#">Energy & Utilities</a></li>
-								<li><a href="#">Transport & Logistics</a></li>
-								<li><a href="#">Consumer Products</a></li>
-								<li><a href="#">Real Estate</a></li>
-							</ul>
-						</div>
+					<div class="footer-col">
+						<h5>About Us</h5>
+						<ul>
+							<li><a href="#">About Company</a></li>
+							<li><a href="#">Leadership</a></li>
+							<li><a href="#">Our Journey</a></li>
+						</ul>
+					</div>
 
-						<!-- QUICK LINKS -->
-						<div class="footer-col">
-							<h5>Quick Links</h5>
-							<ul>
-								<li><a href="#">Sustainability</a></li>
-								<li><a href="#">Investors</a></li>
-								<li><a href="#">Newsroom</a></li>
-								<li><a href="#">Careers</a></li>
-								<li><a href="#">Contact Us</a></li>
-							</ul>
-						</div>
+					<div class="footer-col">
+						<h5>Quick Links</h5>
+						<ul>
+							<li><a href="#">Sustainability</a></li>
+							<li><a href="#">Newsroom</a></li>
+							<li><a href="#">Contact Us</a></li>
+						</ul>
+					</div>
+				</div>
 
-
-						<!-- BOTTOM -->
-						<div class="footer-bottom">
-							<div style="display: flex; align-items: center; gap: 8px;">
-								<img src="images/logo/vijayalakshmi-mark.png" alt="Mark" style="height: 20px; width: auto;">
-								<span>� 2025 Vijayalakshmi Group</span>
-							</div>
-
-
-							<div class="footer-bottom-links">
-								<a href="#">Legal Disclaimer</a>
-								<a href="#">Privacy Notice</a>
-								<a href="#">Terms & Conditions</a>
-								<a href="#">Cookie Policy</a>
-							</div>
-						</div>
-
+				<div class="footer-bottom">
+					<div style="display: flex; align-items: center; gap: 8px;">
+						<img src="images/logo/vijayalakshmi-mark.png" alt="Mark" style="height: 20px; width: auto;">
+						<span>© 2025 Vijayalakshmi Group</span>
+					</div>
+					<div class="footer-bottom-links">
+						<a href="#">Legal Disclaimer</a>
+						<a href="#">Privacy Notice</a>
+						<a href="#">Terms & Conditions</a>
 					</div>
 				</div>
 			</div>
+		</div>
 	</div>
 
 	<script src="js/jquery.min.js"></script>
@@ -939,4 +538,3 @@
 </body>
 
 </html>
-
