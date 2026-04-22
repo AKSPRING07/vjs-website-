@@ -11,6 +11,348 @@
 	<link rel="stylesheet" type="text/css" href="css/responsive.css" media="all">
 	<link rel="stylesheet" type="text/css" href="css/custom.css" media="all">
 	<link rel="stylesheet" type="text/css" href="css/navbar-vjs.css" media="all">
+<!-- VJS-NAVBAR-CSS-START -->
+<style>
+		@media (min-width: 992px) {
+
+			.adani-nav-fx {
+				padding: 0;
+				align-self: top;
+				margin: 0;
+				background: #08201b;
+				border: none !important;
+				box-shadow: none !important;
+				width: 100%;
+
+				/* 🔥 FIX: lock to top */
+				position: fixed;
+				top: 0;
+				left: 0;
+				z-index: 9999;
+			}
+
+			.adani-nav-fx .inner-content {
+				padding: 0;
+				margin: 0;
+				animation: adaniNavReveal 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+			}
+
+			.adani-nav-fx .top-header {
+				position: relative;
+				padding: 18px 20px;
+
+				/* ❌ REMOVE this (causes line) */
+				/* margin: -1px 0; */
+
+				margin: 0;
+
+				width: 100%;
+				border-radius: 0;
+				transition: padding 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+
+				transform: translateZ(0);
+				backface-visibility: hidden;
+				isolation: isolate;
+			}
+		}
+
+		/* ================= GLASS EFFECT ================= */
+
+		.adani-nav-fx .top-header::before {
+			content: "";
+			position: absolute;
+
+			/* 🔥 STRONG FIX */
+			top: -4px;
+			bottom: -3px;
+			left: 0;
+			right: 0;
+
+			border-radius: inherit;
+
+			background: linear-gradient(135deg,
+					rgba(8, 32, 27, 0.88) 0%,
+					rgba(8, 32, 27, 0.82) 50%,
+					rgba(8, 32, 27, 0.88) 100%);
+
+			backdrop-filter: blur(10px);
+			-webkit-backdrop-filter: blur(10px);
+
+			transform: translateZ(0);
+			will-change: transform;
+
+			z-index: 0;
+		}
+
+		/* 🔥 HARD TOP COVER (FINAL LINE KILLER) */
+		.adani-nav-fx::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 3px;
+			background: #08201b;
+			z-index: 10000;
+			padding-top: 0%;
+		}
+
+		/* keep content above */
+		.adani-nav-fx .top-header>.d-flex {
+			position: relative;
+			z-index: 2;
+		}
+
+		/* LOGO */
+		.adani-nav-fx .logo img {
+			transition: transform 0.45s ease;
+			background-color: #9ec008;
+			border-radius: 50%;
+		}
+
+		/* NAVBAR */
+		.adani-nav-fx .navbar-nav {
+			gap: 20px;
+		}
+
+		.adani-nav-fx .nav-item .nav-link {
+			padding: 6px 16px;
+			border-radius: 999px;
+			font-size: 14px;
+			color: rgba(255, 255, 255, 0.85);
+			transition: all 0.35s ease;
+		}
+
+		/* HOVER */
+		.adani-nav-fx .nav-item:hover>.nav-link,
+		.adani-nav-fx .nav-item.nav-current>.nav-link {
+			color: #dfff7c;
+			transform: translateY(-0.5px);
+		}
+
+		/* HOVER INDICATOR */
+		.adani-nav-fx .nav-hover-indicator {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 0;
+			border-radius: 999px;
+			pointer-events: none;
+			opacity: 0;
+			transform: scale(0.92);
+
+			background: linear-gradient(135deg,
+					rgba(255, 255, 255, 0.18),
+					rgba(255, 255, 255, 0.05));
+
+			transition: all 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+		}
+
+		/* DROPDOWN */
+		.adani-nav-fx .navbar .dropdown-menu {
+			margin-top: 14px;
+			padding: 14px 8px;
+			border-radius: 24px;
+			border: 1px solid rgba(255, 255, 255, 0.05);
+			background: rgba(253, 253, 253, 0.719);
+
+			transform: translateY(18px) scale(0.96);
+			clip-path: inset(0 0 100% 0 round 24px);
+
+			transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+				opacity 0.3s ease,
+				visibility 0.3s ease,
+				clip-path 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+		}
+
+		.adani-nav-fx .navbar .dropdown:hover>.dropdown-menu {
+			transform: translateY(0) scale(1);
+			clip-path: inset(0 0 0 0 round 24px);
+		}
+
+		/* ================= STICKY STATE ================= */
+
+		.adani-nav-fx.fixed {
+			padding-top: 12px;
+			background: #08201b;
+		}
+
+		.adani-nav-fx.fixed .top-header {
+			padding: 12px 0;
+		}
+
+		.adani-nav-fx.fixed .top-header::before {
+			top: -4px;
+			bottom: -3px;
+
+			background: linear-gradient(135deg,
+					rgba(8, 32, 27, 0.96) 0%,
+					rgba(8, 32, 27, 0.92) 50%,
+					rgba(8, 32, 27, 0.96) 100%);
+
+			backdrop-filter: blur(12px);
+			-webkit-backdrop-filter: blur(12px);
+		}
+
+		/* LOGO SCALE */
+		.adani-nav-fx.fixed .logo img {
+			transform: scale(0.94);
+		}
+
+		/* MOBILE */
+		@media (max-width: 991px) {
+			.adani-nav-fx .top-header {
+				position: relative;
+				z-index: 5;
+				margin: 0;
+				background: #08201b;
+			}
+		}
+
+		/* BODY FIX */
+		html,
+		body {
+			margin: 0;
+			padding: 0;
+			background: #08201b;
+		}
+
+		/* Hero Slider Styles */
+		.hero-banner-one {
+			position: relative;
+			overflow: hidden;
+		}
+
+		.hero-banner-one .vjs-hero-slider {
+			position: relative !important;
+			z-index: 1;
+			height: auto !important;
+			overflow: hidden;
+		}
+
+		.vjs-hero-slider .item {
+			position: relative;
+			padding: 0 0 120px;
+			min-height: 800px;
+			display: flex !important;
+			align-items: flex-end;
+		}
+
+		.vjs-hero-slider .hero-img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			z-index: -1;
+			transition: transform 5s linear;
+		}
+
+		.hero-banner-one .hero-img::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.2));
+		}
+
+		/* THE WOW FACTOR - Premium Prism Glass Heading */
+		.hero-heading-glass {
+			position: relative;
+			padding: 40px 60px;
+			border-radius: 35px 35px 35px 10px;
+			background: linear-gradient(135deg,
+					rgba(255, 255, 255, 0.18) 0%,
+					rgba(255, 255, 255, 0.05) 100%);
+			backdrop-filter: blur(25px) saturate(180%);
+			-webkit-backdrop-filter: blur(25px) saturate(180%);
+			border: 1.5px solid rgba(255, 255, 255, 0.25);
+			border-top: 2px solid rgba(255, 255, 255, 0.4);
+			border-left: 2px solid rgba(255, 255, 255, 0.4);
+
+			color: #fff;
+			font-size: min(64px, 11vw);
+			line-height: 1.1;
+			font-weight: 800;
+			display: inline-block;
+			width: fit-content;
+			max-width: 950px !important;
+			letter-spacing: -1px;
+
+			text-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+			box-shadow:
+				0 25px 50px -12px rgba(0, 0, 0, 0.5),
+				inset 0 0 20px rgba(255, 255, 255, 0.1);
+
+			animation: premiumReveal 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+		}
+
+		.hero-heading-glass::before {
+			content: "";
+			position: absolute;
+			left: 20px;
+			top: 25%;
+			height: 50%;
+			width: 6px;
+			background: #9ec008;
+			border-radius: 99px;
+			box-shadow: 0 0 15px rgba(158, 192, 8, 0.6);
+		}
+
+		@keyframes premiumReveal {
+			0% {
+				opacity: 0;
+				transform: translateY(40px) scale(0.95) rotate(-1deg);
+				filter: blur(10px);
+			}
+
+			100% {
+				opacity: 1;
+				transform: translateY(0) scale(1) rotate(0);
+				filter: blur(0);
+			}
+		}
+
+		@media (max-width: 991px) {
+			.hero-banner-one .item {
+				min-height: 600px;
+				padding: 180px 0 100px;
+			}
+		}
+
+		@media (max-width: 767px) {
+			.hero-heading-glass {
+				font-size: 34px;
+				padding: 25px 30px;
+				max-width: 100% !important;
+			}
+
+			.hero-banner-one .item {
+				padding: 150px 0 80px;
+				min-height: 500px;
+			}
+		}
+
+		/* ANIMATION */
+		@keyframes adaniNavReveal {
+			from {
+				opacity: 0;
+				transform: translateY(-18px);
+			}
+
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+	</style>
+<!-- VJS-NAVBAR-CSS-END -->
 </head>
 
 <body>
@@ -537,7 +879,7 @@
 							<h5>About Us</h5>
 							<ul>
 								<li><a href="#">About Company</a></li>
-								<li><a href="#">Chairman�s Office</a></li>
+								<li><a href="#">Chairman�s Office</a></li>
 								<li><a href="#">Leadership</a></li>
 								<li><a href="#">Our Journey</a></li>
 								<li><a href="#">Awards</a></li>
@@ -573,7 +915,7 @@
 						<div class="footer-bottom">
 							<div style="display: flex; align-items: center; gap: 8px;">
 								<img src="images/logo/vijayalakshmi-mark.png" alt="Mark" style="height: 20px; width: auto;">
-								<span>� 2025 Vijayalakshmi Group</span>
+								<span>� 2025 Vijayalakshmi Group</span>
 							</div>
 
 
